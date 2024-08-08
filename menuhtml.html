@@ -1,48 +1,294 @@
 <!DOCTYPE html>
 <html>
-	<body>
-<div >
-<nav class="slide-menu" id="example-menu">
-  <ul>
-    <li>
-      <a href="#">Home</a>
-      <ul>
-        <li><a href="#">Submenu entry 1</a></li>
-        <li><a href="#">Submenu entry 2</a></li>
-        <li><a href="#">Submenu entry 3</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="/blog">Blog</a>
-    </li>
-    <li>
-      <a href="/about">About</a>
-    </li>
-  </ul>
-</nav>                    
-                    <nav>
-			    <label class="logo">dedigneX</label>
-                    <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=142350554">  <button  >NABASAN CASH</button></a></li>
-                     <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=1906461957"> <button  >ASRAMMORECASH</button></a></li>
-                     <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=615215702"> <button  >SEORAHATI CASH</button></a></li>
-		     <li><a href="https://docs.google.com/spreadsheets/d/10Izc4srmR7Ea8GJuHPZ-SrfDQvipconZ/edit#gid=1327500264">   <button >NABASAN PASSBOOK</button></a></li>
-		     <li><a href="https://docs.google.com/spreadsheets/d/10Izc4srmR7Ea8GJuHPZ-SrfDQvipconZ/edit#gid=1131385280">   <button >ASRAMMORE PASSBOOK</button></a></li>
-		     <li><a href="https://docs.google.com/spreadsheets/d/10Izc4srmR7Ea8GJuHPZ-SrfDQvipconZ/edit#gid=688966498">   <button >SEORAHATI PASSBOOK</button></a></li>
-		     <li><a href="https://docs.google.com/spreadsheets/d/1LrrdYN4Wwpk7cImQ6muzv-n_FgCzRL_G/edit#gid=1071836722">  <button  >TOTAL AC 32290324</button></a></li>
-		     <li><a href="https://docs.google.com/spreadsheets/d/1osivwpHzfvwdS47jEaySnd-WGcnPmdrN8cbgdZtzRyw/edit?resourcekey#gid=160094801">  <button  >AC REGISTER</button></a></li>
-		     <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=615215702">  <button  >Register Data Entr</button></a></li>
-		     <li><a href="https://script.google.com/macros/s/AKfycbwuJaQv48VWHZMwEUt_VwMxYQnC92hb0O4PAxkI_V-CCejnTUdKUEG3CR-smugxFkoT/exec">  <button  >Fi Ligacy Data</button></a></li>
-		     <li><a href="https://drive.google.com/drive/folders/1DzezLikMAop-j_LYA_kEwUUzZtsP0wCX">  <button  >Pdf Folder</button></a></li>
-		    </nav>
-                 
-    </div>
+<head>
+<title>NABASAN CASH BALANCE</title>
+<style>
+    body {
+    display: fix;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 219, 221);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
 
-    <div class="style">
+table,
+tr,
+th {
+    border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+
+}
+
+
+table {
+    position: top;
+    text-align: center;
+    text-size-adjust: 100px;
+    width: 80%;
+    height: 80%;
+    background: rgb(81, 81, 226);
+    color: #fff;
     
-    </div>
-document.addEventListener("DOMContentLoaded", function () {
-  const menuElement = document.getElementById('example-menu');
-  const menu = new SlideMenu(menuElement);
-});
+}
+
+</style>
+<script>
+    function multiply()
+    {
+      var final_data= document.getElementById("note1").value;
+      var qnt=document.getElementById("Quantity1").value;
+      document.getElementById("total1").innerHTML=final_data*qnt;
+
+      var final_data2= document.getElementById("n2").value;
+      var qnt2=document.getElementById("Q2").value;
+      document.getElementById("t2").innerHTML=final_data2*qnt2;
+
+      var final_data3= document.getElementById("n3").value;
+      var qnt3=document.getElementById("Q3").value;
+      document.getElementById("t3").innerHTML=final_data3*qnt3;
+
+      var final_data4= document.getElementById("n4").value;
+      var qnt4=document.getElementById("Q4").value;
+      document.getElementById("t4").innerHTML=final_data4*qnt4;
+
+      var final_data5= document.getElementById("n5").value;
+      var qnt5=document.getElementById("Q5").value;
+      document.getElementById("t5").innerHTML=final_data5*qnt5;
+
+      var final_data6= document.getElementById("n6").value;
+      var qnt6=document.getElementById("Q6").value;
+      document.getElementById("t6").innerHTML=final_data6*qnt6;
+
+      var final_data7= document.getElementById("n7").value;
+      var qnt7=document.getElementById("Q7").value;
+      document.getElementById("t7").innerHTML=final_data7*qnt7;
+
+      var final_data8= document.getElementById("n8").value;
+      var qnt8=document.getElementById("Q8").value;
+      document.getElementById("t8").innerHTML=final_data8*qnt8;
+
+      var final_data9= document.getElementById("n9").value;
+      var qnt9=document.getElementById("Q9").value;
+      document.getElementById("t9").innerHTML=final_data9*qnt9;
+
+      var final_data10= document.getElementById("n10").value;
+      var qnt10=document.getElementById("Q10").value;
+      document.getElementById("t10").innerHTML=final_data10*qnt10;
+
+      
+      var qnt11=document.getElementById("Q11").value;
+      document.getElementById("t11").innerHTML=qnt11;
+
+      
+      var qnt12=document.getElementById("Q12").value;
+      document.getElementById("t12").innerHTML=qnt12;
+
+      
+      var qnt13=document.getElementById("Q13").value;
+      document.getElementById("t13").innerHTML=qnt13;
+
+      var non_issue1= document.getElementById("no1").value;
+      var qn1=document.getElementById("Qu1").value;
+      document.getElementById("to1").innerHTML=non_issue1*qn1;
+
+      var non_issue2= document.getElementById("no2").value;
+      var qn2=document.getElementById("Qu2").value;
+      document.getElementById("to2").innerHTML=non_issue2*qn2;
+
+      var non_issue3= document.getElementById("no3").value;
+      var qn3=document.getElementById("Qu3").value;
+      document.getElementById("to3").innerHTML=non_issue3*qn3;
+
+      var non_issue4= document.getElementById("no4").value;
+      var qn4=document.getElementById("Qu4").value;
+      document.getElementById("to4").innerHTML=non_issue4*qn4;
+
+      var non_issue5= document.getElementById("no5").value;
+      var qn5=document.getElementById("Qu5").value;
+      document.getElementById("to5").innerHTML=non_issue5*qn5;
+      
+      var non_issue6= document.getElementById("no6").value;
+      var qn6=document.getElementById("Qu6").value;
+      document.getElementById("to6").innerHTML=non_issue6*qn6;
+
+      var qn7=document.getElementById("Qu7").value;
+      document.getElementById("to7").innerHTML=qn7;
+
+      var qn12=document.getElementById("Qu12").value;      var t12=document.getElementById("to12").value;
+      var t1=document.getElementById("to1").value;
+      var t2=document.getElementById("to2").value;
+      var t3=document.getElementById("to3").value;
+      var t4=document.getElementById("to4").value;
+      var t5=document.getElementById("to5").value;
+      var t6=document.getElementById("to6").value;
+      var t7=document.getElementById("to7").value;
+      t12=t1+t2+t3+t4+t5+t6+t7
+      
+
+      
+      document.getElementById("Qu12").innerHTML=t12;
+
+      
+
+      
+
+      
+    }
+</script>
+
+</head>
+<body >
+<table onclick="multiply()">
+    <tr>
+<th></th><th colspan="8"> NABASAN CASH BALANCE </th>
+</tr>
+<tr>
+<th>SL NO</th>
+<th> NOTE</th>
+<th>Quantity</th>
+<th >TOTAL AMOUNT </th>
+<th>SL NO</th>
+<th> DAMAGE NOTE</th>
+<th> Quantity</th>
+<th >TOTAL AMOUNT </th>
+</tr>
+<tr>
+<th> 1</th>
+<td ><input width=" 100%" height="100%" id="note1" readonly value="500"></td>
+<th><input type="number"   id="Quantity1" /></th>
+<th> <p type="number"   id="total1" ></p></th>
+<th> 1</th>
+<th><input type="number" value="500" readonly  id="no1" /></th>
+<th><input type="number"   id="Qu1" /></th>
+<th><p type="number"   id="to1" ></p></th>
+</tr>
+<tr>
+<th> 2</th>
+<th><input type="number" value="200" readonly  id="n2" /></th>
+<th><input type="number"   id="Q2" /></th>
+<th><p type="number"   id="t2" ></p></th>
+<th> 2</th>
+<th><input type="number" value="200" readonly  id="no2" /></th>
+<th><input type="number"   id="Qu2" /></th>
+<th><p type="number"   id="to2" ></p></th>
+</tr>
+<tr>
+<th> 3</th>
+<th><input type="number" value="100" readonly  id="n3" /></th>
+<th><input type="number"   id="Q3" /></th>
+<th><p type="number"   id="t3" ></p></th>
+<th> 3</th>
+<th><input type="number" value="100" readonly  id="no3" /></th>
+<th><input type="number"   id="Qu3" /></th>
+<th><p type="number"   id="to3" ></p></th>
+</tr>
+<tr>
+<th> 4</th>
+<th><input type="number" value="50" readonly  id="n4" /></th>
+<th><input type="number"   id="Q4" /></th>
+<th><p type="number"   id="t4" ></p></th>
+<th> 4</th>
+<th><input type="number" value="50" readonly  id="no4" /></th>
+<th><input type="number"   id="Qu4" /></th>
+<th><p type="number"   id="to4" ></p></th>
+</tr>
+<tr>
+<th> 5</th>
+<th><input type="number" value="20" readonly  id="n5" /></th>
+<th><input type="number"   id="Q5" /></th>
+<th><p type="number"   id="t5" ></p></th>
+<th> 5</th>
+<th><input type="number" value="20" readonly  id="no5" /></th>
+<th><input type="number"   id="Qu5" /></th>
+<th><p type="number"   id="to5" ></p></th>
+</tr>
+<tr>
+<th> 6</th>
+<th><input type="number" value="10" readonly  id="n6" /></th>
+<th><input type="number"   id="Q6" /></th>
+<th><p type="number"   id="t6" ></p></th>
+<th> 6</th>
+<th><input type="number" value="10" readonly  id="no6" /></th>
+<th><input type="number"   id="Qu6" /></th>
+<th><p type="number"   id="to6" ></p></th>
+</tr>
+<tr>
+<th> 7</th>
+<th><input type="number" value="10" readonly  id="n7" /></th>
+<th><input type="number"   id="Q7" /></th>
+<th><p type="number"   id="t7" ></p></th>
+<th> 7</th>
+<th> ANUP BALANCE </th>
+<th><input type="number"  required></th>
+</tr>
+<tr>
+<th> 8</th>
+<th><input type="number" value="5" readonly  id="n8" /></th>
+<th><input type="number"   id="Q8" /></th>
+<th><p type="number"   id="t8" ></p></th>
+<th> 8</th>
+<th> DIPIKA BALANCE</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 9</th>
+<th><input type="number" value="2" readonly  id="n9" /></th>
+<th><input type="number"   id="Q9" /></th>
+<th><p type="number"   id="t9" ></p></th>
+<th> 9</th>
+<th> LOAN PAYMENT</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 10</th>
+<th><input type="number" value="1" readonly  id="n10" /></th>
+<th><input type="number"   id="Q10" /></th>
+<th><p type="number"   id="t10" ></p></th>
+<th>10</th>
+<th> 1</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 11</th>
+<th> BC CASH BALANCE</th>
+<th><input type="number"  id="Q11"></th>
+<th><p id="t11"></p></th>
+<th>11</th>
+<th> EXC </th>
+<th><input type="number" id="Qu7"></th>
+<th><p id="to7"></p></th>
+</tr>
+<tr>
+<th> 12</th>
+<th> AC CASH BALANCE</th>
+<th><input type="number" id="Q12"></th>
+<th><p id="t12"></p></th>
+
+<th>12</th>
+<th> TOTAL DAMAGE NOTE</th>
+<th><input readonly type="number" id="Qu12"></th>
+<th><p id="to12"></p></th>
+</tr>
+<tr>
+<th> 13</th>
+<th> PENDING CASH</th>
+<th><input type="number" id="Q13"></th>
+<th><p id="t13"></p></th>
+<th>13</th>
+<th>OD</th>
+<th><input type="number" ></th>
+<th id="total">0</th>
+</tr>
+<th colspan="2">TOTAL BALANCE</th><th colspan="6"> <p gr_to></p> </th>
+
+</table>
 </body>
+
 </html>
