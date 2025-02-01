@@ -39,9 +39,10 @@ table {
 <script>
     function multiply()
     {
-      var final_data= document.getElementById("notes").value;
-      var qnt=document.getElementById("Quantitys").value;
-      document.getElementById("totals").innerHTML=final_data*qnt;
+      var final_data= document.getElementById("note")[index].value;
+      var qnt=document.getElementById("Quantity")[index].value;
+        var amt=final_data+qnt;
+      document.getElementById("total")[index].value=amt;
 
       var final_data2= document.getElementById("n2").value;
       var qnt2=document.getElementById("Q2").value;
