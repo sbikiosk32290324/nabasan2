@@ -118,11 +118,11 @@ table {
       var qn7=document.getElementById("Qu7").value;
       document.getElementById("to7").innerHTML=qn7;
 
-     
+    }
       
 
-      
-      document.getElementById("all").innerHTML=t12+to6+to7+to5+to4+to3+to2+to1+t13+t11+t10+t9+t8+t7+t6+t5+t4+t3+t2+total1;
+      function sum(){
+      document.getElementById("all").innerHTML=t12++to6++to7++to5++to4++to3++to2++to1++t13++t11++t10++t9++t8++t7++t6++t5++t4+t3++t2++total1;
 
       
 
@@ -278,7 +278,7 @@ table {
 <th><input type="number" ></th>
 <th id="total">0</th>
 </tr>
-<th colspan="2">TOTAL BALANCE</th><th colspan="6"> <p id="all"></p> </th>
+<th colspan="2">TOTAL BALANCE</th><th colspan="6"> <p onclic="sum" id="all"></p> </th>
 
 </table>
 </body>
