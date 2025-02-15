@@ -1,0 +1,10 @@
+
+.body {
+    display: fix;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 219, 221);
+    background-size: contain;
+   
+   
+}
