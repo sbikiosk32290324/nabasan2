@@ -237,7 +237,7 @@ function onContentLoad() {
 
 window.addEventListener && document.addEventListener('DOMContentLoaded', onContentLoad);
 
-	function multiply()
+function multiply()
     {
 	
 	var final_data= document.getElementById("note1").value;
@@ -347,7 +347,7 @@ window.addEventListener && document.addEventListener('DOMContentLoaded', onConte
 	  var total25= document.getElementById("total25").value;
 	  var total26= document.getElementById("total26").value;
 	 
-	  var all1=+(total1)+ +(total3)+ +(total5)+ +(total7)+ +(total9)+ +(total11)+ +(total14)+ +(total15)+ +(total16)+ +(total17)+ +(total18)+ +(total19)+ +(total20)+ +(total21)+ +(total22)+ +(total23)+ +(total24)+ +(total25)+ +(total26);
+	  var all1=+(total1)+ +(total3)+ +(total5)+ +(total7)+ +(total9)+ +(total11)+ +(total14)+ +(total15)+ +(total16)+ +(total17)+ +(total18)+ +(total19)+ +(total20)+ +(total21)+ +(total22)+ +(total23)+ +(total24)+ +(total25);
 	  document.getElementById("all_total").value=all1;
 	  
 	  var qt20=+(qnt2)+ +(qnt4)+ +(qnt6)+ +(qnt8)+ +(qnt10)+ +(qnt12);
@@ -383,10 +383,31 @@ window.addEventListener && document.addEventListener('DOMContentLoaded', onConte
 	  var note26= document.getElementById("ob").value;
 	  var amt26=note26
 	  document.getElementById("total26").value=amt26;
+	 var amt27=total26
+	  document.getElementById("total26_1").value=amt27;
 	  
 	  var note19= document.getElementById("loan").value;
 	  var amt19=note19
 	  document.getElementById("total19").value=amt19;
 	  
-	  }
+	  var ato= document.getElementById("all_total").value;
+	  var pob= document.getElementById("total26_1").value;
+	  var mib=-(pob)- -(ato) 
+	  document.getElementById("db").value=mib;
+	  
+	  
+var dt = new Date();
+document.getElementById("date").innerHTML = dt.toLocaleDateString();
 
+var dt1 = new Date();
+document.getElementById("time").innerHTML = dt1.toLocaleTimeString();
+
+
+document.getElementById("Quantity1").max = "10";
+	  }
+	  
+function GetPrint()
+{
+    /*For Print*/
+    window.print();
+}
