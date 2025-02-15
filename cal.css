@@ -1,10 +1,87 @@
 
-.body {
-    display: fix;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(236, 219, 221);
-    background-size: contain;
-   
+.body 
+{
+    background-image: url('log.jpeg');
+  
+  
    
 }
+.btn
+{
+    background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 3px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+	
+}
+
+.form-control
+{
+    border: 0px;
+}
+
+.input-group-text
+{
+    border: 2px;
+    background-color: blue;
+	
+}
+.note 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#FFFFFF;
+	font-size:100%;
+	}
+.total 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#FFFFFF ;
+	font-size:100%;
+	}
+.timer 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#00FF00 ;
+	font-size:120%;
+	}
+.header
+{
+	background-color:#40E0D0;
+	text-align:center;
+	color:#FFFFFF;
+	font-size:200%;
+	}
+.top
+{
+	background-color:#808000;
+	text-align:center;
+	color:#FFFFFF;
+	font-size:100%;
+	}
+.gt 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#00FF00 ;
+	font-size:105%;
+	}
+.gt1 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#FF0000;
+	font-size:100%;
+	}
+
+table 
+{
+    
+}
+.
