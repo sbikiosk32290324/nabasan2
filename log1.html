@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>NABASAN CASH BALANCE</title>
+
+
+	<!-- CSS For Print Format -->
+    <link rel="stylesheet" media="print" href="cal.css">
+
+<!-- For Invoice  -->
+    <script src="log.js"></script>
+	 <!-- CSS For Invoice -->
+    <link rel="stylesheet"  href="cal.css">
+
+    
+
+
+</head>
+<body >
+<div class="col-4">
+                        <div class="input-group mb-3">
+                            <p class="timer">Date: <span name="date" class="timer" id="date"></span></p>
+							<p class="timer">Time: <span class="timer" name="time" id="time"></span></p>
+                            
+                        </div>
+
+<table onchange="multiply(this)" >
+<tr>
+<th></th><th colspan="8"> DATE <input input="data"  id="date" name="DATE" /><button type="button" class="btn btn-primary" onclick="Search()">Search</button> </th>
+
+<tr>
+<th></th><th colspan="8" class="header"> ASRAMMORE CASH BALANCE </th></tr>
+ <tr><th colspan="7"><input class="timer" readonly value="OPENING BALANCE " name="note" /></th><th colspan="2" ><input class="timer" type="number" id="total26_1" name="total26_1" value="0" readonly> </th></tr>
+
+
+<tr>
+<th class="top">SL NO</th>
+<th class="top"> NOTE</th>
+<th class="top">Quantity</th>
+<th class="top">TOTAL AMOUNT </th>
+<th class="top">SL NO</th>
+<th class="top"> DAMAGE NOTE</th>
+<th class="top"> Quantity</th>
+<th class="top">TOTAL AMOUNT </th>
+</tr>
+<tr>
+<th class="top"> 1</th>
+<th ><input  type="number"id="note1" name="note" class="note"  readonly value="500"></th>
+<th><input type="number"  id="Quantity1" name="Quantity" /></th>
+<th><input type="number" id="total1" class="total" name="total" value="0" readonly></th>
+<th class="top"> 1</th>
+<th><input type="number" value="500" readonly class="note" id="note2" name="note" /></th>
+<th><input type="number"  id="Quantity2" name="Quantity"  /></th>
+<<th><input type="number" id="total2" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 2</th>
+<th><input type="number" value="200" readonly class="note" id="note3" name="note" /></th>
+<th><input type="number"  id="Quantity3" name="Quantity"  /></th>
+<th><input type="number"  id="total3" class="total" name="total" value="0" readonly></th>
+<th class="top"> 2</th>
+<th><input type="number" value="200" readonly class="note" id="note4" name="note" /></th>
+<th><input type="number"  id="Quantity4" name="Quantity"  /></th>
+<th><input type="number"  id="total4" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 3</th>
+<th><input type="number" value="100" readonly class="note" id="note5" name="note" /></th>
+<th><input type="number"  id="Quantity5" name="Quantity"  /></th>
+<th><input type="number" id="total5" class="total" name="total" value="0" readonly></th>
+<th class="top"> 3</th>
+<th><input type="number" value="100" readonly class="note" id="note6" name="note" /></th>
+<th><input type="number"  id="Quantity6" name="Quantity"  /></th>
+<th><input type="number" id="total6" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 4</th>
+<th><input type="number" value="50" readonly class="note" id="note7" name="note" /></th>
+<th><input type="number" id="Quantity7"  name="Quantity"  /></th>
+<th><input type="number" id="total7" class="total" name="total" value="0" readonly></th>
+<th class="top"> 4</th>
+<th><input type="number" value="50" readonly class="note" id="note8" name="note" /></th>
+<th><input type="number"  id="Quantity8" name="Quantity"  /></th>
+<th><input type="number" id="total8" class="total" name="total" value="0" readonly></th>
+<tr>
+<th class="top"> 5</th>
+<th><input type="number" value="20" readonly class="note" id="note9" name="note" /></th>
+<th><input type="number" id="Quantity9"  name="Quantity"  /></th>
+<th><input type="number" id="total9" class="total" name="total" value="0" readonly></th>
+<th class="top"> 5</th>
+<th><input type="number" value="20" readonly class="note" id="note10" name="note" /></th>
+<th><input type="number"  id="Quantity10" name="Quantity"  /></th>
+<th><input type="number" id="total10" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 6</th>
+<th><input type="number" value="10" readonly class="note" id="note11" name="note" /></th>
+<th><input type="number" id="Quantity11"  name="Quantity"  /></th>
+<th><input type="number" id="total11" class="total" name="total" value="0" readonly></th>
+<th class="top"> 6</th>
+<th><input type="number" value="10" readonly class="note" id="note12" name="note" /></th>
+<th><input type="number" id="Quantity12"  name="Quantity"  /></th>
+<th><input type="number" id="total12" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr> 
+<th class="top"> 7</th>
+<th><input type="number" value="10" readonly class="note" id="note13" name="note" /></th>
+<th><input type="number" id="Quantity13" name="Quantity"  /></th>
+<th><input type="number" id="total13" class="total" name="total" value="0" readonly></th>
+<th class="top"> 7</th>
+<th><input  readonly value="NABASAN BALANCE " class="note" name="note" />  </th>
+<th><input type="number" name="Quantity" id="anup" required></th>
+<th><input type="number" id="total17" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 8</th>
+<th><input type="number" value="5" readonly class="note" id="note14" name="note" /></th>
+<th><input type="number" id="Quantity14"  name="Quantity"  /></th>
+<th><input type="number" id="total14" class="total" name="total" value="0" readonly></th>
+<th class="top"> 8</th>
+<th><input  readonly value="MANKHAND BALANCE " class="note" name="note" /> </th>
+<th><input type="number" name="Quantity" id="dipika" required></th>
+<th><input type="number" id="total18" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 9</th>
+<th><input type="number" value="2" readonly class="note" id="note15" name="note" /></th>
+<th><input type="number" id="Quantity15"  name="Quantity"  /></th>
+<th><input type="number" id="total15" class="total" name="total" value="0" readonly></th>
+<th class="top"> 9</th>
+<th><input  readonly value="LOAN PAYMENT " class="note" name="note" /> </th>
+<th><input type="number" name="Quantity"  id="loan" ></th>
+<th><input type="number" id="total19" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 10</th>
+<th><input type="number" value="1" readonly class="note" id="note16" name="note" /></th>
+<th><input type="number"  id="Quantity16" name="Quantity"  /></th>
+<th><input type="number" id="total16" class="total" name="total" value="0" readonly></th>
+<th class="top">10</th>
+<th><input  readonly value="Total Nonessue Note " class="note" name="note" /></th>
+<th><input readonly type="number" id="non" name="Quantity" required></th>
+<th><input type="number" id="total20" class="total" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 11</th>
+<th> <input  readonly value="BC CASH BALANCE " class="note" name="note" /></th>
+<th><input type="number"  id="bc" name="Quantity"></th>
+<th><input type="number" id="total21" class="total" name="total" value="0" readonly></th>
+<th class="top">11</th>
+<th><input  readonly value="EXC " class="note" name="note" /></th>
+<th><input type="number" id="exc" name="Quantity"></th>
+<th><input type="number" id="total22" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 12</th>
+<th> <input  readonly value="AC CASH BALANCE " class="note" name="note" /></th>
+<th><input type="number" id="ac" name="Quantity"></th>
+<th><input type="number" id="total23" class="total" name="total" value="0" readonly></th>
+
+<th class="top">12</th>
+<th> <input  readonly value="Office Ecpences " class="note" name="note" /></th>
+<th><input  type="number"  id="ofe" name="Quantity"></th>
+<th><input type="number" id="total24" class="total" name="total" value="0" readonly></th>
+</tr>
+<tr>
+<th class="top"> 13</th>
+<th><input  readonly value="PENDING CASH " class="note" name="note" /> </th>
+<th><input type="number"  id="pc" name="Quantity"></th>
+<th><input type="number" id="total25" class="total" name="total" value="0" readonly></th>
+<th class="top">13</th>
+<th><input  readonly value="OPENING BALANCE " class="note" name="note" /></th>
+<th><input type="number" class="total" name="Quantity" value="250000" readonly id="ob" required></th>
+<th><input type="number" id="total26" class="total" onchange="multiply(this)" name="total" value="0" readonly></th>
+</tr>
+<tr> <th colspan="7"><input class="gt"  readonly value="TOTAL BALANCE " name="note" /></th><th colspan="2" ><input class="gt" type="number" id="all_total" name="all_total" value="0" readonly> </tr>
+<tr> <th colspan="7"><input class="gt1" readonly value="MISMATCH BALANCE " name="note" /></th><th colspan="2" ><input class="gt1" type="number" id="db" name="db" value="0" readonly> </tr>
+
+</table>
+<div class="row">
+<div class="col-8">
+                      <button type="button" class="btn btn-primary" onclick="Submit()">Submit</button>
+					  
+                        <button type="button" class="btn btn-primary" onclick="GetPrint()">Print</button>
+
+ </div>
+ </div>
+ </body>
+
+</html>
