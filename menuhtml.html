@@ -1,133 +1,20 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>NABASAN CASH BALANCE</title>
-<style>
-    body {
-    display: fix;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(236, 219, 221);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
 
-table,
-tr,
-th {
-    border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
+<!-- CSS For Invoice -->
+    <link rel="stylesheet"  href="cal.css">
+<!-- For Invoice  -->
+    <script src="js.js"></script>
 
-}
-
-
-table {
-    position: top;
-    text-align: center;
-    text-size-adjust: 100px;
-    width: 80%;
-    height: 80%;
-    background: rgb(81, 81, 226);
-    color: #fff;
     
-}
 
-</style>
-<script>
-    function multiply()
-    {
-      var final_data= document.getElementById("note")[index].value;
-      var qnt=document.getElementById("Quantity")[index].value;
-        var amt=final_data+qnt;
-      document.getElementById("total")[index].value=amt;
-
-      var final_data2= document.getElementById("n2").value;
-      var qnt2=document.getElementById("Q2").value;
-      document.getElementById("t2").innerHTML=final_data2*qnt2;
-
-      var final_data3= document.getElementById("n3").value;
-      var qnt3=document.getElementById("Q3").value;
-      document.getElementById("t3").innerHTML=final_data3*qnt3;
-
-      var final_data4= document.getElementById("n4").value;
-      var qnt4=document.getElementById("Q4").value;
-      document.getElementById("t4").innerHTML=final_data4*qnt4;
-
-      var final_data5= document.getElementById("n5").value;
-      var qnt5=document.getElementById("Q5").value;
-      document.getElementById("t5").innerHTML=final_data5*qnt5;
-
-      var final_data6= document.getElementById("n6").value;
-      var qnt6=document.getElementById("Q6").value;
-      document.getElementById("t6").innerHTML=final_data6*qnt6;
-
-      var final_data7= document.getElementById("n7").value;
-      var qnt7=document.getElementById("Q7").value;
-      document.getElementById("t7").innerHTML=final_data7*qnt7;
-
-      var final_data8= document.getElementById("n8").value;
-      var qnt8=document.getElementById("Q8").value;
-      document.getElementById("t8").innerHTML=final_data8*qnt8;
-
-      var final_data9= document.getElementById("n9").value;
-      var qnt9=document.getElementById("Q9").value;
-      document.getElementById("t9").innerHTML=final_data9*qnt9;
-
-      var final_data10= document.getElementById("n10").value;
-      var qnt10=document.getElementById("Q10").value;
-      document.getElementById("t10").innerHTML=final_data10*qnt10;
-
-      
-      var qnt11=document.getElementById("Q11").value;
-      document.getElementById("t11").innerHTML=qnt11;
-
-      
-      var qnt12=document.getElementById("Q12").value;
-      document.getElementById("t12").innerHTML=qnt12;
-
-      
-      var qnt13=document.getElementById("Q13").value;
-      document.getElementById("t13").innerHTML=qnt13;
-
-      var non_issue1= document.getElementById("no1").value;
-      var qn1=document.getElementById("Qu1").value;
-      document.getElementById("to1").innerHTML=non_issue1*qn1;
-
-      var non_issue2= document.getElementById("no2").value;
-      var qn2=document.getElementById("Qu2").value;
-      document.getElementById("to2").innerHTML=non_issue2*qn2;
-
-      var non_issue3= document.getElementById("no3").value;
-      var qn3=document.getElementById("Qu3").value;
-      document.getElementById("to3").innerHTML=non_issue3*qn3;
-
-      var non_issue4= document.getElementById("no4").value;
-      var qn4=document.getElementById("Qu4").value;
-      document.getElementById("to4").innerHTML=non_issue4*qn4;
-
-      var non_issue5= document.getElementById("no5").value;
-      var qn5=document.getElementById("Qu5").value;
-      document.getElementById("to5").innerHTML=non_issue5*qn5;
-      
-      var non_issue6= document.getElementById("no6").value;
-      var qn6=document.getElementById("Qu6").value;
-      document.getElementById("to6").innerHTML=non_issue6*qn6;
-
-      var qn7=document.getElementById("Qu7").value;
-      document.getElementById("to7").innerHTML=qn7;
-
-    }
-      
-
-     
-</script>
 
 </head>
 <body >
-<table onclick="multiply()">
+<table onchange="multiply(this)" >
     <tr>
 <th></th><th colspan="8"> NABASAN CASH BALANCE </th>
 </tr>
@@ -143,135 +30,135 @@ table {
 </tr>
 <tr>
 <th> 1</th>
-<td ><input width=" 100%" height="100%" id="note1" readonly value="500"></td>
-<th><input type="number"   id="Quantity1" /></th>
-<th> <p type="number"   id="total1" ></p></th>
+<th ><input  type="number"id="note1" name="note"  readonly value="500"></th>
+<th><input type="number"  id="Quantity1" name="Quantity" /></th>
+<th><input type="number" id="total1" name="total" value="0" readonly></th>
 <th> 1</th>
-<th><input type="number" value="500" readonly  id="note2" /></th>
-<th><input type="number"   id="Quantity2"  /></th>
-<th><p type="number"   id="total2" ></p></th>
+<th><input type="number" value="500" readonly id="note2" name="note" /></th>
+<th><input type="number"  id="Quantity2" name="Quantity"  /></th>
+<<th><input type="number" id="total2" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 2</th>
-<th><input type="number" value="200" readonly  id="note3" /></th>
-<th><input type="number"   id="Quantity3"  /></th>
-<th><p type="number"   id="total3"></p></th>
+<th><input type="number" value="200" readonly id="note3" name="note" /></th>
+<th><input type="number"  id="Quantity3" name="Quantity"  /></th>
+<th><input type="number"  id="total3" name="total" value="0" readonly></th>
 <th> 2</th>
-<th><input type="number" value="200" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total"></p></th>
+<th><input type="number" value="200" readonly id="note4" name="note" /></th>
+<th><input type="number"  id="Quantity4" name="Quantity"  /></th>
+<th><input type="number"  id="total4" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 3</th>
-<th><input type="number" value="100" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total"></p></th>
+<th><input type="number" value="100" readonly id="note5" name="note" /></th>
+<th><input type="number"  id="Quantity5" name="Quantity"  /></th>
+<th><input type="number" id="total5" name="total" value="0" readonly></th>
 <th> 3</th>
-<th><input type="number" value="100" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="100" readonly id="note6" name="note" /></th>
+<th><input type="number"  id="Quantity6" name="Quantity"  /></th>
+<th><input type="number" id="total6" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 4</th>
-<th><input type="number" value="50" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="50" readonly id="note7" name="note" /></th>
+<th><input type="number" id="Quantity7"  name="Quantity"  /></th>
+<th><input type="number" id="total7" name="total" value="0" readonly></th>
 <th> 4</th>
-<th><input type="number" value="50" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
-</tr>
+<th><input type="number" value="50" readonly id="note8" name="note" /></th>
+<th><input type="number"  id="Quantity8" name="Quantity"  /></th>
+<th><input type="number" id="total8" name="total" value="0" readonly></th>
 <tr>
 <th> 5</th>
-<th><input type="number" value="20" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="t5" ></p></th>
+<th><input type="number" value="20" readonly id="note9" name="note" /></th>
+<th><input type="number" id="Quantity9"  name="Quantity"  /></th>
+<th><input type="number" id="total9" name="total" value="0" readonly></th>
 <th> 5</th>
-<th><input type="number" value="20" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="20" readonly id="note10" name="note" /></th>
+<th><input type="number"  id="Quantity10" name="Quantity"  /></th>
+<th><input type="number" id="total10" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 6</th>
-<th><input type="number" value="10" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="10" readonly id="note11" name="note" /></th>
+<th><input type="number" id="Quantity11"  name="Quantity"  /></th>
+<th><input type="number" id="total11" name="total" value="0" readonly></th>
 <th> 6</th>
-<th><input type="number" value="10" readonly  id="no6" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="10" readonly id="note12" name="note" /></th>
+<th><input type="number" id="Quantity12"  name="Quantity"  /></th>
+<th><input type="number" id="total12" name="total" value="0" readonly></th>
 </tr>
-<tr>
+<tr> 
 <th> 7</th>
-<th><input type="number" value="10" readonly  id="note" /></th>
-<th><input type="number"  id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="10" readonly id="note13" name="note" /></th>
+<th><input type="number" id="Quantity13" name="Quantity"  /></th>
+<th><input type="number" id="total13" name="total" value="0" readonly></th>
 <th> 7</th>
-<th> ANUP BALANCE </th>
-<th><input type="number"  required></th>
+<th><input  readonly value="ANUP BALANCE " name="note" />  </th>
+<th><input type="number" name="Quantity" id="anup" required></th>
+<th><input type="number" id="total17" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 8</th>
-<th><input type="number" value="5" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="5" readonly id="note14" name="note" /></th>
+<th><input type="number" id="Quantity14"  name="Quantity"  /></th>
+<th><input type="number" id="total14" name="total" value="0" readonly></th>
 <th> 8</th>
-<th> DIPIKA BALANCE</th>
-<th><input type="number"  required></th>
-<th id="total">0</th>
+<th><input  readonly value="DIPIKA BALANCE " name="note" /> </th>
+<th><input type="number" name="Quantity" id="dipika" required></th>
+<th><input type="number" id="total18" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 9</th>
-<th><input type="number" value="2" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="2" readonly id="note15" name="note" /></th>
+<th><input type="number" id="Quantity15"  name="Quantity"  /></th>
+<th><input type="number" id="total15"  name="total" value="0" readonly></th>
 <th> 9</th>
-<th> LOAN PAYMENT</th>
-<th><input type="number"  required></th>
-<th id="total">0</th>
+<th><input  readonly value="LOAN PAYMENT " name="note" /> </th>
+<th><input type="number" name="Quantity" value="-240000" readonly id="loan" required></th>
+<th><input type="number" id="total19" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 10</th>
-<th><input type="number" value="1" readonly  id="note" /></th>
-<th><input type="number"   id="Quantity"  /></th>
-<th><p type="number"   id="total" ></p></th>
+<th><input type="number" value="1" readonly id="note16" name="note" /></th>
+<th><input type="number"  id="Quantity16" name="Quantity"  /></th>
+<th><input type="number" id="total16" name="total" value="0" readonly></th>
 <th>10</th>
-<th> 1</th>
-<th><input type="number"  required></th>
-<th id="total">0</th>
+<th><input  readonly value="Total Nonessue Note " name="note" /></th>
+<th><input type="number" id="non" name="Quantity" required></th>
+<th><input type="number" id="total20" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 11</th>
-<th> BC CASH BALANCE</th>
-<th><input type="number"   id="Quantity"></th>
-<th><p id="total"></p></th>
+<th> <input  readonly value="BC CASH BALANCE " name="note" /></th>
+<th><input type="number"  id="bc" name="Quantity"></th>
+<th><input type="number" id="total21" name="total" value="0" readonly></th>
 <th>11</th>
-<th> EXC </th>
-<th><input type="number"  id="Quantity"></th>
-<th><p id="total"></p></th>
+<th><input  readonly value="EXC " name="note" /></th>
+<th><input type="number" id="exc" name="Quantity"></th>
+<th><input type="number" id="total22" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 12</th>
-<th> AC CASH BALANCE</th>
-<th><input type="number"  id="Quantity"></th>
-<th><p id="total"></p></th>
+<th> <input  readonly value="AC CASH BALANCE " name="note" /></th>
+<th><input type="number" id="ac" name="Quantity"></th>
+<th><input type="number" id="total23" name="total" value="0" readonly></th>
 
 <th>12</th>
-<th> TOTAL DAMAGE NOTE</th>
-<th><input readonly type="number"  id="Quantity"></th>
-<th><p id="total"></p></th>
+<th> <input  readonly value="Office Ecpences " name="note" /></th>
+<th><input  type="number"  id="ofe" name="Quantity"></th>
+<th><input type="number" id="total24" name="total" value="0" readonly></th>
 </tr>
 <tr>
 <th> 13</th>
-<th> PENDING CASH</th>
-<th><input type="number"  id="Quantity"></th>
-<th><p id="total"></p></th>
+<th><input  readonly value="PENDING CASH " name="note" /> </th>
+<th><input type="number"  id="pc" name="Quantity"></th>
+<th><input type="number" id="total25" name="total" value="0" readonly></th>
 <th>13</th>
-<th>OD</th>
-<th><input type="number" ></th>
-<th id="total">0</th>
+<th><input  readonly value="OPENING BALANCE " name="note" /></th>
+<th><input name="Quantity"  id="ob" type="number" ></th>
+<th><input type="number" id="total26" name="total" value="0" readonly></th>
 </tr>
-<th colspan="2">TOTAL BALANCE</th><th colspan="6"> <p  id="all"></p> </th>
+<th colspan="2">TOTAL BALANCE</th><th colspan="6" ><input type="number" id="all_total" name="all_total" value="0" readonly> </th>
 
 </table>
 </body>
