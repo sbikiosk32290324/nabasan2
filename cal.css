@@ -8,8 +8,9 @@ background-color: #095de3
    
 } 
 
-.btn
+..btn , .NoPrint 
 {
+    display: none;
     background-color: #04AA6D; /* Green */
   border: none;
   color: white;
