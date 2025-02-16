@@ -2,7 +2,9 @@
 .body 
 {
     background-image: url("log.jpeg");
-  
+  background-size: 109%;
+	  width: 100%;
+	height: 92%;
   
    
 }
