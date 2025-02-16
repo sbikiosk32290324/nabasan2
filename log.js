@@ -164,7 +164,23 @@ var dt1 = new Date();
 document.getElementById("time").innerHTML = dt1.toLocaleTimeString();
 
 
-document.getElementById("Quantity1").max = "10";
+document.getElementById("Quantity1").max = "1000";
+document.getElementById("Quantity2").max = "1000";
+	    document.getElementById("Quantity3").max = "1000";
+	    document.getElementById("Quantity4").max = "1000";
+	    document.getElementById("Quantity5").max = "1000";
+	    document.getElementById("Quantity6").max = "1000";
+	    document.getElementById("Quantity7").max = "1000";
+	    document.getElementById("Quantity8").max = "1000";
+	    document.getElementById("Quantity9").max = "1000";
+	    document.getElementById("Quantity10").max = "1000";
+	    document.getElementById("Quantity11").max = "1000";
+	    document.getElementById("Quantity12").max = "1000";
+	    document.getElementById("Quantity13").max = "1000";
+	    document.getElementById("Quantity14").max = "1000";
+	    document.getElementById("Quantity15").max = "1000";
+	    document.getElementById("Quantity16").max = "1000";
+	    
 	  }
 	  
 function GetPrint()
