@@ -108,7 +108,7 @@ function multiply()
 	  var total25= document.getElementById("total25").value;
 	  var total26= document.getElementById("total26").value;
 	 
-	  var all1=+(total1)+ +(total3)+ +(total5)+ +(total7)+ +(total9)+ +(total11)+ +(total14)+ +(total15)+ +(total16)+ +(total17)+ +(total18)+ +(total19)+ +(total20)+ +(total21)+ +(total22)+ +(total23)+ +(total24)+ +(total25);
+	  var all1=+(total1)+ +(total3)+ +(total5)+ +(total7)+ +(total9)+ +(total11)+ +(total14)+ +(total15)+ +(total16)+ +(total17)+ +(total18)+ +(total19)+ +(total2)+ +(total4)+ +(total6)+ +(total8)+ +(total10)+ +(total12)+ +(total21)+ +(total22)+ +(total23)+ +(total24)+ +(total25);
 	  document.getElementById("all_total").value=all1;
 	  
 	  var qt20=+(qnt2)+ +(qnt4)+ +(qnt6)+ +(qnt8)+ +(qnt10)+ +(qnt12);
