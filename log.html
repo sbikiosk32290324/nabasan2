@@ -22,17 +22,14 @@
 <div class="col-4">
                      
 	
-	<div class="input-group mb-3">
-                            <p class="timer">Date: <span name="date" class="timer" id="date"></span></p>
-							<p class="timer">Time: <span class="timer" name="time" id="time"></span></p>
-                            
-                        </div>
+	
 	<!-- Change action -->
-  <form > 
+ <form method="POST" class="needs-validation" novalidate   action="https://script.google.com/macros/s/AKfycbwYlO7mznSqbxSddCqqeSJq4Mr0QNKZkUppc9DwxT8UqPmh_bQRvR3D4ZCBhoe0krtH/exec" > 
 
 <table onchange="multiply(this)" >
 <tr>
-<th></th><th colspan="8"> DATE <input type="date" name="inv_dt"  value="2023-01-26"><button type="button" class="btn btn-primary" onclick="Search()">Search</button> </th>
+<th></th><th colspan="8"> DATE <input type="date" class="form-control" 
+                                   placeholder="Inv. Date" name="inv_dt"><button type="button" class="btn btn-primary" onclick="Search()">Search</button> </th>
 
 <tr>
 <th></th><th colspan="8" class="header"> NABASAN CASH BALANCE </th></tr>
