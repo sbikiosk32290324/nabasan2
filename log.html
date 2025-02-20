@@ -24,7 +24,7 @@
 	
 	
 	<!-- Change action -->
- <form method="POST" class="needs-validation" novalidate   action="https://script.google.com/macros/s/AKfycbwY-UFbyCNcAswUy2uBRlxHUjNqUyDlLDA9fwKAOjO-34REUbn6egRmqBtKd4u3NogY/exec" > 
+ <form method="POST" class="needs-validation" novalidate   > 
 
 <table onchange="multiply(this)" >
 <tr>
@@ -282,7 +282,7 @@
  $.ajax({
  url:"https://script.google.com/macros/s/AKfycbwYlO7mznSqbxSddCqqeSJq4Mr0QNKZkUppc9DwxT8UqPmh_bQRvR3D4ZCBhoe0krtH/exec",
  type:"post",
- data:{},
+ data:{inv_dt:inv_dt, op:op, all_total:all_total, db:db, note:note, Quantity:Quantity,  total:total, note2:note2, Quantity2:Quantity2, total2:total2, note3:note3, Quantity3:Quantity3,  total3:total3, note4:note4, Quantity4:Quantity4,  total4:total4, note5:note5, Quantity5:Quantity5,  total5:total5, note6:note6, Quantity6:Quantity6,  total6:total6, note7:note7, Quantity7:Quantity7,  total7:total7,note8:note8, Quantity8:Quantity8,  total8:total8,note9:note9, Quantity9:Quantity9,  total9:total9,note10:note10, Quantity10:Quantity10,  total10:total10,note11:note11, Quantity11:Quantity11,  total11:total11,note12:note12, Quantity12:Quantity12,  total12:total12,note13:note13, Quantity13:Quantity13,  total13:total13,note14:note14, Quantity14:Quantity14,  total14:total14,note15:note15, Quantity15:Quantity15,  total15:total15,note16:note16, Quantity16:Quantity16,  total16:total16,note17:note17, Quantity17:Quantity17,  total17:total17,note18:note18, Quantity18:Quantity18,  total18:total18,note19:note19, Quantity19:Quantity19,  total19:total19,note20:note20, Quantity20:Quantity20,  total20:total20,note21:note21, Quantity21:Quantity21,  total21:total21,note22:note22, Quantity22:Quantity22,  total22:total22,note23:note23, Quantity23:Quantity23,  total23:total23,note24:note24, Quantity24:Quantity24,  total24:total24,note25:note25, Quantity25:Quantity25, total25:total25,note26:note26,Quantity26:Quantity26, total26:total26},
  Success:function(data){
  /*console.log(data);*/
  $("#sub").html("Submit");
