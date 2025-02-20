@@ -205,6 +205,7 @@ function SetCurrentDate()
     $('input[name="inv_dt"]').val(CurrDate);
 
 }
+
 function FormValidation()
 {
     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -227,47 +228,4 @@ function FormValidation()
         }, false)
       })
   })()
-}
-function Search(pNo="")
-{
-        var no = $('#inv_dt').val();
-
-		if (pNo != "") no = pNo;
-
-        $.getJSON("https://script.google.com/macros/s/AKfycbyrNCGmKLwBwJPdNoQydVCf11NfyxpK-9vt0L23JiURNA9-UMBQlGVq3WV6NpuJfLd0/exec"+no,
-        function (data) {
-
-         
-          //alert(data);
-         // console.log(data);
-          if (data == "NOT FOUND")
-          {
-            alert('Invoice No. Not Found...');
-
-          }
-          else
-          {
-            //var record = data;
-            var record   = data.record;
-
-            var StartRow = data.SR;
-            var RowCount = data.CNT;
-
-            $('#IsNew').val('N');
-            $('#StartRow').val(StartRow);
-            $('#RowCount').val(RowCount);
-         
-            var i = 0;
-            $.each(record, function(key, value)
-            {
-           
-           
-
-            GetTotal();
-			ReGenSrNo();
-
-          }
-        });
-		$('#exampleModal').modal('hide');
-		 
 }
