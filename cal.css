@@ -24,7 +24,9 @@ background-color: #095de3
 
 .form-control
 {
-    border: 1px;
+    border: 2px;
+    bordercolour:blue;
+	
 }
 
 .input-group-text
