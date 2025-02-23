@@ -206,29 +206,7 @@ function SetCurrentDate()
 
 }
 
-function FormValidation()
-{
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-    'use strict'
- 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
- 
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
- 
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
-}
+
 function getData() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   var data = sheet.getDataRange().getValues();
@@ -264,14 +242,7 @@ function Search(pNo="")
             $('#RowCount').val(RowCount);
          
             var i = 0;
-            $.each(record, function(key, value)
-            
-            });
-
-            GetTotal();
-			ReGenSrNo();
-
-          }
+           
         });
 		$('#exampleModal').modal('hide');
 		 
