@@ -157,11 +157,7 @@ function multiply()
 	  document.getElementById("db").value=mib;
 	  
 	  
-var dt = new Date();
-document.getElementById("date").innerHTML = dt.toLocaleDateString();
 
-var dt1 = new Date();
-document.getElementById("time").innerHTML = dt1.toLocaleTimeString();
 
 
 document.getElementById("Quantity1").max = "1000";
