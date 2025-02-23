@@ -207,10 +207,6 @@ function SetCurrentDate()
 }
 
 
-function getData() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = sheet.getDataRange().getValues();
-  return JSON.stringify(data);
 
 function Search(pNo="")
 {
