@@ -233,3 +233,47 @@ function getData() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   var data = sheet.getDataRange().getValues();
   return JSON.stringify(data);
+
+function Search(pNo="")
+{
+        var no = $('#inv_dt').val();
+
+		if (pNo != "") no = pNo;
+
+        $.getJSON("https://script.google.com/macros/s/AKfycbwY-UFbyCNcAswUy2uBRlxHUjNqUyDlLDA9fwKAOjO-34REUbn6egRmqBtKd4u3NogY/exec"+no,
+        function (data) {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "NOT FOUND")
+          {
+            alert('Invoice No. Not Found...');
+
+          }
+          else
+          {
+            //var record = data;
+            var record   = data.record;
+
+            var StartRow = data.SR;
+            var RowCount = data.CNT;
+
+            $('#IsNew').val('N');
+            $('#StartRow').val(StartRow);
+            $('#RowCount').val(RowCount);
+         
+            var i = 0;
+            $.each(record, function(key, value)
+            
+            });
+
+            GetTotal();
+			ReGenSrNo();
+
+          }
+        });
+		$('#exampleModal').modal('hide');
+		 
+}
+
