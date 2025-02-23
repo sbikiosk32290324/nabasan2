@@ -242,8 +242,111 @@ function Search(pNo="")
             $('#RowCount').val(RowCount);
          
             var i = 0;
+		  $.each(record, function(key, value)
+            {
            
+              if (i == 0)
+              {
+                var dt = value[1].substring(0,100);
+               
+                document.getElementsByName("inv_dt")[0].value = value[0];		
+ document.getElementsByName("inv_op")[0].value = value[1];		
+ document.getElementsByName("inv_all_total")[0].value = value[2];		
+ document.getElementsByName("inv_db")[0].value = value[3];		
+ document.getElementsByName("inv_note")[0].value = value[4];		
+ document.getElementsByName("inv_Quantity")[0].value = value[5];		
+ document.getElementsByName("inv_total")[0].value = value[6];		
+ document.getElementsByName("inv_note2")[0].value = value[6];		
+ document.getElementsByName("inv_Quantity2")[0].value = value[8];		
+ document.getElementsByName("inv_total2")[0].value = value[9];		
+ document.getElementsByName("inv_note2	").value = value[10];
+ document.getElementsByName("inv_Quantity2	").value = value[11];
+ document.getElementsByName("inv_total2	").value = value[12];
+ document.getElementsByName("inv_note3	").value = value[13];
+ document.getElementsByName("inv_Quantity3	").value = value[14];
+ document.getElementsByName("inv_total3	").value = value[15];
+ document.getElementsByName("inv_note4	").value = value[16];
+ document.getElementsByName("inv_Quantity4	").value = value[17];
+ document.getElementsByName("inv_total4	").value = value[18];
+ document.getElementsByName("inv_note5	").value = value[19];
+ document.getElementsByName("inv_Quantity5	").value = value[20];
+ document.getElementsByName("inv_total5	").value = value[21];
+ document.getElementsByName("inv_note6	").value = value[22];
+ document.getElementsByName("inv_Quantity6	").value = value[23];
+ document.getElementsByName("inv_total6	").value = value[24];
+ document.getElementsByName("inv_note7	").value = value[025];
+ document.getElementsByName("inv_Quantity7	").value = value[26];
+ document.getElementsByName("inv_total7	").value = value[27];
+ document.getElementsByName("inv_note8	").value = value[28];
+ document.getElementsByName("inv_Quantity8	").value = value[29];
+ document.getElementsByName("inv_total8	").value = value[30];
+ document.getElementsByName("inv_note9	").value = value[31];
+ document.getElementsByName("inv_Quantity9	").value = value[32];
+ document.getElementsByName("inv_total9	").value = value[33];
+ document.getElementsByName("inv_note10	").value = value[34];
+ document.getElementsByName("inv_Quantity10	").value = value[35];
+ document.getElementsByName("inv_total10	").value = value[36];
+ document.getElementsByName("inv_note11	").value = value[37];
+ document.getElementsByName("inv_Quantity11	").value = value[38];
+ document.getElementsByName("inv_total11	").value = value[39];
+ document.getElementsByName("inv_note12	").value = value[40];
+ document.getElementsByName("inv_Quantity12	").value = value[41];
+ document.getElementsByName("inv_total12	").value = value[42];
+ document.getElementsByName("inv_note13	").value = value[43];
+ document.getElementsByName("inv_Quantity13	").value = value[44];
+ document.getElementsByName("inv_total13	").value = value[45];
+ document.getElementsByName("inv_note14	").value = value[46];
+ document.getElementsByName("inv_Quantity14	").value = value[47];
+ document.getElementsByName("inv_total14	").value = value[48];
+ document.getElementsByName("inv_note15	").value = value[49];
+ document.getElementsByName("inv_Quantity15	").value = value[50];
+ document.getElementsByName("inv_total15	").value = value[51];
+ document.getElementsByName("inv_note16	").value = value[52];
+ document.getElementsByName("inv_Quantity16	").value = value[53];
+ document.getElementsByName("inv_total16	").value = value[54];
+ document.getElementsByName("inv_note17	").value = value[55];
+ document.getElementsByName("inv_Quantity17	").value = value[56];
+ document.getElementsByName("inv_total17	").value = value[57];
+ document.getElementsByName("inv_note18	").value = value[58];
+ document.getElementsByName("inv_Quantity18	").value = value[59];
+ document.getElementsByName("inv_total18	").value = value[60];
+ document.getElementsByName("inv_note19	").value = value[61];
+ document.getElementsByName("inv_Quantity19	").value = value[62];
+ document.getElementsByName("inv_total19	").value = value[63];
+ document.getElementsByName("inv_note20	").value = value[64];
+ document.getElementsByName("inv_Quantity20	").value = value[65];
+ document.getElementsByName("inv_total20	").value = value[66];
+ document.getElementsByName("inv_note21	").value = value[67];
+ document.getElementsByName("inv_Quantity21	").value = value[68];
+ document.getElementsByName("inv_total21	").value = value[69];
+ document.getElementsByName("inv_note22	").value = value[70];
+ document.getElementsByName("inv_Quantity22	").value = value[71];
+ document.getElementsByName("inv_total22	").value = value[72];
+ document.getElementsByName("inv_note23	").value = value[73];
+ document.getElementsByName("inv_Quantity23	").value = value[74];
+ document.getElementsByName("inv_total23	").value = value[75];
+ document.getElementsByName("inv_note24	").value = value[76];
+ document.getElementsByName("inv_Quantity24	").value = value[77];
+ document.getElementsByName("inv_total24	").value = value[78];
+ document.getElementsByName("inv_note25	").value = value[79];
+ document.getElementsByName("inv_Quantity25	").value = value[80];
+ document.getElementsByName("inv_total25	").value = value[81];
+ document.getElementsByName("inv_note26	").value = value[82];
+ document.getElementsByName("inv_Quantity26	").value = value[83];
+ document.getElementsByName("inv_total26	").value = value[84];
+
+              }
+
+              i = i + 1;
+            });
+
+            GetTotal();
+			ReGenSrNo();
+
+          }
         });
+           
+       
 		$('#exampleModal').modal('hide');
 		 
 }
