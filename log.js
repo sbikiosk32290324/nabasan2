@@ -351,3 +351,52 @@ function Search(pNo="")
 		 
 }
 
+function ShowAllData()
+{
+	$(document).ready(function (){
+		
+		$.getJSON("https://script.google.com/macros/s/AKfycbwY-UFbyCNcAswUy2uBRlxHUjNqUyDlLDA9fwKAOjO-34REUbn6egRmqBtKd4u3NogY/exec",
+        function (data) {
+	
+		var Table="", Rows="", Columns="";
+		$.each(data, function(key, value)
+		{
+			var Invdt="";
+			Columns ="";
+			i=0;
+			$.each(value, function(key1, value1)
+			{
+				i++;
+				if (i ==2) 
+				{
+					value1 = "" + value1;
+					value1 = value1.substring(0, 10);	
+				}
+				Columns = Columns + '<td>' + value1 + '</td>';
+				if (Invdt == "") Invdt = value1;
+				
+				
+			});
+			Rows = Rows + '<tr onclick="Search('+Invdt+')">' + Columns + '</tr>';
+		});
+		
+		$("#MyTBody").html(Rows);
+		$('#exampleModal').modal('show');
+	});	
+	});			
+
+}
+function getData() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = sheet.getDataRange().getValues();
+  return JSON.stringify(data);
+}
+function displayResults(results) {
+        const resultsTd = document.getElementById('results');
+        resultsTd.innerHTML = '';
+        results.forEach(row => {
+          const td = document.createElement('td');
+          div.textContent = row.join(', ');
+          resultstd.appendChild(td);
+        });
+      }
