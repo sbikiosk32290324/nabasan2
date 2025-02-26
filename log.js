@@ -176,6 +176,24 @@ document.getElementById("Quantity2").max = "1000";
 	    document.getElementById("Quantity14").max = "1000";
 	    document.getElementById("Quantity15").max = "1000";
 	    document.getElementById("Quantity16").max = "1000";
+	    var no = $('#db').val();
+	    function (data)
+	    {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "0>")
+          {
+		  color(red);
+            alert('Please Check All Amount ');
+		  if (data == "0")
+		  {
+			color(green);  
+		  }
+
+          }
+          
 	    
 	  }
 	  
