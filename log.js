@@ -110,6 +110,7 @@ function multiply()
 	 
 	  var all1=+(total1)+ +(total2)+ +(total3)+ +(total4)+ +(total5)+ +(total6)+ +(total7)+ +(total8)+  +(total9)+ +(total10)+ +(total11)+ +(total12)+ +(total13)+ +(total14)+ +(total15)+ +(total16)+ +(total17)+ +(total18)+ +(total19)+ +(total21)+ +(total22)+ +(total23)+ +(total24)+ +(total25);
 	  document.getElementById("all_total").value=all1;
+	    document.getElementById("all_total1").value=all1;
 	  
 	  var qt20=+(qnt2)+ +(qnt4)+ +(qnt6)+ +(qnt8)+ +(qnt10)+ +(qnt12);
 	  document.getElementById("non").value=qt20;
