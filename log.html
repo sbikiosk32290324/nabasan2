@@ -36,7 +36,8 @@
 </head>
 <body >
 <div class="container ">
-  <form     id="form"   >
+  <form     method: "POST" id="form"   >
+	   <div id="res" style="colour:green;font-size:16px;"></div>
  <div class="card mt-3">
             <div class="card-header text-center">
              <h4 class="header"> NABASAN CASH BALANCE </h4>
@@ -89,7 +90,7 @@
                         </div>
                     </div>
                </div>
-		    <div id="res" style="colour:green;font-size:16px;"></div>
+		   
 			   
                <input type="hidden"  id="IsNew"    name="IsNew"    value="Y">
                <input type="hidden"  id="StartRow" name="StartRow" value="0"> 
@@ -243,7 +244,7 @@
 
 </table>
 
-                      <button type="submit" name="btn" class="btn btn-primary" >submit</button>
+                      <button  name="btn" class="btn btn-primary" >submit</button>
 					  
                         <button type="button" class="btn btn-primary" onclick="GetPrint()">Print</button>
 
@@ -254,17 +255,19 @@
             let url='https://script.google.com/macros/s/AKfycbxYt88Gt14swxZAw3dHAJ-DyY_K-G3U82lsIQWJOS1pEJLYv7tN19DcpvXLjUDrLi2s/exec';
 		let form=document.querySelector('#form');
 		form.addEventListener("submit",(e)=>{
+			
 			e.target.btn.innerHTML="submitting....";
 			let d=new FormData(form);
 			fatch(url,{
-                method: 'POST',
-                body: d
+                method: "POST",
+                body:d
             })
             .then((res) => res.text())
-            .then((finalRes) => {
+            .then((finalRes) =>{
 		    e.target.btn.innerHTML="submit";
                 
                 document.getElementById('res').innerHTML=finalRes;
+		    form.reset();
 		    setTimeout(()=>{
 			    document.getElementById('res').innerHTML='';
             },5000)
