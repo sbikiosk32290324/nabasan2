@@ -251,29 +251,23 @@
  
  </form>
 	<script>
-       
-            let url='https://script.google.com/macros/s/AKfycbxYt88Gt14swxZAw3dHAJ-DyY_K-G3U82lsIQWJOS1pEJLYv7tN19DcpvXLjUDrLi2s/exec';
-		let form=document.querySelector('#form');
-		form.addEventListener("submit",(e)=>{
-			
-			e.target.btn.innerHTML="submitting....";
-			let d=new FormData(form);
-			fatch(url,{
-                method: "POST",
-                body:d
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('https://script.google.com/macros/s/AKfycbwY-UFbyCNcAswUy2uBRlxHUjNqUyDlLDA9fwKAOjO-34REUbn6egRmqBtKd4u3NogY/exec', {
+                method: 'POST',
+                body: formData
             })
-            .then((res) => res.text())
-            .then((finalRes) =>{
-		    e.target.btn.innerHTML="submit";
-                
-                document.getElementById('res').innerHTML=finalRes;
-		    form.reset();
-		    setTimeout(()=>{
-			    document.getElementById('res').innerHTML='';
-            },5000)
-            e.preventDefault();
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                document.getElementById('form').reset();
+            })
+            .catch(error => console.error('Error:', error));
         });
     </script>
+		
+  
  </body>
 	
 
