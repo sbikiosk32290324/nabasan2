@@ -206,6 +206,111 @@ function SetCurrentDate()
 
 }
 
+function Search()
+{
+        var no = $('#inv_no').val();                      //01
+        $.getJSON("https://script.google.com/macros/s/AKfycbycE8dz2B5SorWCToVP0j0wulS65wgVVpFK7RcQJEVZY_BGwcGzfNhzC7HojEKPhXpn/exec?page=search&no="+no, 
+        function (data) {                                 //02
+          if (data == "NOT FOUND") {                      //03
+            alert('SL No. Not Found...');
+          }
+          else {                                          //04
+            var record = data;
+            var i = 0;
+            $.each(record, function(key, value) {         //05
+                  if (i == 0) {                           //06
+                      var dt = value[1].substring(0,10);  //07
+                      document.getElementsByName("inv_dt")[0].value = dt;
+                      document.getElementsByName("inv_no")[0].value = value[1];
+                      document.getElementsByName("cust_nm")[0].value = value[2];
+                      document.getElementsByName("addr")[0].value = value[3];
+                      document.getElementsByName("city")[0].value = value[4];
+                                                    
+                     document.getElementsByName("note	")[0].value     = value[	5	];
+document.getElementsByName("Quantity	")[0].value     = value[	6	];
+document.getElementsByName("total	")[0].value     = value[	7	];
+document.getElementsByName("note2	")[0].value     = value[	8	];
+document.getElementsByName("Quantity2	")[0].value     = value[	9	];
+document.getElementsByName("total2	")[0].value     = value[	10	];
+document.getElementsByName("note3	")[0].value     = value[	11	];
+document.getElementsByName("Quantity3	")[0].value     = value[	12	];
+document.getElementsByName("total3	")[0].value     = value[	13	];
+document.getElementsByName("note4	")[0].value     = value[	14	];
+document.getElementsByName("Quantity4	")[0].value     = value[	15	];
+document.getElementsByName("total4	")[0].value     = value[	16	];
+document.getElementsByName("note5	")[0].value     = value[	17	];
+document.getElementsByName("Quantity5	")[0].value     = value[	18	];
+document.getElementsByName("total5	")[0].value     = value[	19	];
+document.getElementsByName("note6	")[0].value     = value[	20	];
+document.getElementsByName("Quantity6	")[0].value     = value[	21	];
+document.getElementsByName("total6	")[0].value     = value[	22	];
+document.getElementsByName("note7	")[0].value     = value[	23	];
+document.getElementsByName("Quantity7	")[0].value     = value[	24	];
+document.getElementsByName("total7	")[0].value     = value[	25	];
+document.getElementsByName("note8	")[0].value     = value[	26	];
+document.getElementsByName("Quantity8	")[0].value     = value[	27	];
+document.getElementsByName("total8	")[0].value     = value[	28	];
+document.getElementsByName("note9	")[0].value     = value[	29	];
+document.getElementsByName("Quantity9	")[0].value     = value[	30	];
+document.getElementsByName("total9	")[0].value     = value[	31	];
+document.getElementsByName("note10	")[0].value     = value[	32	];
+document.getElementsByName("Quantity10	")[0].value     = value[	33	];
+document.getElementsByName("total10	")[0].value     = value[	34	];
+document.getElementsByName("note11	")[0].value     = value[	35	];
+document.getElementsByName("Quantity11	")[0].value     = value[	36	];
+document.getElementsByName("total11	")[0].value     = value[	37	];
+document.getElementsByName("note12	")[0].value     = value[	38	];
+document.getElementsByName("Quantity12	")[0].value     = value[	39	];
+document.getElementsByName("total12	")[0].value     = value[	40	];
+document.getElementsByName("note13	")[0].value     = value[	41	];
+document.getElementsByName("Quantity13	")[0].value     = value[	42	];
+document.getElementsByName("total13	")[0].value     = value[	43	];
+document.getElementsByName("note14	")[0].value     = value[	44	];
+document.getElementsByName("Quantity14	")[0].value     = value[	45	];
+document.getElementsByName("total14	")[0].value     = value[	46	];
+document.getElementsByName("note15	")[0].value     = value[	47	];
+document.getElementsByName("Quantity15	")[0].value     = value[	48	];
+document.getElementsByName("total15	")[0].value     = value[	49	];
+document.getElementsByName("note16	")[0].value     = value[	50	];
+document.getElementsByName("Quantity16	")[0].value     = value[	51	];
+document.getElementsByName("total16	")[0].value     = value[	52	];
+document.getElementsByName("note17	")[0].value     = value[	53	];
+document.getElementsByName("Quantity17	")[0].value     = value[	54	];
+document.getElementsByName("total17	")[0].value     = value[	55	];
+document.getElementsByName("note18	")[0].value     = value[	56	];
+document.getElementsByName("Quantity18	")[0].value     = value[	57	];
+document.getElementsByName("total18	")[0].value     = value[	58	];
+document.getElementsByName("note19	")[0].value     = value[	59	];
+document.getElementsByName("Quantity19	")[0].value     = value[	60	];
+document.getElementsByName("total19	")[0].value     = value[	61	];
+document.getElementsByName("note20	")[0].value     = value[	62	];
+document.getElementsByName("Quantity20	")[0].value     = value[	63	];
+document.getElementsByName("total20	")[0].value     = value[	64	];
+document.getElementsByName("note21	")[0].value     = value[	65	];
+document.getElementsByName("Quantity21	")[0].value     = value[	66	];
+document.getElementsByName("total21	")[0].value     = value[	67	];
+document.getElementsByName("note22	")[0].value     = value[	68	];
+document.getElementsByName("Quantity22	")[0].value     = value[	69	];
+document.getElementsByName("total22	")[0].value     = value[	70	];
+document.getElementsByName("note23	")[0].value     = value[	71	];
+document.getElementsByName("Quantity23	")[0].value     = value[	72	];
+document.getElementsByName("total23	")[0].value     = value[	73	];
+document.getElementsByName("note24	")[0].value     = value[	74	];
+document.getElementsByName("Quantity24	")[0].value     = value[	75	];
+document.getElementsByName("total24	")[0].value     = value[	76	];
+document.getElementsByName("note25	")[0].value     = value[	77	];
+document.getElementsByName("Quantity25	")[0].value     = value[	78	];
+document.getElementsByName("total25	")[0].value     = value[	79	];
+document.getElementsByName("note26	")[0].value     = value[	80	];
+document.getElementsByName("Quantity26	")[0].value     = value[	81	];
+document.getElementsByName("total26	")[0].value     = value[	82	];
 
+
+                  }
+                  
+            });
+          }
+        });
+}
 
 
