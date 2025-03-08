@@ -208,7 +208,7 @@ function SetCurrentDate()
 
 function Search()
 {
-        var no = $('#inv_no').val();                      //01
+        var no = $('#inv_dt').val();                      //01
         $.getJSON("https://script.google.com/macros/s/AKfycbycE8dz2B5SorWCToVP0j0wulS65wgVVpFK7RcQJEVZY_BGwcGzfNhzC7HojEKPhXpn/exec?page=search&no="+no, 
         function (data) {                                 //02
           if (data == "NOT FOUND") {                      //03
