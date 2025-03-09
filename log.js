@@ -209,7 +209,7 @@ function SetCurrentDate()
 function Search()
 {
         var no = $('#inv_dt').val();                      //01
-        $.getJSON("https://script.google.com/macros/s/AKfycbwU5aBdqeRT2htq51hg8YbS3DfQ8NqwIH8Rqo3X1XA/dev?page=search&no="+no, 
+        $.getJSON("https://script.google.com/macros/s/AKfycbwd0o49OAD6DMjyPENu0d_q4UNYC5iS5oS2aiMPjMPVRveDtyjQQzAoHuCQoCptXnJw/exec?page=search&no="+no, 
         function (data) {                                 //02
           if (data == "NOT FOUND") {                      //03
             alert('SL No. Not Found...');
