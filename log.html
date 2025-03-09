@@ -67,20 +67,25 @@
                         </div>
                     </div>
                     <div class="col-4">
-                      
-                       
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" >Cash. Date</span>
-                            <input type="number" class="form-control" 
-                                   placeholder="Inv. Date" name="inv_dt">
-				<div class="input-group-append">
+                      <div class="input-group mb-3">
+                            <span class="input-group-text" >Inv. No</span>
+                            <input type="text" class="form-control" 
+                                   placeholder="Inv. No"  id="inv_no" 
+                                   name="inv_no" autocomplete="off" 
+                                   required >
+                            <div class="input-group-append">
                                   <button class="btn btn-outline-secondary"  
                                           type="button" onclick="Search();">
                                       <i class="bi bi-search"></i></button>
                             </div>
-                            <div class="valid-feedback">cash. is 
+                            <div class="valid-feedback">Invoice No. is 
                             OK</div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Inv. Date</span>
+                            <input type="date" class="form-control" 
+                                   placeholder="Inv. Date" name="inv_dt">
                         </div>
                     </div>
                </div>
