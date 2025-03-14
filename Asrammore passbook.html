@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" ></script>
     <!-- For Invoice  -->
     <script >
-       $(document).ready(function () {
+     $(document).ready(function () {
     FormValidation();
     FillDataList();
     MaxInv();
@@ -30,7 +30,7 @@
  
  function FillDataList()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbxM3x6JUFlu4qXvlfCTzQJPVdBVCf3WUIK-9H9wxUy8tfsH5tlaWNKmKU9ah1VB3PXY/exec?page=dropdown",
+        $.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=dropdown",
        
         function (data) {
 
@@ -48,7 +48,7 @@
 
 function MaxInv()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbxM3x6JUFlu4qXvlfCTzQJPVdBVCf3WUIK-9H9wxUy8tfsH5tlaWNKmKU9ah1VB3PXY/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=max",
         function (data) {
          
           $("input[name='sn']").val(data);
@@ -88,7 +88,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxM3x6JUFlu4qXvlfCTzQJPVdBVCf3WUIK-9H9wxUy8tfsH5tlaWNKmKU9ah1VB3PXY/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=search&no="+no,
         function (data) {
 
          
@@ -158,7 +158,7 @@ function Search1(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbwlNCCCxt1Rq7Vr_B24_wvm9RpvOFWvEh_Coi0tSB6eOjrrYB2Vc_eJqZD2y-Fkqere/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbxOtl0GfdpiSJyW1PJSjp_zk5qLbSesDT3atHB6nQpxqyW6DAiDvVOg4J1mrkrIxnRg/exec?page=search&no="+no,
         function (data) {
 
          
@@ -228,7 +228,7 @@ function Search2(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbzHIH-vuZHJ6Idler6FaqHlcycmHzZcx-9spIRvKr-O4Hprl1pGw6Rii9C0bgnKarFc/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbybv4FZLgDFg2jEYL_cgMyQD76azGcarKQ72cobi5UNahax7rpTTt87rf_lrXtBnuzj/exec?page=search&no="+no,
         function (data) {
 
          
@@ -298,7 +298,7 @@ function Search3(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxuv5PCRypiVErOQm9fwf3HFcdbnQhNqCkKtk30brwvCjfg6MHbB04pDKq2w0do5g_z/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwKh0M1mDY2kF3grv6BpRxRVCjnBnA6_NZO56gXivXlNZwLOYKBTXmWf2il6PwRmZ-K/exec?page=search&no="+no,
         function (data) {
 
          
@@ -368,7 +368,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbxM3x6JUFlu4qXvlfCTzQJPVdBVCf3WUIK-9H9wxUy8tfsH5tlaWNKmKU9ah1VB3PXY/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -503,7 +503,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbxM3x6JUFlu4qXvlfCTzQJPVdBVCf3WUIK-9H9wxUy8tfsH5tlaWNKmKU9ah1VB3PXY/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec', {
                 method: 'POST',
                 body: formData
             })
