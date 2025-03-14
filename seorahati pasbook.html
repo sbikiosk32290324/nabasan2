@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" ></script>
     <!-- For Invoice  -->
     <script>
-     $(document).ready(function () {
+    $(document).ready(function () {
     FormValidation();
     FillDataList();
     MaxInv();
@@ -30,7 +30,7 @@
  
  function FillDataList()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbz7-tq0RmgYf7GNK03NrNlf9bZ0YS0pm7CRdz5c-bZI3kC7ad5opXxDCUJ4SZiUyRHw/exec?page=dropdown",
+        $.getJSON("https://script.google.com/macros/s/AKfycbxRdTz_3wv88YIV_JKJTneu46eY2oVB4OMQ9g7mLW6e_oFKZ_n3IFdboIMyfkrHVH9X/exec?page=dropdown",
        
         function (data) {
 
@@ -48,7 +48,7 @@
 
 function MaxInv()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbz7-tq0RmgYf7GNK03NrNlf9bZ0YS0pm7CRdz5c-bZI3kC7ad5opXxDCUJ4SZiUyRHw/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycbxRdTz_3wv88YIV_JKJTneu46eY2oVB4OMQ9g7mLW6e_oFKZ_n3IFdboIMyfkrHVH9X/exec?page=max",
         function (data) {
          
           $("input[name='sn']").val(data);
@@ -88,7 +88,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbz7-tq0RmgYf7GNK03NrNlf9bZ0YS0pm7CRdz5c-bZI3kC7ad5opXxDCUJ4SZiUyRHw/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbxRdTz_3wv88YIV_JKJTneu46eY2oVB4OMQ9g7mLW6e_oFKZ_n3IFdboIMyfkrHVH9X/exec?page=search&no="+no,
         function (data) {
 
          
@@ -117,7 +117,7 @@ function Search(pNo="")
            
               if (i == 0)
               {
-                var dt = value[7].substring(0,10);
+               var dt = value[8].substring(0,10);
 				document.getElementsByName("sn")[0].value = value[0];
                 document.getElementsByName("rn")[0].value = value[1];
                 document.getElementsByName("cn")[0].value = value[2];
@@ -125,6 +125,7 @@ function Search(pNo="")
 				document.getElementsByName("nfc")[0].value = value[4];
 				document.getElementsByName("co")[0].value = value[5];
                 document.getElementsByName("addr")[0].value = value[6];
+				document.getElementsByName("mn")[0].value = value[7];
                 document.getElementsByName("rec")[0].value = dt;
                
 				
@@ -158,7 +159,7 @@ function Search1(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbx1YKfUEZlAGc-FNLWLXmH-HfT-Z-OMP8Si86vhw8UkrQCWoIL9OVrKq8hem98bP2Q-1w/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwKOt_7q7g6iCF-q5BrMV39U1mu8tL8fkqTNCWtiqn_0fPMlNtBwGRAbY2k3V339UqWwA/exec?page=search&no="+no,
         function (data) {
 
          
@@ -187,7 +188,7 @@ function Search1(pNo="")
            
               if (i == 0)
               {
-                var dt = value[7].substring(0,10);
+                var dt = value[8].substring(0,10);
 				document.getElementsByName("sn")[0].value = value[0];
                 document.getElementsByName("rn")[0].value = value[1];
                 document.getElementsByName("cn")[0].value = value[2];
@@ -195,6 +196,7 @@ function Search1(pNo="")
 				document.getElementsByName("nfc")[0].value = value[4];
 				document.getElementsByName("co")[0].value = value[5];
                 document.getElementsByName("addr")[0].value = value[6];
+				document.getElementsByName("mn")[0].value = value[7];
                 document.getElementsByName("rec")[0].value = dt;
                
 				
@@ -228,7 +230,7 @@ function Search2(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbx7g-5SYDY2jvdwxZIdlGkiAC-D7nEz8-3LWcSyayvjJKC7U8xynmUq9XalhFzO8UX0mw/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwZPjbHJkQqlkLdmrWFd7w75aj8xFBZ1yCn7PByUZydkd36beeAqBiCKquqqZHCNXN1CA/exec?page=search&no="+no,
         function (data) {
 
          
@@ -257,7 +259,7 @@ function Search2(pNo="")
            
               if (i == 0)
               {
-                var dt = value[7].substring(0,10);
+                var dt = value[8].substring(0,10);
 				document.getElementsByName("sn")[0].value = value[0];
                 document.getElementsByName("rn")[0].value = value[1];
                 document.getElementsByName("cn")[0].value = value[2];
@@ -265,6 +267,7 @@ function Search2(pNo="")
 				document.getElementsByName("nfc")[0].value = value[4];
 				document.getElementsByName("co")[0].value = value[5];
                 document.getElementsByName("addr")[0].value = value[6];
+				document.getElementsByName("mn")[0].value = value[7];
                 document.getElementsByName("rec")[0].value = dt;
                
 				
@@ -274,10 +277,10 @@ function Search2(pNo="")
                 if (i > 1) BtnAdd();
                
              
-                document.getElementsByName("item_nm")[i].value = value[8];
-                document.getElementsByName("qty")[i].value     = value[9];
-                document.getElementsByName("rate")[i].value    = value[10];
-                document.getElementsByName("amt")[i].value     = value[11];
+                document.getElementsByName("item_nm")[i].value = value[9];
+                document.getElementsByName("qty")[i].value     = value[10];
+                document.getElementsByName("rate")[i].value    = value[11];
+                document.getElementsByName("amt")[i].value     = value[12];
 
               }
 
@@ -298,7 +301,7 @@ function Search3(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbw-mWsYdxjvyGSAv9GLSppKtSdNRVVgG7FY7XhY1p1pbP9h4uZhu1r6GJsgrNwtGNWwFQ/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbz79WLNJCof1UlLWBOT1ME7kXdFnoK-r_QmfRpmu_Kn0D2hWaO5aly69LHIQJqijOaFxg/exec?page=search&no="+no,
         function (data) {
 
          
@@ -327,7 +330,7 @@ function Search3(pNo="")
            
               if (i == 0)
               {
-                var dt = value[7].substring(0,10);
+                var dt = value[8].substring(0,10);
 				document.getElementsByName("sn")[0].value = value[0];
                 document.getElementsByName("rn")[0].value = value[1];
                 document.getElementsByName("cn")[0].value = value[2];
@@ -335,6 +338,7 @@ function Search3(pNo="")
 				document.getElementsByName("nfc")[0].value = value[4];
 				document.getElementsByName("co")[0].value = value[5];
                 document.getElementsByName("addr")[0].value = value[6];
+				document.getElementsByName("mn")[0].value = value[7];
                 document.getElementsByName("rec")[0].value = dt;
                
 				
@@ -368,7 +372,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbz7-tq0RmgYf7GNK03NrNlf9bZ0YS0pm7CRdz5c-bZI3kC7ad5opXxDCUJ4SZiUyRHw/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbxRdTz_3wv88YIV_JKJTneu46eY2oVB4OMQ9g7mLW6e_oFKZ_n3IFdboIMyfkrHVH9X/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -383,7 +387,7 @@ function ShowAllData()
 				if (i ==2) 
 				{
 					value1 = "" + value1;
-					value1 = value1.substring(0, 13);	
+					value1 = value1.substring(0, 14);	
 				}
 				Columns = Columns + '<td>' + value1 + '</td>';
 				if (sn == "") sn = value1;
@@ -435,7 +439,7 @@ function ShowAllData()
 </tr>
 </table>
  
- <form     method="POST" id="form"   >
+<form     method="POST" id="form"   >
 
         <div class="card mt-3">
             <div class="card-header text-center">
@@ -455,11 +459,13 @@ function ShowAllData()
 			<td scope="col" class="text-end" > CUSTOMER NAME</td><td><input type="text" class="form-control"placeholder="CUSTOMER NAME" name="nfc"required ></td>
 			<td scope="col" class="text-end"> ADDRESS</td><td><input type="text" class="form-control"placeholder="ADDRESS"  name="addr"></td>
 			<td scope="col" class="text-end"> C\S\D\W\O NAME</td><td><input type="text"class="form-control" placeholder="C\S\D\W\O NAME"name="co"  ></td>
+			<td scope="col" class="text-end"> Mobile No</td><td><input type="number"class="form-control" placeholder="Mobile no"name="mn"  ></td>
 			<td scope="col" class="text-end">RECIVED. Date</td><td><input type="date" class="form-control"placeholder="RECIVED. Date" name="rec"></td>
 			
 			</tr>
 			</table>
-		
+			
+  
                <input type="hidden"  id="IsNew"    name="IsNew"    value="Y">
                <input type="hidden"  id="StartRow" name="StartRow" value="0"> 
                <input type="hidden"  id="RowCount" name="RowCount" value="0"> 
@@ -482,7 +488,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbz7-tq0RmgYf7GNK03NrNlf9bZ0YS0pm7CRdz5c-bZI3kC7ad5opXxDCUJ4SZiUyRHw/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxRdTz_3wv88YIV_JKJTneu46eY2oVB4OMQ9g7mLW6e_oFKZ_n3IFdboIMyfkrHVH9X/exec', {
                 method: 'POST',
                 body: formData
             })
