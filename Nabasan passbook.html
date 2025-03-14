@@ -37,7 +37,7 @@
  
  function FillDataList()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbzjl12icc-crShOpfZudaKCDnnK_qbB2yJa0B9onc_-t6JQjJFyGPlOffExPT1byf6Q2w/exec?page=dropdown",
+        $.getJSON("https://script.google.com/macros/s/AKfycby8xeykbs5CkJzdO1GGB6P8SbEqCR_jonWrfcbf6AvJPbs1vT9CiYwYG2r0ppGyPQ9f1g/exec?page=dropdown",
        
         function (data) {
 
@@ -55,7 +55,7 @@
 
 function MaxInv()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbxSOMRMN4B14S8DXUO0igEMKVoT7BXUjWpBETDnG3ZlcGii_xbYIl0E7ipA0qN-FIEs/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycby8xeykbs5CkJzdO1GGB6P8SbEqCR_jonWrfcbf6AvJPbs1vT9CiYwYG2r0ppGyPQ9f1g/exec?page=max",
         function (data) {
          
           $("input[name='sn']").val(data);
@@ -95,7 +95,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxSOMRMN4B14S8DXUO0igEMKVoT7BXUjWpBETDnG3ZlcGii_xbYIl0E7ipA0qN-FIEs/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycby8xeykbs5CkJzdO1GGB6P8SbEqCR_jonWrfcbf6AvJPbs1vT9CiYwYG2r0ppGyPQ9f1g/exec?page=search&no="+no,
         function (data) {
 
          
@@ -375,7 +375,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbzjl12icc-crShOpfZudaKCDnnK_qbB2yJa0B9onc_-t6JQjJFyGPlOffExPT1byf6Q2w/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycby8xeykbs5CkJzdO1GGB6P8SbEqCR_jonWrfcbf6AvJPbs1vT9CiYwYG2r0ppGyPQ9f1g/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -460,6 +460,7 @@ function ShowAllData()
 			<td scope="col" class="text-end"> AC NO</td><td><input type="NUMBER" class="form-control"placeholder="Account No" name="an"required ></td>
 			
 			</tr>
+				<tr></tr>
 			<tr>
 			<td scope="col" class="text-end" > CUSTOMER NAME</td><td><input type="text" class="form-control"placeholder="CUSTOMER NAME" name="nfc"required ></td>
 			<td scope="col" class="text-end"> ADDRESS</td><td><input type="text" class="form-control"placeholder="ADDRESS"  name="addr"></td>
@@ -491,7 +492,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbxfkafUODx1K3Q9LiZDxgS1KJKA7wuUVb2lFDhGjiXFnDwRvtiX8qsvV1zPJpXVlM6SLQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycby8xeykbs5CkJzdO1GGB6P8SbEqCR_jonWrfcbf6AvJPbs1vT9CiYwYG2r0ppGyPQ9f1g/exec', {
                 method: 'POST',
                 body: formData
             })
