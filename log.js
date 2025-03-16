@@ -183,25 +183,20 @@ document.getElementById("Quantity2").max = "1000";
 	    
 	  }
 	  
-function GetPrint()
-{
-    /*For Print*/
-    window.print();
-}
-
- $(document).ready(function () {
+ 	  
+$(document).ready(function () {
     FormValidation();
+    
     FillDataList();
-   MaxInv();
-     
+    MaxInv();
+      MaxInv1() 
+       
 });
- 
- 
- 
- 
- function FillDataList()
+
+
+function FillDataList()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbz3tWgvaLtsd6P6gBdSdBAJGId0JYBhTI-IIJMkCcm1Tn4SspEGmUjvKjqX8ycsbT0u3Q/exec?page=dropdown",
+        $.getJSON("https://script.google.com/macros/s/AKfycbx1s328D-0O8ZE41npTuymNGQlgjxGu0m4vSOF03Qa3B6kxWfrL3yRB8bvBa-AfBpPR/exec?page=dropdown",
        
         function (data) {
 
@@ -217,19 +212,30 @@ function GetPrint()
         });
 }
 
+function MaxInv()
+{
+        $.getJSON("https://script.google.com/macros/s/AKfycbx1s328D-0O8ZE41npTuymNGQlgjxGu0m4vSOF03Qa3B6kxWfrL3yRB8bvBa-AfBpPR/exec?page=max",
+        function (data) {
+         
+          $("input[name='sln']").val(data);
+
+        });
+}
+
+
 
 
 
 function FormValidation()
 {
-    
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict'
  
-    
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.querySelectorAll('.needs-validation')
  
-    
+    // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
         form.addEventListener('submit', function (event) {
@@ -243,22 +249,14 @@ function FormValidation()
       })
   })()
 }
-function MaxInv()
-{
-        $.getJSON("https://script.google.com/macros/s/AKfycbz3tWgvaLtsd6P6gBdSdBAJGId0JYBhTI-IIJMkCcm1Tn4SspEGmUjvKjqX8ycsbT0u3Q/exec?page=max",
-        function (data) {
-         
-          $("input[name='inv_no']").val(data);
 
-        }); 
-		
 function Search(pNo="")
 {
-        var no = $('#inv_no').val();
+        var no = $('#sln').val();
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbz3tWgvaLtsd6P6gBdSdBAJGId0JYBhTI-IIJMkCcm1Tn4SspEGmUjvKjqX8ycsbT0u3Q/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycby2SdTfjwyjdeEx_uFwtsdJ692FXENnYIs5ncIv_IH8IehxCEpwliUlMBTQ8nah2xPBfA/exec?page=search&no="+no,
         function (data) {
 
          
@@ -266,7 +264,7 @@ function Search(pNo="")
          // console.log(data);
           if (data == "NOT FOUND")
           {
-            alert('SL NO. Not Found...');
+            alert('Sl No. Not Found...');
 
           }
           else
@@ -287,106 +285,175 @@ function Search(pNo="")
            
               if (i == 0)
               {
-               var dt = value[1].substring(0,10);
-ddocument.getElementsByName("	inv_no	"	)[0].value = value[	0	];
-document.getElementsByName("	inv_dt	"	)[0].value = dt
-document.getElementsByName("	 op	"	)[0].value = value[	2	];
-document.getElementsByName("	 all_total	"	)[0].value = value[	3	];
-document.getElementsByName("	 db	"	)[0].value = value[	4	];
-document.getElementsByName("	 note	"	)[0].value = value[	5	];
-document.getElementsByName("	 Quantity	"	)[0].value = value[	6	];
-document.getElementsByName("	 total	"	)[0].value = value[	7	];
-document.getElementsByName("	 note2	"	)[0].value = value[	8	];
-document.getElementsByName("	 Quantity2	"	)[0].value = value[	9	];
-document.getElementsByName("	 total2	"	)[0].value = value[	10	];
-document.getElementsByName("	 note3	"	)[0].value = value[	11	];
-document.getElementsByName("	 Quantity3	"	)[0].value = value[	12	];
-document.getElementsByName("	 total3	"	)[0].value = value[	13	];
-document.getElementsByName("	 note4	"	)[0].value = value[	14	];
-document.getElementsByName("	 Quantity4	"	)[0].value = value[	15	];
-document.getElementsByName("	 total4	"	)[0].value = value[	16	];
-document.getElementsByName("	 note5	"	)[0].value = value[	17	];
-document.getElementsByName("	 Quantity5	"	)[0].value = value[	18	];
-document.getElementsByName("	 total5	"	)[0].value = value[	19	];
-document.getElementsByName("	 note6	"	)[0].value = value[	20	];
-document.getElementsByName("	 Quantity6	"	)[0].value = value[	21	];
-document.getElementsByName("	 total6	"	)[0].value = value[	22	];
-document.getElementsByName("	 note7	"	)[0].value = value[	23	];
-document.getElementsByName("	 Quantity7	"	)[0].value = value[	24	];
-document.getElementsByName("	 total7	"	)[0].value = value[	25	];
-document.getElementsByName("	 note8	"	)[0].value = value[	26	];
-document.getElementsByName("	 Quantity8	"	)[0].value = value[	27	];
-document.getElementsByName("	 total8	"	)[0].value = value[	28	];
-document.getElementsByName("	 note9	"	)[0].value = value[	29	];
-document.getElementsByName("	 Quantity9	"	)[0].value = value[	30	];
-document.getElementsByName("	 total9	"	)[0].value = value[	31	];
-document.getElementsByName("	 note10	"	)[0].value = value[	32	];
-document.getElementsByName("	 Quantity10	"	)[0].value = value[	33	];
-document.getElementsByName("	 total10	"	)[0].value = value[	34	];
-document.getElementsByName("	 note11	"	)[0].value = value[	35	];
-document.getElementsByName("	 Quantity11	"	)[0].value = value[	36	];
-document.getElementsByName("	 total11	"	)[0].value = value[	37	];
-document.getElementsByName("	 note12	"	)[0].value = value[	38	];
-document.getElementsByName("	 Quantity12	"	)[0].value = value[	39	];
-document.getElementsByName("	 total12	"	)[0].value = value[	40	];
-document.getElementsByName("	 note13	"	)[0].value = value[	41	];
-document.getElementsByName("	 Quantity13	"	)[0].value = value[	42	];
-document.getElementsByName("	 total13	"	)[0].value = value[	43	];
-document.getElementsByName("	 note14	"	)[0].value = value[	44	];
-document.getElementsByName("	 Quantity14	"	)[0].value = value[	45	];
-document.getElementsByName("	total14	"	)[0].value = value[	46	];
-document.getElementsByName("	 note15 	"	)[0].value = value[	47	];
-document.getElementsByName("	Quantity15	"	)[0].value = value[	48	];
-document.getElementsByName("	 total15	"	)[0].value = value[	49	];
-document.getElementsByName("	 note16	"	)[0].value = value[	50	];
-document.getElementsByName("	 Quantity16	"	)[0].value = value[	51	];
-document.getElementsByName("	 total16	"	)[0].value = value[	52	];
-document.getElementsByName("	 note17	"	)[0].value = value[	53	];
-document.getElementsByName("	 Quantity17	"	)[0].value = value[	54	];
-document.getElementsByName("	 total17	"	)[0].value = value[	55	];
-document.getElementsByName("	 note18	"	)[0].value = value[	56	];
-document.getElementsByName("	 Quantity18	"	)[0].value = value[	57	];
-document.getElementsByName("	 total18	"	)[0].value = value[	58	];
-document.getElementsByName("	 note19	"	)[0].value = value[	59	];
-document.getElementsByName("	 Quantity19	"	)[0].value = value[	60	];
-document.getElementsByName("	 total19	"	)[0].value = value[	61	];
-document.getElementsByName("	 note20	"	)[0].value = value[	62	];
-document.getElementsByName("	 Quantity20	"	)[0].value = value[	63	];
-document.getElementsByName("	 total20	"	)[0].value = value[	64	];
-document.getElementsByName("	 note21	"	)[0].value = value[	65	];
-document.getElementsByName("	 Quantity21	"	)[0].value = value[	66	];
-document.getElementsByName("	 total21	"	)[0].value = value[	67	];
-document.getElementsByName("	 note22	"	)[0].value = value[	68	];
-document.getElementsByName("	 Quantity22	"	)[0].value = value[	69	];
-document.getElementsByName("	 total22	"	)[0].value = value[	70	];
-document.getElementsByName("	 note23	"	)[0].value = value[	71	];
-document.getElementsByName("	 Quantity23	"	)[0].value = value[	72	];
-document.getElementsByName("	 total23	"	)[0].value = value[	73	];
-document.getElementsByName("	 note24	"	)[0].value = value[	74	];
-document.getElementsByName("	 Quantity24	"	)[0].value = value[	75	];
-document.getElementsByName("	 total24	"	)[0].value = value[	76	];
-document.getElementsByName("	 note25	"	)[0].value = value[	77	];
-document.getElementsByName("	 Quantity25	"	)[0].value = value[	78	];
-document.getElementsByName("	 total25	"	)[0].value = value[	79	];
-document.getElementsByName("	 note26	"	)[0].value = value[	80	];
-document.getElementsByName("	 Quantity26	"	)[0].value = value[	81	];
-document.getElementsByName("	 total26	"	)[0].value = value[	82	];
-
-
-
-               
-               
-				
+                var dt = value[1].substring(0,10);
+				document.getElementsByName("sln")[0].value = value[0];
+				document.getElementsByName("date")[0].value = dt;
+									document.getElementsByName("ob")[0].value = value[2];
+									
+									document.getElementsByName("cb")[0].value = value[3];
+									document.getElementsByName("mb")[0].value = value[4];
+									
+									document.getElementsByName("n500")[0].value = value[5];
+									document.getElementsByName("amt500")[0].value = value[6];
+									document.getElementsByName("n200")[0].value = value[7];
+									document.getElementsByName("amt200")[0].value = value[8];
+									document.getElementsByName("n100")[0].value = value[9];
+									document.getElementsByName("amt100")[0].value = value[10];
+									document.getElementsByName("n50")[0].value = value[11];
+									document.getElementsByName("amt50")[0].value = value[12];
+									document.getElementsByName("n20")[0].value = value[13];
+									document.getElementsByName("amt20")[0].value = value[14];
+									document.getElementsByName("n10")[0].value = value[15];
+									document.getElementsByName("amt10")[0].value = value[16];
+									document.getElementsByName("c10")[0].value = value[17];
+									document.getElementsByName("amtc10")[0].value = value[18];
+									document.getElementsByName("c5")[0].value = value[19];
+									document.getElementsByName("amtc5")[0].value = value[20];
+									document.getElementsByName("c2")[0].value = value[21];
+									document.getElementsByName("amtc2")[0].value = value[22];
+									document.getElementsByName("c1")[0].value = value[23];
+									document.getElementsByName("amtc1")[0].value = value[24];
+									document.getElementsByName("sb")[0].value = value[25];
+									document.getElementsByName("ab")[0].value = value[26];
+									document.getElementsByName("rn500")[0].value = value[27];
+									document.getElementsByName("amtr500")[0].value = value[28];
+									document.getElementsByName("rn200")[0].value = value[29];
+									document.getElementsByName("amtr200")[0].value = value[30];
+									document.getElementsByName("rn100")[0].value = value[31];
+									document.getElementsByName("amtr100")[0].value = value[32];
+									document.getElementsByName("rn50")[0].value = value[33];
+									document.getElementsByName("amtr50")[0].value = value[34];
+									document.getElementsByName("rn20")[0].value = value[35];
+									document.getElementsByName("amtr20")[0].value = value[36];
+									document.getElementsByName("rn10")[0].value = value[37];
+									document.getElementsByName("amtr10")[0].value = value[38];
+									document.getElementsByName("ap")[0].value = value[39];
+									document.getElementsByName("sp")[0].value = value[40];
+									document.getElementsByName("lb")[0].value = value[41];
+									document.getElementsByName("pc")[0].value = value[42];
+									document.getElementsByName("mp")[0].value = value[43];
+									document.getElementsByName("mpa")[0].value = value[44];
+									document.getElementsByName("oe")[0].value = value[45];
+                
               }
               else
               {
                 if (i > 1) BtnAdd();
                
              
-                document.getElementsByName("item_nm")[i].value = value[83];
-                document.getElementsByName("qty")[i].value     = value[84];
-                document.getElementsByName("rate")[i].value    = value[85];
-                document.getElementsByName("amt")[i].value     = value[86];
+                document.getElementsByName("item")[i].value = value[46];
+                document.getElementsByName("qty")[i].value     = value[47];
+                document.getElementsByName("rate")[i].value    = value[48];
+                document.getElementsByName("amt")[i].value     = value[49];
+
+              }
+
+              i = i + 1;
+            });
+
+            GetTotal();
+			ReGenSrNo();
+
+          }
+        });
+		$('#exampleModal').modal('hide');
+		 
+}
+function Search1(pNo="")
+{
+        var no = $('#dt').val();
+
+		if (pNo != "") no = pNo;
+
+        $.getJSON("https://script.google.com/macros/s/AKfycbxdO6Ux8JNwFi5xnfoUQoE3LYZ2iEVIwCbdv3mXugi3TTVTuKcenpL7i1fIMeG1_a5fiw/exec?page=search&no="+no,
+        function (data) {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "NOT FOUND")
+          {
+            alert('date. Not Found...');
+
+          }
+          else
+          {
+            //var record = data;
+            var record   = data.record;
+
+            var StartRow = data.SR;
+            var RowCount = data.CNT;
+
+            $('#IsNew').val('N');
+            $('#StartRow').val(StartRow);
+            $('#RowCount').val(RowCount);
+         
+            var i = 0;
+            $.each(record, function(key, value)
+            {
+           
+              if (i == 0)
+              {
+                var dt = value[1].substring(0,10);
+				document.getElementsByName("sln")[0].value = value[0];
+				document.getElementsByName("date")[0].value = dt;
+									document.getElementsByName("ob")[0].value = value[2];
+									
+									document.getElementsByName("cb")[0].value = value[3];
+									document.getElementsByName("mb")[0].value = value[4];
+									
+									document.getElementsByName("n500")[0].value = value[5];
+									document.getElementsByName("amt500")[0].value = value[6];
+									document.getElementsByName("n200")[0].value = value[7];
+									document.getElementsByName("amt200")[0].value = value[8];
+									document.getElementsByName("n100")[0].value = value[9];
+									document.getElementsByName("amt100")[0].value = value[10];
+									document.getElementsByName("n50")[0].value = value[11];
+									document.getElementsByName("amt50")[0].value = value[12];
+									document.getElementsByName("n20")[0].value = value[13];
+									document.getElementsByName("amt20")[0].value = value[14];
+									document.getElementsByName("n10")[0].value = value[15];
+									document.getElementsByName("amt10")[0].value = value[16];
+									document.getElementsByName("c10")[0].value = value[17];
+									document.getElementsByName("amtc10")[0].value = value[18];
+									document.getElementsByName("c5")[0].value = value[19];
+									document.getElementsByName("amtc5")[0].value = value[20];
+									document.getElementsByName("c2")[0].value = value[21];
+									document.getElementsByName("amtc2")[0].value = value[22];
+									document.getElementsByName("c1")[0].value = value[23];
+									document.getElementsByName("amtc1")[0].value = value[24];
+									document.getElementsByName("sb")[0].value = value[25];
+									document.getElementsByName("ab")[0].value = value[26];
+									document.getElementsByName("rn500")[0].value = value[27];
+									document.getElementsByName("amtr500")[0].value = value[28];
+									document.getElementsByName("rn200")[0].value = value[29];
+									document.getElementsByName("amtr200")[0].value = value[30];
+									document.getElementsByName("rn100")[0].value = value[31];
+									document.getElementsByName("amtr100")[0].value = value[32];
+									document.getElementsByName("rn50")[0].value = value[33];
+									document.getElementsByName("amtr50")[0].value = value[34];
+									document.getElementsByName("rn20")[0].value = value[35];
+									document.getElementsByName("amtr20")[0].value = value[36];
+									document.getElementsByName("rn10")[0].value = value[37];
+									document.getElementsByName("amtr10")[0].value = value[38];
+									document.getElementsByName("ap")[0].value = value[39];
+									document.getElementsByName("sp")[0].value = value[40];
+									document.getElementsByName("lb")[0].value = value[41];
+									document.getElementsByName("pc")[0].value = value[42];
+									document.getElementsByName("mp")[0].value = value[43];
+									document.getElementsByName("mpa")[0].value = value[44];
+									document.getElementsByName("oe")[0].value = value[45];
+                
+              }
+              else
+              {
+                if (i > 1) BtnAdd();
+               
+             
+                document.getElementsByName("item")[i].value = value[46];
+                document.getElementsByName("qty")[i].value     = value[47];
+                document.getElementsByName("rate")[i].value    = value[48];
+                document.getElementsByName("amt")[i].value     = value[49];
 
               }
 
@@ -402,19 +469,17 @@ document.getElementsByName("	 total26	"	)[0].value = value[	82	];
 		 
 }
 
-
-
 function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbz3tWgvaLtsd6P6gBdSdBAJGId0JYBhTI-IIJMkCcm1Tn4SspEGmUjvKjqX8ycsbT0u3Q/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbx1s328D-0O8ZE41npTuymNGQlgjxGu0m4vSOF03Qa3B6kxWfrL3yRB8bvBa-AfBpPR/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
 		$.each(data, function(key, value)
 		{
-			var sn="";
+			var InvNo="";
 			Columns ="";
 			i=0;
 			$.each(value, function(key1, value1)
@@ -423,14 +488,14 @@ function ShowAllData()
 				if (i ==2) 
 				{
 					value1 = "" + value1;
-					value1 = value1.substring(0, 83);	
+					value1 = value1.substring(0, 60);	
 				}
 				Columns = Columns + '<td>' + value1 + '</td>';
-				if (sn == "") sn = value1;
+				if (InvNo == "") InvNo = value1;
 				
 				
 			});
-			Rows = Rows + '<tr onclick="Search('+sn+')">' + Columns + '</tr>';
+			Rows = Rows + '<tr onclick="Search('+InvNo+')">' + Columns + '</tr>';
 		});
 		
 		$("#MyTBody").html(Rows);
@@ -439,3 +504,5 @@ function ShowAllData()
 	});			
 
 }
+ 
+ 
