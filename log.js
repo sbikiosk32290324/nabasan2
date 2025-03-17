@@ -187,30 +187,13 @@ document.getElementById("Quantity2").max = "1000";
 $(document).ready(function () {
     FormValidation();
     
-    FillDataList();
+    
     MaxInv();
      
        
 });
 
 
-function FillDataList()
-{
-        $.getJSON("https://script.google.com/macros/s/AKfycbx1s328D-0O8ZE41npTuymNGQlgjxGu0m4vSOF03Qa3B6kxWfrL3yRB8bvBa-AfBpPR/exec?page=dropdown",
-       
-        function (data) {
-
-          var Options="";
-
-          $.each(data, function(key, value)
-          {
-            Options = Options + '<option>' + value + '</option>';
-          });
-
-          $("#mylist").append(Options);
-         
-        });
-}
 
 function MaxInv()
 {
