@@ -196,7 +196,7 @@ $(document).ready(function () {
 
 function FillDataList()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbxbQ4NyzclGH2LGmyE6fI6E1wMvG3oH8jNlT2QQFyXpxK19bew2UcLat-ZvILvv_-DJQg/exec?page=dropdown",
+        $.getJSON("https://script.google.com/macros/s/AKfycbynGkHoRwCw0jwbC9pqK7YeYdb3-s0KX0JsrOutAQMZ1yWE_Vi-n-CPWemcNLOhSuWCNg/exec?page=dropdown",
        
         function (data) {
 
@@ -207,7 +207,7 @@ function FillDataList()
             Options = Options + '<option>' + value + '</option>';
           });
 
-          $("input[name='sln']").append(Options);
+          $("#sln").append(Options);
 		
          
         });
