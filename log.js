@@ -187,24 +187,30 @@ document.getElementById("Quantity2").max = "1000";
 $(document).ready(function () {
     FormValidation();
     
-    
-    MaxInv();
-     
+    FillDataList();
+   
        
 });
 
 
 
-function MaxInv()
+function FillDataList()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbx1s328D-0O8ZE41npTuymNGQlgjxGu0m4vSOF03Qa3B6kxWfrL3yRB8bvBa-AfBpPR/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycbw6eedrOooS3bhk27p03rwh1z_ourKU7lLRrX55MRZHXGoiC3nl-bdjPm32BX8Fk8sTEg/exec?page=dropdown",
+       
         function (data) {
-         
-          $("input[name='sln']").val(data);
 
+          var Options="";
+
+          $.each(data, function(key, value)
+          {
+            Options = Options + '<option>' + value + '</option>';
+          });
+
+          $("#sln").append(Options);
+         
         });
 }
-
 
 
 
