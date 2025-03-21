@@ -186,7 +186,7 @@ function add()
 {
 	var amt23= document.getElementById("total23").value;
       var mib=document.getElementById("db").value;
-        var note23=-(amt23)- -(mib);
+        var note23=(amt23)- -(mib);
       document.getElementById("ac").value=note23;var note23= document.getElementById("ac").value;
 	
 }
