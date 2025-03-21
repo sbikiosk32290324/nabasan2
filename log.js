@@ -182,7 +182,8 @@ document.getElementById("Quantity2").max = "1000";
           
 	    
 	  }
-function add() {
+function add() 
+{
 	var amt23= document.getElementById("total23").value;
       var mib=document.getElementById("db").value;
         var note23=-(amt23)- -(mib);
@@ -348,8 +349,7 @@ function Search(pNo="")
               i = i + 1;
             });
 
-            GetTotal();
-			ReGenSrNo();
+            
 
           }
         });
@@ -457,8 +457,7 @@ function Search1(pNo="")
               i = i + 1;
             });
 
-            GetTotal();
-			ReGenSrNo();
+            
 
           }
         });
