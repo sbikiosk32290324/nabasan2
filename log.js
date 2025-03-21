@@ -182,6 +182,13 @@ document.getElementById("Quantity2").max = "1000";
           
 	    
 	  }
+function add() {
+	var amt23= document.getElementById("total23").value;
+      var mib=document.getElementById("db").value;
+        var note23=-(amt23)- -(mib);
+      document.getElementById("ac").value=note23;var note23= document.getElementById("ac").value;
+	
+}
 	  
  	  
 $(document).ready(function () {
@@ -489,7 +496,7 @@ function ShowAllData()
 		});
 		
 		$("#MyTBody").html(Rows);
-		$('#exampleModal').modal('show');
+		
 	});	
 	});			
 
