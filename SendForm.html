@@ -83,31 +83,15 @@ function ReGenSrNo()
 $(document).ready(function () {
     FormValidation();
     SetCurrentDate();
-    BtnAdd();
-    FillDataList();
+   
+    
     MaxInv();
       
        
 });
 
 
-function FillDataList()
-{
-        $.getJSON("https://script.google.com/macros/s/AKfycby8xvPmSOXYEk5XDEkv0UF2Bn5Drhf8_XfM4c7q3u3i2XLzztyP_LShiClvkunmkFvJGw/exec?page=dropdown",
-       
-        function (data) {
 
-          var Options="";
-
-          $.each(data, function(key, value)
-          {
-            Options = Options + '<option>' + value + '</option>';
-          });
-
-          $("#mylist").append(Options);
-         
-        });
-}
 
 function MaxInv()
 {
@@ -226,7 +210,7 @@ function Search(pNo="")
               i = i + 1;
             });
 
-            GetTotal();
+           
 			ReGenSrNo();
 
           }
