@@ -98,19 +98,11 @@ function MaxInv()
         $.getJSON("https://script.google.com/macros/s/AKfycbzgfyA7VMQVj6mPwAlCNomfrw7XnOR74QmN_sqU5ocB7jrryG2Vz1zCFRwgDsOsDEWKKg/exec?page=max",
         function (data) {
          
-          $("input[name='inv_no']").val(data);
+          $("input[name='leno']").val(data);
 
         });
 }
-function Max1Inv()
-{
-        $.getJSON("https://script.google.com/macros/s/AKfycbx0Cd8PiLgVECn9G6P-2APOQzOufs50ESIiWgAn3f7V-H7yNiRm5ruCcE2hHe_5puVAUg/exec?page=max1",
-        function (data) {
-         
-          $("input[name='']").val(data);
 
-        });
-}
 
 function SetCurrentDate()
 {
@@ -161,7 +153,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbzrdTdZNwYH9h3d8nPQtxS6ICvP4_kFtPVcESlK1RYS9gT1yqbakisP5vCV0TnH7IdlCg/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbw0wlbYHgaeUwQktfiHl3aRs1oranpQeibDtIh3778PCIZGlcZokt8CrdFJzgS2vXLqag/exec?page=search&no="+no,
         function (data) {
 
          
@@ -223,7 +215,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbzrdTdZNwYH9h3d8nPQtxS6ICvP4_kFtPVcESlK1RYS9gT1yqbakisP5vCV0TnH7IdlCg/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbw0wlbYHgaeUwQktfiHl3aRs1oranpQeibDtIh3778PCIZGlcZokt8CrdFJzgS2vXLqag/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
