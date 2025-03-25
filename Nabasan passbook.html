@@ -424,7 +424,7 @@ function ShowAllData()
                                   
                             
  
- <form     method="POST" id="form"   >
+ <form method="POST" class="needs-validation" novalidate   action="https://script.google.com/macros/s/AKfycbyyW6gKcLK7Yw0sHasLP5JKtQIZgM961MCMzM2LnJ4wSoWxutzAtCk-Wr5eAARyFx0gKQ/exec"  >
 
         <div class="card mt-3">
             <div class="card-header text-center">
@@ -467,22 +467,7 @@ function ShowAllData()
 			    </div>
           </div>
         </form>
-		<script>
-        document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbyyW6gKcLK7Yw0sHasLP5JKtQIZgM961MCMzM2LnJ4wSoWxutzAtCk-Wr5eAARyFx0gKQ/exec', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data);
-                document.getElementById('form').reset();
-            })
-           
-        });
-    </script>
+		
     </div>
 	
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
