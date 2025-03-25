@@ -493,7 +493,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbwe5lexovgyMksj2VcpXhhuabB83JUeFlH6JQDHAax781dt6Qy5X-FQTMmNUnOsDiIYZA/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbyyW6gKcLK7Yw0sHasLP5JKtQIZgM961MCMzM2LnJ4wSoWxutzAtCk-Wr5eAARyFx0gKQ/exec', {
                 method: 'POST',
                 body: formData
             })
@@ -502,7 +502,7 @@ function ShowAllData()
                 alert(data);
                 document.getElementById('form').reset();
             })
-            .catch(error => console.error('Error:', error));
+           
         });
     </script>
     </div>
