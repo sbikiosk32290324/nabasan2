@@ -36,7 +36,7 @@
 </head>
 <body >
 <div class="container ">
-  <form method="POST" class="needs-validation" novalidate   action="https://script.google.com/macros/s/AKfycbzo3ktqdEMOyNKJm6ZU7hGSQopSGPFZqCyXgnto3Hl8a96PR6vqqrlrrg7jSHePbomPqw/exec"   >
+  <form  class="needs-validation" novalidate   id="form"   >
 	   <div id="res" style="colour:green;font-size:16px;"></div>
  <div class="card mt-3">
             <div class="card-header text-center">
@@ -235,11 +235,11 @@ additional payment AC No</th>
 			    </div>
           </div>
         </form>
-<!-- 		<script>
+<script>
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbwalIhgOcTUEIWKcBYfV6wbGaO7TgoZUWCgJpuHIf2oCtMcWwizd2gK7D97If7pnwR1Jg/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbzo3ktqdEMOyNKJm6ZU7hGSQopSGPFZqCyXgnto3Hl8a96PR6vqqrlrrg7jSHePbomPqw/exec', {
                 method: 'POST',
                 body: formData
             })
@@ -250,7 +250,7 @@ additional payment AC No</th>
             })
             .catch(error => console.error('Error:', error));
         });
-    </script> -->
+    </script>
     </div>
 	
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
