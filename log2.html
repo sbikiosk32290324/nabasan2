@@ -216,7 +216,7 @@ $(document).ready(function () {
     FormValidation();
     
     FillDataList();
-   lastRow()
+   max()
     
        
 });
@@ -241,9 +241,9 @@ function FillDataList()
 }
 
 
-	    function lastRow()
+	    function max()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbx7ui8cQobr-l0cKBSfdDVcGAQ2Rp-SeaNjD1mg-gqcuVirNPKzdG5BSW7K0Ba_OlFEQg/exec?page=lastRow",
+        $.getJSON("https://script.google.com/macros/s/AKfycbxFMbBE2oMVygTqQ2SZhl6bfMY2Co1HEBpSMSwLAAQS5tDINkCajast475QsNc9YygRIg/exec?page=max",
         function (data) {
          
           $("input[name='sln']").val(data);
