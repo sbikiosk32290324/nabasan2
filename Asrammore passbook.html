@@ -139,7 +139,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbzvZIAAdj6D5XTkOgvl1q7szhFllpY0KPvAESYnoAUCN-v7SBeCGesOE8W4AtqxEUk0/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbyMYxwacqUv_ykAUR5M2yuM1D9gfYakloGB-Z-M3wKV1CsXhJGU7kZWqO1fZPvDjSVw/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -261,7 +261,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbxUK0b5jZ0t9qSjl4NgV7_5Yh08oFAcUlgFSHzaUZVvewNJ0tNVuMhVnEMxWl3f6H_L/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxxzASc4hDEZU0XQSBJrGBfGnxWEMoSw3Z6X0sCVrB6jbNkQsFST1PUkr0s4QWT5uc2/exec', {
                 method: 'POST',
                 body: formData
             })
