@@ -216,7 +216,7 @@ $(document).ready(function () {
     FormValidation();
     
     FillDataList();
-    MaxInv();
+   lastRow()
     
        
 });
@@ -240,9 +240,10 @@ function FillDataList()
         });
 }
 
-function MaxInv()
+
+	    function lastRow()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbz9FbjEbLBkyL65Rx0PwNRr2UIrn_pjM5BeJhiClU3p-kZaNlUjydPjcHl6YrbY77j0ZA/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycbx7ui8cQobr-l0cKBSfdDVcGAQ2Rp-SeaNjD1mg-gqcuVirNPKzdG5BSW7K0Ba_OlFEQg/exec?page=lastRow",
         function (data) {
          
           $("input[name='sln']").val(data);
