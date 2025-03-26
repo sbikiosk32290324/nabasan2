@@ -20,7 +20,7 @@
     <script >
      $(document).ready(function () {
     FormValidation();
-    FillDataList();
+   
     MaxInv();
      
 });
@@ -28,27 +28,11 @@
  
  
  
- function FillDataList()
-{
-        $.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=dropdown",
-       
-        function (data) {
 
-          var Options="";
-
-          $.each(data, function(key, value)
-          {
-            Options = Options + '<option>' + value + '</option>';
-          });
-
-          $("#mylist").append(Options);
-         
-        });
-}
 
 function MaxInv()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycbwHSVTi8IX5WCqP-qxDBPrlZZaS2j9XkNV3dmJ-C-Kuw4HXqqxICBpOkUTEfZ7juRWP/exec?page=max",
         function (data) {
          
           $("input[name='sn']").val(data);
@@ -82,223 +66,14 @@ function FormValidation()
   })()
 }
 
-function Search(pNo="")
-{
-        var no = $('#se').val();
 
-		if (pNo != "") no = pNo;
-
-        $.getJSON("https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec?page=search&no="+no,
-        function (data) {
-
-         
-          //alert(data);
-         // console.log(data);
-          if (data == "NOT FOUND")
-          {
-            alert('SL NO. Not Found...');
-
-          }
-          else
-          {
-            //var record = data;
-            var record   = data.record;
-
-            var StartRow = data.SR;
-            var RowCount = data.CNT;
-
-            $('#IsNew').val('N');
-            $('#StartRow').val(StartRow);
-            $('#RowCount').val(RowCount);
-         
-            var i = 0;
-            $.each(record, function(key, value)
-            {
-           
-              if (i == 0)
-              {
-                var dt = value[7].substring(0,10);
-				document.getElementsByName("sn")[0].value = value[0];
-                document.getElementsByName("rn")[0].value = value[1];
-                document.getElementsByName("cn")[0].value = value[2];
-				document.getElementsByName("an")[0].value = value[3];
-				document.getElementsByName("nfc")[0].value = value[4];
-				document.getElementsByName("co")[0].value = value[5];
-                document.getElementsByName("addr")[0].value = value[6];
-                document.getElementsByName("rec")[0].value = dt;
-               
-				
-              }
-              else
-              {
-                if (i > 1) BtnAdd();
-               
-             
-                document.getElementsByName("item_nm")[i].value = value[8];
-                document.getElementsByName("qty")[i].value     = value[9];
-                document.getElementsByName("rate")[i].value    = value[10];
-                document.getElementsByName("amt")[i].value     = value[11];
-
-              }
-
-              i = i + 1;
-            });
-
-            GetTotal();
-			ReGenSrNo();
-
-          }
-        });
-		$('#exampleModal').modal('hide');
-		 
-}
-function Search1(pNo="")
-{
-        var no = $('#se1').val();
-
-		if (pNo != "") no = pNo;
-
-        $.getJSON("https://script.google.com/macros/s/AKfycbxOtl0GfdpiSJyW1PJSjp_zk5qLbSesDT3atHB6nQpxqyW6DAiDvVOg4J1mrkrIxnRg/exec?page=search&no="+no,
-        function (data) {
-
-         
-          //alert(data);
-         // console.log(data);
-          if (data == "NOT FOUND")
-          {
-            alert('Rf No. Not Found...');
-
-          }
-          else
-          {
-            //var record = data;
-            var record   = data.record;
-
-            var StartRow = data.SR;
-            var RowCount = data.CNT;
-
-            $('#IsNew').val('N');
-            $('#StartRow').val(StartRow);
-            $('#RowCount').val(RowCount);
-         
-            var i = 0;
-            $.each(record, function(key, value)
-            {
-           
-              if (i == 0)
-              {
-                var dt = value[7].substring(0,10);
-				document.getElementsByName("sn")[0].value = value[0];
-                document.getElementsByName("rn")[0].value = value[1];
-                document.getElementsByName("cn")[0].value = value[2];
-				document.getElementsByName("an")[0].value = value[3];
-				document.getElementsByName("nfc")[0].value = value[4];
-				document.getElementsByName("co")[0].value = value[5];
-                document.getElementsByName("addr")[0].value = value[6];
-                document.getElementsByName("rec")[0].value = dt;
-               
-				
-              }
-              else
-              {
-                if (i > 1) BtnAdd();
-               
-             
-                document.getElementsByName("item_nm")[i].value = value[8];
-                document.getElementsByName("qty")[i].value     = value[9];
-                document.getElementsByName("rate")[i].value    = value[10];
-                document.getElementsByName("amt")[i].value     = value[11];
-
-              }
-
-              i = i + 1;
-            });
-
-            GetTotal();
-			ReGenSrNo();
-
-          }
-        });
-		$('#exampleModal').modal('hide');
-		 
-}
-function Search2(pNo="")
-{
-        var no = $('#se2').val();
-
-		if (pNo != "") no = pNo;
-
-        $.getJSON("https://script.google.com/macros/s/AKfycbybv4FZLgDFg2jEYL_cgMyQD76azGcarKQ72cobi5UNahax7rpTTt87rf_lrXtBnuzj/exec?page=search&no="+no,
-        function (data) {
-
-         
-          //alert(data);
-         // console.log(data);
-          if (data == "NOT FOUND")
-          {
-            alert('Account. Not Found...');
-
-          }
-          else
-          {
-            //var record = data;
-            var record   = data.record;
-
-            var StartRow = data.SR;
-            var RowCount = data.CNT;
-
-            $('#IsNew').val('N');
-            $('#StartRow').val(StartRow);
-            $('#RowCount').val(RowCount);
-         
-            var i = 0;
-            $.each(record, function(key, value)
-            {
-           
-              if (i == 0)
-              {
-                var dt = value[7].substring(0,10);
-				document.getElementsByName("sn")[0].value = value[0];
-                document.getElementsByName("rn")[0].value = value[1];
-                document.getElementsByName("cn")[0].value = value[2];
-				document.getElementsByName("an")[0].value = value[3];
-				document.getElementsByName("nfc")[0].value = value[4];
-				document.getElementsByName("co")[0].value = value[5];
-                document.getElementsByName("addr")[0].value = value[6];
-                document.getElementsByName("rec")[0].value = dt;
-               
-				
-              }
-              else
-              {
-                if (i > 1) BtnAdd();
-               
-             
-                document.getElementsByName("item_nm")[i].value = value[8];
-                document.getElementsByName("qty")[i].value     = value[9];
-                document.getElementsByName("rate")[i].value    = value[10];
-                document.getElementsByName("amt")[i].value     = value[11];
-
-              }
-
-              i = i + 1;
-            });
-
-            GetTotal();
-			ReGenSrNo();
-
-          }
-        });
-		$('#exampleModal').modal('hide');
-		 
-}
 function Search3(pNo="")
 {
         var no = $('#se3').val();
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbwKh0M1mDY2kF3grv6BpRxRVCjnBnA6_NZO56gXivXlNZwLOYKBTXmWf2il6PwRmZ-K/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwHSVTi8IX5WCqP-qxDBPrlZZaS2j9XkNV3dmJ-C-Kuw4HXqqxICBpOkUTEfZ7juRWP/exec?page=search&no="+no,
         function (data) {
 
          
@@ -341,21 +116,17 @@ function Search3(pNo="")
               }
               else
               {
-                if (i > 1) BtnAdd();
+                if (i > 1) ;
                
              
-                document.getElementsByName("item_nm")[i].value = value[8];
-                document.getElementsByName("qty")[i].value     = value[9];
-                document.getElementsByName("rate")[i].value    = value[10];
-                document.getElementsByName("amt")[i].value     = value[11];
-
+                document.getElementsByName("name")[i].value = value[8];
+               
               }
 
               i = i + 1;
             });
 
-            GetTotal();
-			ReGenSrNo();
+           
 
           }
         });
@@ -368,7 +139,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbxqOovUfk5__kkNofjnZEDE9tbvH3otGktpKbD18_vKd57K1CF3fguKlMx-h_JnpZft/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbwHSVTi8IX5WCqP-qxDBPrlZZaS2j9XkNV3dmJ-C-Kuw4HXqqxICBpOkUTEfZ7juRWP/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -504,7 +275,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbw7bPghNxl-z4Vr6t4MId9ejlls5VN8o1qFUV6jnuZ_z6XcyJH4GEg9MouepTmKtkRO/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbwHSVTi8IX5WCqP-qxDBPrlZZaS2j9XkNV3dmJ-C-Kuw4HXqqxICBpOkUTEfZ7juRWP/exec', {
                 method: 'POST',
                 body: formData
             })
