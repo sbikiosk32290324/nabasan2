@@ -347,6 +347,7 @@ $(document).ready(function () {
     FormValidation()
     SetCurrentDate()
     Search2(pNo="")
+	Search1(pNo="")
    MaxInv()
        
 });
@@ -356,7 +357,7 @@ $(document).ready(function () {
 
 function MaxInv()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbza0FxFZVxB8q473YaGG0ALNuoy3JKsHDbCXl3oq1tBWr0NosZwNj_baFaz7tPxRRk43w/exec?page=max",
+        $.getJSON("https://script.google.com/macros/s/AKfycbzCCg0ni_3-X_SysgeO_IVf1Q0S-SKPxrTFBvavGzYToDf9qMvYH4IBo1ehJwEQZqK4/exec?page=max",
         function (data) {
          
           $("input[name='sln1']").val(data);
@@ -521,7 +522,7 @@ function Search1(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxdO6Ux8JNwFi5xnfoUQoE3LYZ2iEVIwCbdv3mXugi3TTVTuKcenpL7i1fIMeG1_a5fiw/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbzCCg0ni_3-X_SysgeO_IVf1Q0S-SKPxrTFBvavGzYToDf9qMvYH4IBo1ehJwEQZqK4/exec?page=search&no="+no,
         function (data) {
 
          
@@ -671,7 +672,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbwmZL-GUukHuGbZaZ19U3Y21e2CWhKy5ufW3RaoZhcl5BdEzIwfjWRlmqmHpy6HMIhRrg/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbzCCg0ni_3-X_SysgeO_IVf1Q0S-SKPxrTFBvavGzYToDf9qMvYH4IBo1ehJwEQZqK4/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -831,7 +832,7 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" id="total13" class="total" name="amtc10" value="0" readonly></th>
 <th class="top"> 7</th>
 <th><input  readonly value="NABASAN BALANCE " class="note" name="note17" />  </th>
-<th><input type="number" onchange="multiply(this)" class="needs-validation"   name="ap" id="anup" required></th>
+<th><input type="number" onchange="multiply(this)" class="note"   name="ap" id="anup" readonly></th>
 <th><input type="number" onchange="multiply(this)" id="total17" class="total" name="ap1" value="0" readonly></th>
 
 
