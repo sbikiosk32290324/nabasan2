@@ -215,30 +215,31 @@ document.getElementById("Quantity2").max = "1000";
 $(document).ready(function () {
     FormValidation();
     Search2(pNo="")
-    FillDataList();
+   SetCurrentDate()
     MaxInv();
     Search1(pNo="")
        
 });
 
-
-function FillDataList()
+function SetCurrentDate()
 {
-        $.getJSON("https://script.google.com/macros/s/AKfycbzCCg0ni_3-X_SysgeO_IVf1Q0S-SKPxrTFBvavGzYToDf9qMvYH4IBo1ehJwEQZqK4/exec?page=dropdown",
-       
-        function (data) {
+    const date = new Date();
+    console.log(date);
 
-          var Options="";
+    let d = date.getDate();
+    let m = date.getMonth() + 1;
+    let y = date.getFullYear();
 
-          $.each(data, function(key, value)
-          {
-            Options = Options + '<option>' + value + '</option>';
-          });
+    if (d < 10) d = '0' + d;
+    if (m < 10) m = '0' + m;
 
-          $("#mylist").append(Options);
-         
-        });
+    let CurrDate = y + '-' + m + '-' + d;
+
+    $('input[name="date"]').val(CurrDate);
+
 }
+
+
 
 function MaxInv()
 {
