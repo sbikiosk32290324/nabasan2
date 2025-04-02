@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -490,7 +491,43 @@ $(document).ready(function () {
     
 });
 
-
+function sendwhatsapp()
+	{
+		var phonenumber="";
+		var	date= document.getElementById("dt").value;
+		var	acc	= document.getElementById("acc").value;
+var	jjby= document.getElementById("jjby").value;
+var	sby	= document.getElementById("sby").value;
+var	apy	= document.getElementById("apy").value;
+var	rdo	= document.getElementById("rdo").value;
+var	stdr= document.getElementById("stdr").value;
+var	ppf	= document.getElementById("ppf").value;
+var	ssy	= document.getElementById("ssy").value;
+var	aof	= document.getElementById("aof").value;
+var	kyc	= document.getElementById("kyc").value;
+var	pfif= document.getElementById("pfif").value;
+ 
+ var url="https://wa.me/"+ phonenumber + "?text="
+ 
+	
+	+"CSP NAME  RAJESH PURKAIT%0a"
+	+"CSP CODE   32290324%0a"
+	+"DATE     :  "+date+"%0a"
+	+"ACCOUNT  :  "+acc+"%0a"
+	+"JJBY     :  "+jjby+"%0a"
+	+"SBY      :  "+sby+"%0a"
+	+"APY      :  "+apy+"%0a"
+	+"RD OPEN  :  "+rdo+"%0a"
+	+"STDR OPEN:  "+stdr+"%0a"
+	+"PPF      :  "+ppf+"%0a"
+	+"SSY      :  "+ssy+"%0a"
+	+"AOF COLLECTION :"+aof+"%0a"
+	+"KYC UPDATE :    "+kyc+"%0a"
+	+"PENDING FI LEGACY COLLECTION:"+pfif+"%0a";
+	window.open(url, '_blank').focus();
+	
+	}
+	
 
 function SetCurrentDate()
 {
@@ -890,7 +927,7 @@ function ShowAllData()
 
   <form     id="form"   >
 	  
-                  
+                   <ul>
 					
 								<li> <button type="button"
                                 class="btn btn-primary" onclick="Search3();">SHOW REPORT</button></li>
@@ -900,8 +937,9 @@ function ShowAllData()
 						<li><button type="button" class="btn btn-primary"  
                                 onclick="ShowAllData()">Show All Data</button></li>
 								<li><a class="btn btn-primary" target="_blank" href="https://docs.google.com/spreadsheets/d/1n25MUoSsZSz-3fiXNb7mQ6X5YcGzhinip1dxYWh10QY/edit?gid=831137797#gid=831137797">PAST TRANSSACTION</a></li>
-								
-                 
+								<li> <button type="button"
+                                class="btn btn-primary" onclick="sendwhatsapp();">BC report post</button></li>
+                  </ul>
 	   <table>
 <th class="btn1" scope="col">OPENING BALANCE  </th><th><input class="top3" type="number" id="total26_1"   name="ob" 
                                     value="240000" required readonly> 
@@ -1117,31 +1155,36 @@ function ShowAllData()
 <td class="top">	JJBY		</td>
 <td class="top">	SBY		</td>
 <td class="top">	APY		</td>
-<td class="top">	RD OPENING		</td>
-<td class="top">	STDR OPE NING		</td>
-<td class="top">	LOAN DEP OSIT		</td>
-<td class="top">	YONO DEP OSIT		</td>
-<td class="top">	RD DEP OSIT		</td>
-<td class="top">	ATM DEP OSIT		</td>
-<td class="top">	ATM WITHD RAWAL		</td>
-<td class="top">	AEPS DEPOSIT		</td>
-<td class="top">	AEPS WITHD RAWAL		</td>
+<td class="top">	RD OPEN</td>
+<td class="top">	STDR OPE</td>
+<td class="top">	LOAN DEP</td>
+<td class="top">	YONO DEP</td>
+<td class="top">	RD DEP</td>
+<td class="top">	ATM DEP</td>
+<td class="top">	ATM WITHD</td>
+<td class="top">	AEPS DEP</td>
+<td class="top">	AEPS WITHD	</td>
 <td class="top">	DEPOSIT		</td>
 <td class="top">	WITHD RAWAL		</td>
-<td class="top">	MONY TRANSFAR		</td>
-<td class="top">	TOTAL TRANS ACTION		</td>
+<td class="top">	MONY TRAN</td>
+<td class="top">	TOTAL TRAN</td>
+<td class="top">	PPF		</td>
+<td class="top">	SSY		</td>
+<td class="top">	AOF 	</td>
+<td class="top">	KYC		</td>
+<td class="top">	FI LEGACY</td>
 
 
 
       </tr>
       <tr>
  
-<td>	<input  type="number"  class="top2"  name="acc" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="jjby" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="sby" readonly >	</td>
-<td>	<input  type="number"  class="top4"  name="apy"  >	</td>
-<td>	<input  type="number"  class="top2"  name="rdo" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="stdr" readonly >	</td>
+<td>	<input  type="number"  class="top2" id="acc" name="acc" readonly >	</td>
+<td>	<input  type="number"  class="top2" id="jjby" name="jjby" readonly >	</td>
+<td>	<input  type="number"  class="top2" id="sby" name="sby" readonly >	</td>
+<td>	<input  type="number"  class="top4" id="apy" name="apy"  >	</td>
+<td>	<input  type="number"  class="top2" id="rdo" name="rdo" readonly >	</td>
+<td>	<input  type="number"  class="top2" id="stdr" name="stdr" readonly >	</td>
 <td>	<input  type="number"  class="top2"  name="loan" readonly >	</td>
 <td>	<input  type="number"  class="top2"  name="yono" readonly >	</td>
 <td>	<input  type="number"  class="top2"  name="rdd" readonly >	</td>
@@ -1153,6 +1196,11 @@ function ShowAllData()
 <td>	<input  type="number"  class="top2"  name="withd" readonly >	</td>
 <td>	<input  type="number"  class="top2"  name="mtr" readonly >	</td>
 <td>	<input  type="number"  class="top2"  name="ttran" readonly >	</td>
+<td>	<input  type="number"  class="top4" id="ppf" name="ppf" >	</td>
+<td>	<input  type="number"  class="top4" id="ssy" name="ssy"  >	</td>
+<td>	<input  type="number"  class="top4" id="aof" name="aof"  >	</td>
+<td>	<input  type="number"  class="top4" id="kyc" name="kyc"  >	</td>
+<td>	<input  type="number"  class="top4" id="pfif" name="pfif"  >	</td>
 
 
 
