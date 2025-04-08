@@ -162,42 +162,41 @@ function Search(pNo="")
 		$('#exampleModal').modal('hide');
 		 
 }
-
-function ShowAllData()
-{
-	$(document).ready(function (){
+// function ShowAllData()
+// {
+// 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbw0wlbYHgaeUwQktfiHl3aRs1oranpQeibDtIh3778PCIZGlcZokt8CrdFJzgS2vXLqag/exec?page=all",
-        function (data) {
+// 		$.getJSON("https://script.google.com/macros/s/AKfycbw0wlbYHgaeUwQktfiHl3aRs1oranpQeibDtIh3778PCIZGlcZokt8CrdFJzgS2vXLqag/exec?page=all",
+//         function (data) {
 	
-		var Table="", Rows="", Columns="";
-		$.each(data, function(key, value)
-		{
-			var leno="";
-			Columns ="";
-			i=0;
-			$.each(value, function(key1, value1)
-			{
-				i++;
-				if (i ==2) 
-				{
-					value1 = "" + value1;
-					value1 = value1.substring(0, 10);	
-				}
-				Columns = Columns + '<td>' + value1 + '</td>';
-				if (leno == "") leno = value1;
+// 		var Table="", Rows="", Columns="";
+// 		$.each(data, function(key, value)
+// 		{
+// 			var leno="";
+// 			Columns ="";
+// 			i=0;
+// 			$.each(value, function(key1, value1)
+// 			{
+// 				i++;
+// 				if (i ==2) 
+// 				{
+// 					value1 = "" + value1;
+// 					value1 = value1.substring(0, 10);	
+// 				}
+// 				Columns = Columns + '<td>' + value1 + '</td>';
+// 				if (leno == "") leno = value1;
 				
 				
-			});
-			Rows = Rows + '<tr onclick="Search('+leno+')">' + Columns + '</tr>';
-		});
+// 			});
+// 			Rows = Rows + '<tr onclick="Search('+leno+')">' + Columns + '</tr>';
+// 		});
 		
-		$("#MyTBody").html(Rows);
-		$('#exampleModal').modal('show');
-	});	
-	});			
+// 		$("#MyTBody").html(Rows);
+// 		$('#exampleModal').modal('show');
+// 	});	
+// 	});			
 
-}
+// }
 	</script>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -235,8 +234,7 @@ function ShowAllData()
                                 class="btn btn-primary" >Submit</button>
                         <button type="button" class="btn btn-primary"  
                                 onclick="GetPrint()">Print</button>
-						<button type="button" class="btn btn-primary"  
-                                onclick="ShowAllData()">Show All Data</button>
+						
                     </div>
                                                  
                         </div>
