@@ -485,13 +485,7 @@ var csb= +(osb)+ +(twa)+ +(bcd)+ -(tda)+ -(bcw);
       document.getElementById("csb").value=csb;
 	}	
  	  
-$(document).ready(function () {
-    FormValidation();
-    SetCurrentDate()
-    
-  
-    
-});
+
 
 function sendwhatsapp()
 	{
@@ -589,7 +583,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxOswkvZb4tBybVzfBKxo82P3K6KqrQWm3929qZCGCwZYniSUdoGSvUsWuHteBOjQ-C3w/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwe_X3_Ef2UP4P27mzVdIxkb8cG_najQCZBxGOmIVD0qseVVp_kCrLRVTgupbSUS3oNOw/exec?page=search&no="+no,
         function (data) {
 
          
@@ -935,9 +929,9 @@ function ShowAllData()
 			<th class="btn1"  scope="col">OPENING SYSTEM BALANCE </th><th> <input  type="number"  class="top3" name="osb" id="osb" value="0" ></th>
             <th class="btn1"  scope="col">CLOSING SYSTEM BALANCE  </th><th><button type="button" onclick="scb();"><input class="top3" type="number" id="csb"   name="csb" value="" required readonly></button> </th>
             
-            <th scope="col" type="hidden" class="btn1" >SEARCH SL No</th><th><input type="hidden" class="form-control" 
-                                   placeholder="rf no" novalidate  id="sln" 
-                                   name="sln"  autocomplete="off" required ><th>
+            <th scope="col" type="hidden" class="btn1" >SEARCH SL No</th><th><input type="number" class="form-control" 
+                                   id="sln" 
+                                   name="sln"  autocomplete="off" readonly ><th>
 									  <th scope="col" class="btn1" >SEARCH Date</th><th><input type="date" class="form-control" 
                                    placeholder="search data" novalidate id="dt" 
                                    name="date"   required ></th><th><button class="btn btn-outline-secondary"  
