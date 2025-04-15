@@ -466,8 +466,10 @@ document.getElementById("Quantity2").max = "1000";
  	  
 $(document).ready(function () {
     FormValidation();
-    SetCurrentDate()
-    Search1(pNo="")
+	MaxInv();
+    SetCurrentDate();
+	Search(pNo="")
+    Search3(pNo="")
   
        
 });
@@ -570,6 +572,16 @@ function FormValidation()
       })
   })()
 }
+	    function MaxInv()
+{
+        $.getJSON("https://script.google.com/macros/s/AKfycbxkcOsKEieVVZ8HMcLHHB31BmPWKMpe4LKf6_KRzgsanCqvoCuczMpZ9nNXEA0DlnEvdQ/exec?page=max",
+        function (data) {
+         
+          $("input[name='sln']").val(data);
+
+        });
+}
+
 
 function Search(pNo="")
 {
@@ -768,11 +780,11 @@ function Search1(pNo="")
 }
 function Search3(pNo="")
 {
-        var no = $('#dt').val();
+        var no = $('#sl').val();
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbyifgmTM9AcRiHAwptWwMMcPE-XvIAhSOD6XEM-7JNS6AfXK_aWB6IopX1-x9znUsUEfQ/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbxzGOK9QjKsyEaw9J1udPHc9UNkH2CvyQkR99pTmW-94CasWkF6tKLMQfJtfdFx0DSvsw/exec?page=search&no="+no,
         function (data) {
 
          
@@ -827,7 +839,7 @@ document.getElementsByName("dep")[0].value = value[20];
 document.getElementsByName("withd")[0].value = value[21];
 document.getElementsByName("mtr")[0].value = value[22];
 document.getElementsByName("ttran")[0].value = value[23];
-
+document.getElementsByName("sl")[0].value = value[24];
 					
                 
               }
@@ -956,7 +968,7 @@ function ShowAllData()
 </tr>
 </tr>
 <tr>
-<th class="top"> 1</th>
+<th ><input  value="1" class="top" placeholder="1" novalidate  id="sl" name="sl"   readonly></th>
 <th ><input  type="number"id="note1" name="note" class="note"  readonly value="500"></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity1" name="n500" /></th>
 <th><input type="number" onchange="multiply(this)" id="total1" class="total" name="amt500" value="0" readonly></th>
