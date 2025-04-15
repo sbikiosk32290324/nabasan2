@@ -465,12 +465,11 @@ document.getElementById("Quantity2").max = "1000";
 	  
  	  
 $(document).ready(function () {
-    FormValidation();
-	MaxInv();
-    SetCurrentDate();
-	Search(pNo="")
+    FormValidation()
+	
+    Search(pNo="")
     Search3(pNo="")
-  
+  SetCurrentDate()
        
 });
 
@@ -566,16 +565,6 @@ function FormValidation()
       })
   })()
 }
- function MaxInv()
-{
-        $.getJSON("https://script.google.com/macros/s/AKfycbz5-Kux8xcXitQBGj6jl1YnDfq8MltXd-8tNT4BpnAmkjPQyrnaN-AuSeuHRaU4l3nj7A/exec?page=max",
-        function (data) {
-         
-          $("input[name='sln']").val(data);
-
-        });
-}
-
 
 function Search(pNo="")
 {
