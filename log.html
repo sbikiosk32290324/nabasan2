@@ -583,7 +583,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxyq4TbzO3hmseMXB0-0BRJ8aF2aIvf197ON9th9behOXa71_2nugxa_K5LeuIVquvK/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbz8NBQmv3on4V53B1ZS3D_L2egjmQoWi9Sz3t2GnO6DQSwomsvK9-BP8_gz9jT1Q9-dmQ/exec?page=search&no="+no,
         function (data) {
 
          
@@ -591,7 +591,7 @@ function Search(pNo="")
          // console.log(data);
           if (data == "NOT FOUND")
           {
-            alert('Sl No. Not Found...');
+            alert('date. Not Found...');
 
           }
           else
@@ -664,7 +664,6 @@ function Search(pNo="")
                 
               }
              
-
               i = i + 1;
             });
 
