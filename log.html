@@ -936,10 +936,8 @@ function ShowAllData()
             <th class="btn1"  scope="col">CLOSING SYSTEM BALANCE  </th><th><button type="button" onclick="scb();"><input class="top3" type="number" id="csb"   name="csb" value="" required readonly></button> </th>
             
             <th scope="col" type="hidden" class="btn1" >SEARCH SL No</th><th><input type="hidden" class="form-control" 
-                                   placeholder="rf no" novalidate  id="sln1" 
-                                   name="sln"  autocomplete="off" required ><th><button class="btn btn-outline-secondary"  
-                                          type="hidden" onclick="Search();">
-                                      <i class="bi bi-search"></i></button></th>
+                                   placeholder="rf no" novalidate  id="sln" 
+                                   name="sln"  autocomplete="off" required ><th>
 									  <th scope="col" class="btn1" >SEARCH Date</th><th><input type="date" class="form-control" 
                                    placeholder="search data" novalidate id="dt" 
                                    name="date"   required ></th><th><button class="btn btn-outline-secondary"  
@@ -968,7 +966,7 @@ function ShowAllData()
 </tr>
 </tr>
 <tr>
-<th ><input  value="1" class="top" placeholder="1" novalidate  id="sl" name="sl"   readonly></th>
+<th >1</th>
 <th ><input  type="number"id="note1" name="note" class="note"  readonly value="500"></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity1" name="n500" /></th>
 <th><input type="number" onchange="multiply(this)" id="total1" class="total" name="amt500" value="0" readonly></th>
@@ -1181,7 +1179,7 @@ function ShowAllData()
 
 
       </tr>
-     
+     <input type="hidden" value="1" class="top" placeholder="1" novalidate  id="sl" name="sl"   readonly>
     </table>
                   
         </form>
