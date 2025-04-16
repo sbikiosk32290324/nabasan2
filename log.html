@@ -468,8 +468,8 @@ $(document).ready(function () {
     FormValidation()
 	
     Search(pNo="")
-    Search3(pNo="")
-  SetCurrentDate()
+   
+  
        
 });
 
@@ -572,7 +572,7 @@ function Search(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbwWQKjMcumlZu8SDWKy1ENLcrwiHoukt2G2wgTYzGHIZNArrwy_Q6HPbWWdHPQm_D1GNg/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwGTLW3ZDFQbBxbyiyBwJfQbxVu04z-iwK6o3KFh9TPDri0K19rMxdVsM2kd6tcOuiTpQ/exec?page=search&no="+no,
         function (data) {
 
          
@@ -650,14 +650,40 @@ function Search(pNo="")
 									document.getElementsByName("mp")[0].value = value[43];
 									document.getElementsByName("mpa")[0].value = value[44];
 									document.getElementsByName("oe")[0].value = value[45];
-                
+                							document.getElementsByName("tds")[0].value = value[46];
+									document.getElementsByName("tda")[0].value = value[47];
+									document.getElementsByName("tws")[0].value = value[48];
+									document.getElementsByName("twa")[0].value = value[49];
+									document.getElementsByName("osb")[0].value = value[50];
+									document.getElementsByName("csb")[0].value = value[51];
+									document.getElementsByName("acc")[0].value = value[52];
+									document.getElementsByName("jjby")[0].value = value[53];
+		      							
+									document.getElementsByName("sby")[0].value = value[54];
+									document.getElementsByName("apy")[0].value = value[55];
+									document.getElementsByName("rdo")[0].value = value[56];
+									document.getElementsByName("stdr")[0].value = value[57];
+									document.getElementsByName("rdd")[0].value = value[58];
+									document.getElementsByName("loan")[0].value = value[59];
+									document.getElementsByName("yono")[0].value = value[61];
+									
+									document.getElementsByName("atmd")[0].value = value[60];
+									document.getElementsByName("atmw")[0].value = value[62];
+									document.getElementsByName("aepsd")[0].value = value[63];
+									document.getElementsByName("aepsw")[0].value = value[64];
+									document.getElementsByName("dep")[0].value = value[65];
+									document.getElementsByName("wit")[0].value = value[66];
+									document.getElementsByName("mtr")[0].value = value[67];
+									document.getElementsByName("ttran")[0].value = value[68];
+		      							document.getElementsByName("bcw")[0].value = value[69];
+		      							document.getElementsByName("bcd")[0].value = value[70];
               }
              
               i = i + 1;
             });
 
-           
-
+           SetCurrentDate()
+	   multiply()
           }
         });
 		$('#exampleModal').modal('hide');
@@ -669,7 +695,7 @@ function Search1(pNo="")
 
 		if (pNo != "") no = pNo;
 
-        $.getJSON("https://script.google.com/macros/s/AKfycbxdO6Ux8JNwFi5xnfoUQoE3LYZ2iEVIwCbdv3mXugi3TTVTuKcenpL7i1fIMeG1_a5fiw/exec?page=search&no="+no,
+        $.getJSON("https://script.google.com/macros/s/AKfycbwGTLW3ZDFQbBxbyiyBwJfQbxVu04z-iwK6o3KFh9TPDri0K19rMxdVsM2kd6tcOuiTpQ/exec?page=search&no="+no,
         function (data) {
 
          
@@ -747,7 +773,33 @@ function Search1(pNo="")
 									document.getElementsByName("mp")[0].value = value[43];
 									document.getElementsByName("mpa")[0].value = value[44];
 									document.getElementsByName("oe")[0].value = value[45];
-                
+                							document.getElementsByName("tds")[0].value = value[46];
+									document.getElementsByName("tda")[0].value = value[47];
+									document.getElementsByName("tws")[0].value = value[48];
+									document.getElementsByName("twa")[0].value = value[49];
+									document.getElementsByName("osb")[0].value = value[50];
+									document.getElementsByName("csb")[0].value = value[51];
+									document.getElementsByName("acc")[0].value = value[52];
+									document.getElementsByName("jjby")[0].value = value[53];
+		      							document.getElementsByName("sby")[0].value = value[54];
+									document.getElementsByName("apy")[0].value = value[55];
+									document.getElementsByName("rdo")[0].value = value[56];
+									document.getElementsByName("stdr")[0].value = value[57];
+									document.getElementsByName("rdd")[0].value = value[58];
+									document.getElementsByName("loan")[0].value = value[59];
+									document.getElementsByName("yono")[0].value = value[61];
+									
+									document.getElementsByName("atmd")[0].value = value[60];
+									document.getElementsByName("atmw")[0].value = value[62];
+									document.getElementsByName("aepsd")[0].value = value[63];
+									document.getElementsByName("aepsw")[0].value = value[64];
+									document.getElementsByName("dep")[0].value = value[65];
+									document.getElementsByName("wit")[0].value = value[66];
+									document.getElementsByName("mtr")[0].value = value[67];
+									document.getElementsByName("ttran")[0].value = value[68];
+		      							document.getElementsByName("bcw")[0].value = value[69];
+		      							document.getElementsByName("bcd")[0].value = value[70];
+
               }
              
               i = i + 1;
@@ -818,7 +870,7 @@ document.getElementsByName("atmw")[0].value = value[17];
 document.getElementsByName("aepsd")[0].value = value[18];
 document.getElementsByName("aepsw")[0].value = value[19];
 document.getElementsByName("dep")[0].value = value[20];
-document.getElementsByName("withd")[0].value = value[21];
+document.getElementsByName("wit")[0].value = value[21];
 document.getElementsByName("mtr")[0].value = value[22];
 document.getElementsByName("ttran")[0].value = value[23];
 document.getElementsByName("sl")[0].value = value[24];
@@ -842,7 +894,7 @@ function ShowAllData()
 {
 	$(document).ready(function (){
 		
-		$.getJSON("https://script.google.com/macros/s/AKfycbwmZL-GUukHuGbZaZ19U3Y21e2CWhKy5ufW3RaoZhcl5BdEzIwfjWRlmqmHpy6HMIhRrg/exec?page=all",
+		$.getJSON("https://script.google.com/macros/s/AKfycbwGTLW3ZDFQbBxbyiyBwJfQbxVu04z-iwK6o3KFh9TPDri0K19rMxdVsM2kd6tcOuiTpQ/exec?page=all",
         function (data) {
 	
 		var Table="", Rows="", Columns="";
@@ -908,12 +960,12 @@ function ShowAllData()
 <th class="top"  scope="col">TOTAL DEPOSIT  </th><th><input class="top3" type="number" id="tds"   name="tds" value="" required readonly> 
                                      <input class="top3" type="number" id="tda"   name="tda" value="" required readonly> </th>
                                     <th class="top"  scope="col">TOTAL WITHDRAWAL  </th><th><input    id="tws"   class="top3" name="tws"  > <input    id="twa"   class="top3" name="twa"  ></th> 
-                <th class="top"  scope="col">BC WITHDRAWAL  </th>     <th>	<input  type="number"  class="form-control"  id="bcw" name="bcw" >	</th>
+                <th class="top"  scope="col">BC WITHDRAWAL  </th>     <th>	<input  type="number" value="0"  class="form-control"  id="bcw" name="bcw" >	</th>
              
 			
 			
 			
-			<tr><th class="top"  scope="col">BC DEPOSIT  </th><th>	<input  type="number"  class="form-control"  id="bcd" name="bcd"  >	</th> 
+			<tr><th class="top"  scope="col">BC DEPOSIT  </th><th>	<input  type="number" value="0"  class="form-control"  id="bcd" name="bcd"  >	</th> 
 			<th class="top"  scope="col">OPENING SYSTEM BALANCE </th><th> <input  type="number"  class="top3" name="osb" id="osb" value="0" ></th>
             <th class="top"  scope="col">CLOSING SYSTEM BALANCE  </th><th><button type="button" onclick="scb();"><input class="top3" type="number" id="csb"   name="csb" value="" required readonly></button> </th>
             
@@ -1135,28 +1187,28 @@ function ShowAllData()
       </tr>
       <tr>
  
-<td>	<input  type="number"  class="top2" id="acc" name="acc" readonly >	</td>
-<td>	<input  type="number"  class="top2" id="jjby" name="jjby" readonly >	</td>
-<td>	<input  type="number"  class="top2" id="sby" name="sby" readonly >	</td>
-<td>	<input  type="number"  class="top4" id="apy" name="apy"  >	</td>
-<td>	<input  type="number"  class="top2" id="rdo" name="rdo" readonly >	</td>
-<td>	<input  type="number"  class="top2" id="stdr" name="stdr" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="loan" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="yono" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="rdd" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="atmd" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="atmw" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="aepsd" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="aepsw" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="dep" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="withd" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="mtr" readonly >	</td>
-<td>	<input  type="number"  class="top2"  name="ttran" readonly >	</td>
-<td>	<input  type="number"  class="top4" id="ppf" name="ppf" >	</td>
-<td>	<input  type="number"  class="top4" id="ssy" name="ssy"  >	</td>
-<td>	<input  type="number"  class="top4" id="aof" name="aof"  >	</td>
-<td>	<input  type="number"  class="top4" id="kyc" name="kyc"  >	</td>
-<td>	<input  type="number"  class="top4" id="pfif" name="pfif"  >	</td>
+<td>	<input  type="number" value="0" class="top2" id="acc" name="acc" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2" id="jjby" name="jjby" readonly >	</td>
+<td>	<input  type="number"  value="0" class="top2" id="sby" name="sby" readonly >	</td>
+<td>	<input  type="number" value="0" class="top4" id="apy" name="apy"  >	</td>
+<td>	<input  type="number" value="0" class="top2" id="rdo" name="rdo" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2" id="stdr" name="stdr" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="loan" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="yono" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="rdd" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="atmd" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="atmw" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="aepsd" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="aepsw" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="dep" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="wit" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="mtr" readonly >	</td>
+<td>	<input  type="number" value="0" class="top2"  name="ttran" readonly >	</td>
+<td>	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td>
+<td>	<input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
+<td>	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td>
+<td>	<input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
+<td>	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
 
 
 
@@ -1170,7 +1222,7 @@ function ShowAllData()
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbzo3ktqdEMOyNKJm6ZU7hGSQopSGPFZqCyXgnto3Hl8a96PR6vqqrlrrg7jSHePbomPqw/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxfxZw4-3KKttlTLQDaJ9KnzhuIxiYxRmwL4Z7p5tBJFqrF0ic4mbFu1-xpEN3wfnqg4A/exec', {
                 method: 'POST',
                 body: formData
             })
@@ -1188,7 +1240,7 @@ function ShowAllData()
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Mankhand PASSBOOK</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">details</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
