@@ -513,6 +513,44 @@ function SetCurrentDate()
     $('input[name="date"]').val(CurrDate);
 
 }
+	function sendwhatsapp()
+	{
+		var phonenumber="";
+		var	date= document.getElementById("dt").value;
+		var	acc	= document.getElementById("acc").value;
+var	jjby= document.getElementById("jjby").value;
+var	sby	= document.getElementById("sby").value;
+var	apy	= document.getElementById("apy").value;
+var	rdo	= document.getElementById("rdo").value;
+var	stdr= document.getElementById("stdr").value;
+var	ppf	= document.getElementById("ppf").value;
+var	ssy	= document.getElementById("ssy").value;
+var	aof	= document.getElementById("aof").value;
+var	kyc	= document.getElementById("kyc").value;
+var	pfif= document.getElementById("pfif").value;
+		var	ttran= document.getElementById("ttran").value;
+ 
+ var url="https://wa.me/"+ phonenumber + "?text="
+ 
+	
+	+"CSP NAME  SUSMITA PURKAIT%0a"
+	+"CSP CODE   32311337%0a"
+	+"DATE     :  "+date+"%0a"
+	+"ACCOUNT  :  "+acc+"%0a"
+	+"JJBY     :  "+jjby+"%0a"
+	+"SBY      :  "+sby+"%0a"
+	+"APY      :  "+apy+"%0a"
+	+"RD OPEN  :  "+rdo+"%0a"
+	+"STDR OPEN:  "+stdr+"%0a"
+	+"PPF      :  "+ppf+"%0a"
+	+"SSY      :  "+ssy+"%0a"
+	+"AOF COLLECTION :"+aof+"%0a"
+	+"KYC UPDATE :    "+kyc+"%0a"
+	+"PENDING FI LEGACY COLLECTION:"+pfif+"%0a"
+	 +"TOTAL tRANSACTION:"+ttran+"%0a";
+	window.open(url, '_blank').focus();
+	
+	}
 
 function FormValidation()
 {
