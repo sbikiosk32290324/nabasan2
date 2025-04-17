@@ -454,13 +454,22 @@ document.getElementById("Quantity2").max = "1000";
 	    
 	  }
 	  
-	  function add() 
-{
+	  function add() {
+  let text = "আপনি নিশ্চিত তো ? \nAre you sure? \nমিসমাচ টি একাউন্ট ব্যালান্স  এর সাথে যুক্ত হবে \nThe mismatch will be added to the account balance.";
+  if (confirm(text) == true) {
+	  
+            
+
 	var amt23= document.getElementById("total23").value;
       var mib=document.getElementById("db").value;
         var note23= -(mib)- -(amt23);
       document.getElementById("ac").value=note23;var note23= document.getElementById("ac").value;
-	
+	 
+	  text = "You pressed OK!";
+  } else {
+    text = "You canceled!";
+  }
+  document.getElementById("demo").innerHTML = text;
 }
 	  
  	  
