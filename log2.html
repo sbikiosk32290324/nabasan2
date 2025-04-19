@@ -1272,8 +1272,9 @@ function ShowAllData()
 </tr>
 	<input  onchange="multiply(this)" type="number" id="1input" name="mpa"  ></td>
 
-<tr > <th colspan="7"><button  type="submit" 
-                                class="btn btn-primary" >Submit</button><button type="button" class="btn btn-primary"  
+<tr > <th colspan="7"><button class="btn btn-primary" onclick="myFunction()">সংরক্ষণ করুন Save Data</button>
+
+<p class="top" id="demo"></p><button type="button" class="btn btn-primary"  
                                 onclick="ShowAllData()">Show All Data</button></th> </tr>
 
 
@@ -1287,6 +1288,13 @@ function ShowAllData()
         </form>
 		
            <script>
+       function myFunction() {
+
+  let text = "ভালো করে দেখে তবে সংরক্ষণ করবে\nYou will save it if you look carefully..";
+  if (confirm(text) == true) {
+    text = "সংরক্ষণ করা হয়েছে \nSaved";
+	
+  
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
@@ -1297,10 +1305,16 @@ function ShowAllData()
             .then(response => response.text())
             .then(data => {
                 alert(data);
-                document.getElementById('form').reset();
+                
             })
             .catch(error => console.error('Error:', error));
         });
+		 }
+		else {
+    text = "বাতিল  করা হয়েছে \nCancelled";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
     </script>
               
     </div>
