@@ -948,14 +948,8 @@ function ShowAllData()
 	  
                   
 					
-								<li> <button type="button"
-                                class="btn btn-primary" onclick="Search3();">SHOW REPORT</button></li>
-                        <li><button  type="submit" 
-                                class="btn btn-primary" >Submit</button></li>
                         
-						<li><button type="button" class="btn btn-primary"  
-                                onclick="ShowAllData()">Show All Data</button></li>
-								<li><a class="btn btn-primary" target="_blank" href="https://docs.google.com/spreadsheets/d/1n25MUoSsZSz-3fiXNb7mQ6X5YcGzhinip1dxYWh10QY/edit?gid=831137797#gid=831137797">PAST TRANSSACTION</a></li>
+						
 								
                  
 	   <table>
@@ -1005,7 +999,9 @@ function ShowAllData()
 <th class="top"> DAMAGE NOTE</th>
 <th class="top"> Quantity</th>
 <th class="top">TOTAL AMOUNT </th>
-<th class="top">BC REPORT </th>
+<th  colspan="4" class="top">BC REPORT </th><th colspan="5" ><button type="button"
+                                class="btn btn-primary" onclick="Search3();">SHOW REPORT</button></th>
+
 
 </tr>
 </tr>
@@ -1166,8 +1162,8 @@ function ShowAllData()
 <th> <input  readonly value="MANKHAND BALANCE " class="note" name="note24" /></th>
 <th><input  type="number" onchange="multiply(this)" class="needs-validation"  id="ofe" name="oe"></th>
 <th><input type="number" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
-<th></th>
-<TH colspan="4" > <button type="button"
+<th colspan="3" ><a class="btn btn-primary" target="_blank" href="https://docs.google.com/spreadsheets/d/1n25MUoSsZSz-3fiXNb7mQ6X5YcGzhinip1dxYWh10QY/edit?gid=831137797#gid=831137797">PAST TRANSSACTION</a></th>
+<TH colspan="5" > <button type="button"
                                 class="btn btn-primary" onclick="sendwhatsapp();">BC report post</button></TH>
 </tr>
 <tr>
@@ -1190,7 +1186,9 @@ function ShowAllData()
   <div class="column">
     <table  >
       <tr>
-       
+       <button class="btn btn-primary" onclick="myFunction()">সংরক্ষণ করুন Save Data</button>
+
+<p class="top" id="demo"></p>
 
 
 
@@ -1232,6 +1230,13 @@ function ShowAllData()
         </form>
 	 </body>
 <script>
+	function myFunction() {
+
+  let text = "ভালো করে দেখে তবে সংরক্ষণ করবে\nYou will save it if you look carefully..";
+  if (confirm(text) == true) {
+    text = "সংরক্ষণ করা হয়েছে \nSaved";
+	
+  
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
@@ -1246,6 +1251,13 @@ function ShowAllData()
             })
             .catch(error => console.error('Error:', error));
         });
+		 }
+		else {
+    text = "বাতিল  করা হয়েছে \nCancelled";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+       
     </script>
     </div>
 	
