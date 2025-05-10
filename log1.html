@@ -340,7 +340,7 @@ table {
       document.getElementById("total16").value=amt16;
 	  
 	  var note17= document.getElementById("anup").value;
-	  var amt17=note17
+	  var amt17=-(note17)
 	  document.getElementById("total17").value=amt17;
 	  
 	  var total1= document.getElementById("total1").value;
@@ -380,8 +380,8 @@ table {
 	  var amt20=+(total2)+ +(total4)+ +(total6)+ +(total8)+ +(total10)+ +(total12);
 	  document.getElementById("total20").value=amt20;
 	  
-	  var note18= document.getElementById("dipika").value;
-	  var amt18=-(note18)
+	  var dip= document.getElementById("dipika").value;
+	  var amt18=dip
 	  document.getElementById("total18").value=amt18;
 	  
 	  var note21= document.getElementById("bc").value;
@@ -418,10 +418,17 @@ table {
 	  var pob= document.getElementById("total26_1").value;
 	  var mib=-(amt26)- -(ato) 
 	  document.getElementById("db").value=mib;
+	  var input15= document.getElementById("1input15").value;
+	    var input13= document.getElementById("1input13").value;
+	    var input11= document.getElementById("1input11").value;
+	    var input9= document.getElementById("1input9").value;
+	    var input7= document.getElementById("1input7").value;
+	    var input5= document.getElementById("1input5").value;
+	    var input3= document.getElementById("1input3").value;
+	    var input1= document.getElementById("1input1").value;
 	  
-	  
-
-
+var dip=+(input1)+ +(input3)+ +(input5)+ +(input7)+ +(input9)+ +(input11)+ +(input13)+ +(input15)
+document.getElementById("dipika").value=dip;
 
 document.getElementById("Quantity1").max = "1000";
 document.getElementById("Quantity2").max = "1000";
@@ -1165,8 +1172,8 @@ document.getElementsByName("ttran")[0].value = value[23];
 <th><input type="number" id="total14" class="total" name="amtc5" value="0" readonly></th>
 
 <th><input  readonly type="hidden" class="btn1" name="note18" /> </th>
-<th><input type="hidden" onchange="multiply(this)" value="0" class="btn1" name="sp" id="dipika" required></th>
-<th><input type="hidden" onchange="multiply(this)" class="btn1" id="total18"  name="sp1" value="0" readonly></th>
+<th><input type="number" onchange="multiply(this)" value="0" class="btn1" name="sp" id="dipika" required></th>
+<th><input type="number" onchange="multiply(this)" class="btn1" id="total18"  name="sp1" value="0" readonly></th>
 
 <td class="top">	WITHD RAWAL		</td><td>	<input  type="number" value="0" class="top2"  name="wit" readonly >	</td>
 <td class="top">	MONY TRAN</td><td>	<input  type="number" value="0" class="top2"  name="mtr" readonly >	</td>
@@ -1265,31 +1272,31 @@ document.getElementsByName("ttran")[0].value = value[23];
 	<p> </p>
 <tr>
      <input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa"  >
-	<input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa1"  >
-	<input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa2"  >
-	<input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa3"  >
+	<input class="top6" onchange="multiply(this)" type="text" id="1input1" name="mpa1"  >
+	<input class="top5" onchange="multiply(this)" type="text" id="1input2" name="mpa2"  >
+	<input class="top6" onchange="multiply(this)" type="text" id="1input3" name="mpa3"  >
 	
 	
       
 	   
-     <input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa4"  >
-	<input class="top6" onchange="multiply(this)" type="text"id="1input" name="mpa5"  >
-	<input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa6"  >
-	 <input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa7"  >
+     <input class="top5" onchange="multiply(this)" type="text" id="1input4" name="mpa4"  >
+	<input class="top6" onchange="multiply(this)" type="text"id="1input5" name="mpa5"  >
+	<input class="top5" onchange="multiply(this)" type="text" id="1input6" name="mpa6"  >
+	 <input class="top6" onchange="multiply(this)" type="text" id="1input7" name="mpa7"  >
 	
 	
        
-     <input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa8"  >
-	<input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa9"  >
-	<input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa10"  >
-	<input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa11"  >
+     <input class="top5" onchange="multiply(this)" type="text" id="1input8" name="mpa8"  >
+	<input class="top6" onchange="multiply(this)" type="text" id="1input9" name="mpa9"  >
+	<input class="top5" onchange="multiply(this)" type="text" id="1input10" name="mpa10"  >
+	<input class="top6" onchange="multiply(this)" type="text" id="1input11" name="mpa11"  >
 	
 	
        
-     <input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa12"  >
-	<input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa13"  >
-	<input class="top5" onchange="multiply(this)" type="text" id="1input" name="mpa14"  >
-	<input class="top6" onchange="multiply(this)" type="text" id="1input" name="mpa15"  >
+     <input class="top5" onchange="multiply(this)" type="text" id="1input12" name="mpa12"  >
+	<input class="top6" onchange="multiply(this)" type="text" id="1input13" name="mpa13"  >
+	<input class="top5" onchange="multiply(this)" type="text" id="1input14" name="mpa14"  >
+	<input class="top6" onchange="multiply(this)" type="text" id="1input15" name="mpa15"  >
 	
 	
        </div>
