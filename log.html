@@ -120,7 +120,17 @@ text-align: center;
  
 
 }
-
+.btn3
+{
+	 background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+	text-align:center;
+	color:black;
+	
+	padding: 2px 5px;
+	font-size: 12px;
+}
 .btn2,col-8
 {
 	background-color:ff5733; /* Green */
@@ -388,6 +398,9 @@ table {
 	  
 	  var amt20=+(total2)+ +(total4)+ +(total6)+ +(total8)+ +(total10)+ +(total12);
 	  document.getElementById("total20").value=amt20;
+
+	    var cch1=+(total1)+ +(total2)+ +(total3)+ +(total4)+ +(total5)+ +(total6)+ +(total7)+ +(total8)+  +(total9)+ +(total10)+ +(total11)+ +(total12)+ +(total13)+ +(total14)+ +(total15)+ +(total16);
+	  document.getElementById("cch").value=cch1;
 	  
 	  var note18= document.getElementById("dipika").value;
 	  var amt18=note18
@@ -466,9 +479,9 @@ document.getElementById("Quantity2").max = "1000";
         var note23= -(mib)- -(amt23);
       document.getElementById("ac").value=note23;var note23= document.getElementById("ac").value;
 	 
-	  text = "You pressed OK!";
+	  text = "মিসমাচ টি খরচের সাথে যুক্ত হয়েছে";
   } else {
-    text = "You canceled!";
+    text = "মিসমাচ টি খরচের সাথে যুক্ত হয়নি";
   }
   document.getElementById("demo").innerHTML = text;
 }
@@ -696,6 +709,7 @@ function Search(pNo="")
 	   multiply()
 		  multiply()
 		  multiply()
+		  Search3(pNo="")
           }
         });
 		$('#exampleModal').modal('hide');
@@ -894,7 +908,7 @@ document.getElementsByName("sl")[0].value = value[24];
               i = i + 1;
             });
 
-          
+          scb()
 
           }
         });
@@ -972,8 +986,9 @@ function ShowAllData()
 			
 			<tr><th class="top"  scope="col">BC DEPOSIT  </th><th>	<input  type="number" value="0"  class="form-control"  id="bcd" name="bcd"  >	</th> 
 			<th class="top"  scope="col">OPENING SYSTEM BALANCE </th><th> <input  type="number"  class="top3" name="osb" id="osb" value="0" ></th>
-            <th class="top"  scope="col">CLOSING SYSTEM BALANCE  </th><th><button type="button" onclick="scb();"><input class="top3" type="number" id="csb"   name="csb" value="" required readonly></button> </th>
-            
+            <th class="top"  scope="col">CLOSING SYSTEM BALANCE  </th><th><button type="button" onclick="scb();"><input class="btn3 btn-primary" type="number" id="csb"   name="csb" value="" required readonly></button> </th>
+            <th class="top"  scope="col">CLOSING CASH HANDBALANCE  </th><th><input class="top3" type="number" id="cch"   name="cch" value="" required readonly> </th>
+           
             <th scope="col" type="hidden" class="btn1" ></th><th><input type="hidden" class="btn1" name="sln" id="sln"value="1" readonly ><th>
                                    
                                    
@@ -1121,7 +1136,7 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity15"  name="c2"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total15" class="total" name="amtc2" value="0" readonly></th>
 
-<th><input  readonly value="LOAN PAYMENT " class="note" name="note19" /> </th>
+<th><input  readonly value="OFFICE STATIONERY PAYMENT " class="note" name="note19" /> </th>
 <th><input type="number" onchange="multiply(this)"  class="needs-validation" name="lb"  id="loan" ></th>
 <th><input type="number" onchange="multiply(this)" id="total19" class="total" name="lb1" value="0" readonly></th>
 <td class="top">	TOTAL TRAN</td><td>	<input  type="number" value="0" class="top2"  name="ttran" readonly >	</td>
@@ -1157,9 +1172,9 @@ function ShowAllData()
 </tr>
 <tr>
 <th class="top"> 12</th>
-<th> <input  readonly value="AC CASH BALANCE " class="note" name="note23" /></th>
-<th><button type="button" class="top3" onclick="add ();" ><input type="number" value="" class="note" readonly id="ac" name="ab"></button></th>
-<th><button type="button" class="top3" onclick="multiply();"><input type="number" onchange="multiply(this)" id="total23" class="total" name="ab1" value="0" readonly></button></th>
+<th> <input  readonly value="NEGATIVE BALANCE " class="note" name="note23" /></th>
+<th><button type="button" class="top3" onclick="add ();" ><input type="number" value=""class="btn3 btn-primary" readonly id="ac" name="ab"></button></th>
+<th><button type="button" class="top3" onclick="multiply();"><input type="number" onchange="multiply(this)" id="total23" class="btn3 btn-primary" name="ab1" value="0" readonly></button></th>
 
 
 <th> <input  readonly value="MANKHAND BALANCE " class="note" name="note24" /></th>
@@ -1183,8 +1198,7 @@ function ShowAllData()
 
 <tr>  <th colspan="7"><button class="btn btn-primary" onclick="myFunction()">সংরক্ষণ করুন Save Data</button>
 
-<p  id="demo"></p><button type="button" class="btn btn-primary"  
-                                onclick="ShowAllData()">Show All Data</button></th>  </tr>
+<p  id="demo"></p></th>  </tr>
 
 
 </table>
