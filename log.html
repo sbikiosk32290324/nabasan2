@@ -524,7 +524,7 @@ var	ssy	= document.getElementById("ssy").value;
 var	aof	= document.getElementById("aof").value;
 var	kyc	= document.getElementById("kyc").value;
 var	pfif= document.getElementById("pfif").value;
- 
+ var	ttran= document.getElementById("ttran").value;
  var url="https://wa.me/"+ phonenumber + "?text="
  
 	+"NEW REPORT FORMAT%0a" 
@@ -539,8 +539,10 @@ var	pfif= document.getElementById("pfif").value;
 	+"3.JJBY    👉  "+jjby+"%0a"
 	+"4.Fi Legacy Collection  👉"+aof+"%0a"
 	+"5.FI legacy Submite Br. 👉"+pfif+"%0a"
-	+"6.Inoperative Submitted Br.👉  "+ssy+"%0a"
+	+"6.Inoperative KYC Update👉  "+ssy+"%0a"
 	+"7.New Ac opened👉 "+acc+"%0a"
+	+"8.Total Tnx👉 "+ttran+"%0a"
+
 	 
 	+" Regards%0a"
 	+"CSP NAME  RAJESH PURKAIT%0a";
@@ -1141,8 +1143,8 @@ function ShowAllData()
 <th><input  readonly value="OFFICE STATIONERY PAYMENT " class="note" name="note19" /> </th>
 <th><input type="number" onchange="multiply(this)"  class="needs-validation" name="lb"  id="loan" ></th>
 <th><input type="number" onchange="multiply(this)" id="total19" class="total" name="lb1" value="0" readonly></th>
-<td class="top">	TOTAL TRAN</td><td>	<input  type="number" value="0" class="top2"  name="ttran" readonly >	</td>
-<td class="top">	PPF		</td><td>	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td>
+<td class="top">	TOTAL TRAN</td><td>	<input  type="number" value="0" class="top2" id="ttran" name="ttran" readonly >	</td>
+<td class="top">	PPF & SSY		</td><td>	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td>
 
 </tr>
 <tr>
@@ -1154,7 +1156,7 @@ function ShowAllData()
 <th><input  readonly value="Total Nonessue Note " class="note" name="note20" /></th>
 <th><input readonly type="number" id="non" name="Quantity20" class="needs-validation"  onchange="multiply(this)" required></th>
 <th><input type="number" onchange="multiply(this)" id="total20" class="total" class="total" name="total20" value="0" readonly></th>
-<td class="top">	SSY		</td><td>	<input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
+<td class="top">	KYC UPDATE		</td><td>	<input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
 <td class="top">	AOF 	</td><td>	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td>
 
 
