@@ -1,16 +1,17 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
 	
-<title>SEORAHATI CASH BALANCE</title>
+<title>home</title>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imagination Invoice Example</title>
+    
     <!-- For Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     
 
@@ -22,125 +23,223 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 
-	
+	<style>
 
-<style>
-	
-	body {
+		.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+ background-color:rgb(5, 48, 53);
+ 
+  position: fixed;
+  top: 14%;
+    left: 0%;
+  height: 100%;
+  overflow: auto;
+}
 
-	 background-image: url("IMG_20220723_175319.jpg");
+.sidebar a {
+  display: block;
+  color: green;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #003ce0;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #4a205a;
+  color: white;
+}
+ .header {
+ overflow: hidden;
+ background-color:#021c20;
+ width: 100%;
+ 
+ 
+ position: absolute;
+   top: 0;
+   right: 0;
+  
+  height: 14%;
+ }
+ body {
+
+	 background-image: url("IMG_319.jpg");
 	background-size: 109%;
-	  width: 100%;
+	  width: 80%;
 	height: 92%;
 }
-      *{
-        padding: 0;
-        margin: 0;
-        font-family: monospace;
-
-      }
-
-
-      ul{
-		  margin: 0;
-		  padding: 0;
-        list-style: none;
-        background: #22438C;
-		 text-align: left;
-
-      }
-      ul li {
-        display: inline-block;
-        position: relative;
-		text-align: left;
-		padding: 0;
-        margin: 0;
-height:30px;
-      }
-      ul li a{
-		  padding: 0;
-        margin: 0;
-        display: block;
-        padding: 15px 50px;
-        color: rgb(217, 217, 235);
-        text-decoration: none;
-       text-align: center-left;
-        font-size:12px;
-		white-space: nowrap;
-			height:20px;
-   width:100%;
-      }
-      ul li ul.dropdown li{
-        display: block;
-		
-      }
-      ul li ul.dropdown{
-        font-size: 100%;
-        background: #22438C;
-        position: absolute;
-        z-index: 1;
-        display: none;
-		padding: 0;
-        margin: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
+ .image{
+ border-radius: 80%;
+position: fixed;
+  width: 4%;
+  height: 7%;
+   left:88%;
+  }
+ 
+ .left
+ {
   text-align: left;
+}
+ .right
+ {
+  text-align: right;
+}
+ .center
+ {
   
-      }
-      ul li a:hover{
-        background: #112C66;
-
-      }
-      ul li:hover ul.dropdown{
-        display: block;
-      }
-.btn
-{
-    background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 3px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
+  background:rgba(23, 4, 0, 0.50);
+  position: fixed;
+   top: 20%;
+   right: 0%;
   
 }
-  
-	
+ 
+ .header-right {
+   float: right;
+   position: absolute;
+   top: 0;
+   right: 0;
+ }
+ 
 
-.btn1
-{
-	background-color:ff5733; /* Green */
-color: #ff5733;
-font-size: 12px;
+
+
+
+.custom-alert {
+    visibility: hidden;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    border: 1px solid #77bb77;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	 background:rgba(75, 133, 241, 0.5);
+    
+    margin: auto;
+   
+   
+    
+    text-align: center; 
+   
+}
+
+.alert-content {
+    text-align: center;
+}
+.open-btn {
+    color: #fff;
+    background: rgb(17, 202, 17);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+h1{
+  
+color: #50fa67;
+font-size:11px;
+border: 2px;
+
+text-align: left;
+}
+h2, h3 {
+   background-color:ff5733; /* Green */
+color: #50fa67;
+font-size:12px;
 border: 2px;
 
 text-align: center;
-  text-decoration: none;
-  display: inline-block;
  
-
+ 
 }
 
-.btn2,col-8
-{
-	background-color:ff5733; /* Green */
-color: #ff5733;
-font-size: 12px;
-text-align: left;
-padding: 2px 30px;
+
+.button-container {
+    margin-top: 15px;
+}
+
+#confirm-btn,
+#cancel-btn {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+#confirm-btn:hover,
+#cancel-btn:hover {
+    background-color: #45a049;
+}
+
+#confirm-btn:focus,
+#cancel-btn:focus {
+    outline: none;
+}
+
+#confirm-btn:active,
+#cancel-btn:active {
+    background-color: #3e8e41;
+}  
+
+
+
+.massage {
+  font-size: 14px;
+width:1000px;
+    height:50px;
+   }  
+
+  .micmatch
+  {
+    background-color: color(srgb red green blue);
+    color: color(srgb red green blue);
+  }
+	
+
+
+
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+ 
+  text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-size: 14px;
+
+  cursor: pointer;
+
   
- 
-
 }
+.button:hover {
+  background-color: #4a205a;}
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 40px;}
+.button5 {border-radius: 50%;}
+
 .form-control
 {
-    border: 0px;
-	padding: 2px 5px;
-	font-size: 12px;
+    
+	font-size: 16px;
+	width:130px;
+    height:20px;
+    
 }
 
 .input-group-text
@@ -160,9 +259,8 @@ padding: 2px 30px;
 	padding: 2px 5px;
 	font-size: 12px;
 }
-.note 
-{
-	background-color:#900C3F;
+.note {
+	background-color:#1905f7;
 	text-align:center;
 	color:#FFFFFF;
 	
@@ -172,42 +270,26 @@ padding: 2px 30px;
 	}
 .total 
 {
-	background-color:#900C3F;
+	background-color:#1603e9;
 	text-align:center;
 	color:#FFFFFF ;
 	
 	padding: 2px 5px;
 	font-size: 12px;
 	}
-.timer 
-{
-	background-color:#900C3F;
-	text-align:center;
-	color:#00FF00 ;
-	
-	padding: 2px 5px;
-	font-size: 12px;
-	}
-.header
-{
-	background-color:#40E0D0;
-	text-align:center;
-	color:#FFFFFF;
-	font-size:100%;
-	padding: 2px 5px;
-	
-	}
+
+
 .top
 {
-	background-color:#808000;
+	background-color:ff5733;
 	text-align:center;
-	color:#FFFFFF;
+	color: #faa250;
 	font-size: 12px;
-	
+	text-align:left;
 	}
 	.top1
 {
-	background-color:#900C3F;
+	background-color:#1300e2;
 	text-align:center;
 	color:#FFFFFF;
 	font-size: 12px;
@@ -216,9 +298,9 @@ padding: 2px 30px;
 	}
 .top2
 {
-	background-color:#900C3F;
+	background-color:#011d10;
 	text-align:center;
-	color:#2ae610 ;
+	color:#d5ff88 ;
 	font-size: 12px;
 	width:50px;
     height:20px;
@@ -226,11 +308,11 @@ padding: 2px 30px;
 .top3
 {
 	
-	background-color:#900C3F;
-	text-align:center;
-	color:#2ae610 ;
+	background-color:#011d10;
+	
+	color:#d5ff88 ;
 	font-size: 16px;
-	width:100px;
+	width:80px;
     height:20px;
 	}
 .top4
@@ -251,23 +333,134 @@ padding: 2px 30px;
   display: table;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
+
+#demo {
+	background-color:#808000;
+	text-align:center;
+	color:#FFFFFF;
+	font-size: 12px;
+	
+	}
+	label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+	color: green;
 }
-.alert
-{
-	color:rad ;
+
+input {
+    
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	
 }
 
 
 
 
-</style>
-<script>
-	function multiply()
+	</style>
+
+<!-- For Invoice  -->
+    <script>
+
+
+
+function multiply1()
+    {
+	
+	var final_data= document.getElementById("nt1").value;
+      var qnt=document.getElementById("Qt1").value;
+        var amt=final_data*qnt;
+      document.getElementById("tot1").value=amt;
+
+	  var note3= document.getElementById("nt2").value;
+      var qnt3=document.getElementById("Qt2").value;
+        var amt3=note3*qnt3;
+      document.getElementById("tot2").value=amt3;
+	 
+	  var note5= document.getElementById("nt3").value;
+      var qnt5=document.getElementById("Qt3").value;
+        var amt5=note5*qnt5;
+      document.getElementById("tot3").value=amt5;
+	  
+	
+	  
+	  var note7= document.getElementById("nt4").value;
+      var qnt7=document.getElementById("Qt4").value;
+        var amt7=note7*qnt7;
+      document.getElementById("tot4").value=amt7;
+	  
+	
+	  
+	  var note9= document.getElementById("nt5").value;
+      var qnt9=document.getElementById("Qt5").value;
+        var amt9=note9*qnt9;
+      document.getElementById("tot5").value=amt9;
+	  
+	
+	  
+	  var note11= document.getElementById("nt6").value;
+      var qnt11=document.getElementById("Qt6").value;
+        var amt11=note11*qnt11;
+      document.getElementById("tot6").value=amt11;
+	  
+	
+	  
+	  var note13= document.getElementById("nt7").value;
+      var qnt13=document.getElementById("Qt7").value;
+        var amt13=note13*qnt13;
+      document.getElementById("tot7").value=amt13;
+	  
+	  var note14= document.getElementById("nt8").value;
+      var qnt14=document.getElementById("Qt8").value;
+        var amt14=note14*qnt14;
+      document.getElementById("tot8").value=amt14;
+	  
+	  var note15= document.getElementById("nt9").value;
+      var qnt15=document.getElementById("Qt9").value;
+        var amt15=note15*qnt15;
+      document.getElementById("tot9").value=amt15;
+	  
+	  
+	
+	  
+	  var total1= document.getElementById("tot1").value;
+	    var total3= document.getElementById("tot2").value;
+	    var total5= document.getElementById("tot3").value;
+	    var total7= document.getElementById("tot4").value;
+	    var total9= document.getElementById("tot5").value;
+	    var total11= document.getElementById("tot6").value;
+	    var total13= document.getElementById("tot7").value;
+	    var total14= document.getElementById("tot8").value;
+	    var total15= document.getElementById("tot9").value;
+	    
+	  
+	  
+	 
+	
+	  
+	  var amtg=+(total1)+ +(total3)+ +(total5)+ +(total7)+ +(total9)+ +(total11)+ +(total13)+ +(total15)+ +(total14)  ;
+	  
+	  document.getElementById("alltot").value=amtg;
+	  
+	document.getElementById("Qt1").max = "100";
+	    document.getElementById("Qt2").max = "300";
+	    document.getElementById("Qt3").max = "500";
+	    document.getElementById("Qt4").max = "500";
+	    document.getElementById("Qt5").max = "500";
+	     document.getElementById("Qt6").max = "500";
+	     document.getElementById("Qt7").max = "100";
+	     document.getElementById("Qt8").max = "100";
+	     document.getElementById("Qt9").max = "100";
+	     
+	    
+	    
+	
+	    
+	  } 
+    
+	    function multiply()
     {
 	
 	var final_data= document.getElementById("note1").value;
@@ -386,6 +579,17 @@ table {
 	  
 	  var amt20=+(total2)+ +(total4)+ +(total6)+ +(total8)+ +(total10)+ +(total12);
 	  document.getElementById("total20").value=amt20;
+
+      var cch1=+(total1)+ +(total2)+ +(total3)+ +(total4)+ +(total5)+ +(total6)+ +(total7)+ +(total8)+  +(total9)+ +(total10)+ +(total11)+ +(total12)+ +(total13)+ +(total14)+ +(total15)+ +(total16);
+	  document.getElementById("cch").value=cch1;
+
+   var cch1 = +(document.getElementById("cch").value); // Retrieve and convert cch value to number
+      // Ensure note21 is defined and converted to a number *before* being used
+      var note21 = +(document.getElementById("bc").value); 
+      
+      var thk = cch1 + note21; // Perform the addition with the correctly defined numeric variables
+      document.getElementById("TH").value = thk;
+
 	  
 	  var note18= document.getElementById("dipika").value;
 	  var amt18=-(note18)
@@ -960,121 +1164,211 @@ document.getElementsByName("ttran")[0].value = value[23];
 		$('#exampleModal').modal('hide');
 		 
 }
+ function customAlert() {
+            const message = 
+                "Cash Count";
+            document.getElementById("alert-message").
+                innerText = message;
+            document.getElementById("custom-alert").
+                style.visibility = "visible";
+            document.body.
+                style.backgroundColor = "rgb(49 45 45 / 45%)";
+        }
 
-function ShowAllData()
-{
-	$(document).ready(function (){
-		
-		$.getJSON("https://script.google.com/macros/s/AKfycbx7Y9H6pXRsTzOWz0rjr0Aa7CcINUuvHL5tE_RaVJnaZfo8nIt9jpafo2MObOY5K9M8/exec?page=all",
-        function (data) {
-	
-		var Table="", Rows="", Columns="";
-		$.each(data, function(key, value)
-		{
-			var date="";
-			Columns ="";
-			i=0;
-			$.each(value, function(key1, value1)
-			{
-				i++;
-				if (i ==2) 
-				{
-					value1 = "" + value1;
-					value1 = value1.substring(0, 60);	
-				}
-				Columns = Columns + '<td>' + value1 + '</td>';
-				if (date == "") date = value1;
-				
-				
-			});
-			Rows = Rows + '<tr onclick="Search('+date+')">' + Columns + '</tr>';
-		});
-		
-		$("#MyTBody").html(Rows);
-		$('#exampleModal').modal('show');
-	});	
-	});			
+        
 
+        function cancelAction1() {
+            document.getElementById("custom-alert").
+                style.visibility = "hidden";
+            document.body.
+                style.backgroundColor = "#fff"
+        }
+
+
+
+		function Alert1() {
+            const message = 
+                "Loan Balance Count";
+            document.getElementById("alert-message").
+                innerText = message;
+            document.getElementById("alert1").
+                style.visibility = "visible";
+            document.body.
+                style.backgroundColor = "rgb(49 45 45 / 45%)";
+        }
+ 
+
+        function cancelAction() {
+            document.getElementById("alert1").
+                style.visibility = "hidden";
+            document.body.
+                style.backgroundColor = "#fff"
+        }
+        function customAlert3() {
+            const message = 
+                "Calculate";
+            document.getElementById("alert-message3").
+                innerText = message;
+            document.getElementById("custom-alert3").
+                style.visibility = "visible";
+            document.body.
+                style.backgroundColor = "rgb(49 45 45 / 45%)";
+        }
+
+        
+
+        function cancelAction3() {
+            document.getElementById("custom-alert3").
+                style.visibility = "hidden";
+            document.body.
+                style.backgroundColor = "#fff"
+        }
+		function customAlert4() {
+            const message = 
+                "FD Calculate";
+            document.getElementById("alert-message4").
+                innerText = message;
+            document.getElementById("custom-alert4").
+                style.visibility = "visible";
+            document.body.
+                style.backgroundColor = "rgb(49 45 45 / 45%)";
+        }
+
+        
+
+        function cancelAction4() {
+            document.getElementById("custom-alert4").
+                style.visibility = "hidden";
+            document.body.
+                style.backgroundColor = "#fff"
+        }
+
+
+
+		function calculateEMI() {
+    event.preventDefault()
+    let loanAmount = document.getElementById("loanAmount").value;
+    let interestRate = document.getElementById("interestRate").value;
+    let loanTenure = document.getElementById("loanTenure").value;
+
+    if (loanAmount === "" || interestRate === "" || loanTenure === "") {
+        alert("Please fill in all fields!");
+        return;
+    }
+
+    let principal = parseFloat(loanAmount);
+    let annualRate = parseFloat(interestRate) / 100;
+    let monthlyRate = annualRate / 12;
+    let months = parseInt(loanTenure);
+
+    let emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / 
+              (Math.pow(1 + monthlyRate, months) - 1);
+			  let tin = emi*months-(principal);
+			  let tpay =emi*months;
+			  
+
+    document.getElementById("emiResult").innerText = emi.toFixed(2);
+	document.getElementById("tin").innerText = tin.toFixed(2);
+	document.getElementById("tpay").innerText = tpay.toFixed(2);
 }
-</script>
+function calculateRD() {
+    // Get input values
+    var investment = parseFloat(document.getElementById("investment").value);
+    var rate = parseFloat(document.getElementById("rate").value);
+    var tenure = parseInt(document.getElementById("tenure").value);
 
-    <h1 class="header"> SEORAHATI CASH BALANCE</H1>
-<ul>
- <li><a class="btn btn-primary" href="https://sbikiosk32290324.github.io/nabasan2/nabasan.html">home</a></li>
- <li>
-        <a class="btn btn-primary">Other Service </a>
-        <ul class="dropdown">
-          <li><a class="btn btn-primary" href="#"></a></li>
-          <li><a class="btn btn-primary" href="https://customer.epson.co.in/customer/repair.do#/servicerequest/IN">Printer Call Loge</a></li>
-          <li><a class="btn btn-primary" href="">TDR Calculater</a></li>
-          <li><a class="btn btn-primary" href="#"></a></li>
-        </ul>
-      </li>
-      
-      <li><a class="btn btn-primary" href="https://drive.google.com/drive/folders/1DzezLikMAop-j_LYA_kEwUUzZtsP0wCX">Pdf Folder</a></li>
-	   
+    // Calculate maturity amount and interest earned
+    var maturityAmount = investment * tenure + (investment * (tenure * (tenure + 1))) / 2 * (rate / 100) / 12;
+    var interestEarned = maturityAmount - (investment * tenure);
+
+    // Display the results
+    document.getElementById("maturityAmount").textContent = maturityAmount.toFixed(2);
+    document.getElementById("interestEarned").textContent = interestEarned.toFixed(2);
+
+    // Generate a pie chart
+    var ctx = document.getElementById("pie-chart").getContext("2d");
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Investment Amount', 'Interest Earned'],
+            datasets: [{
+                data: [investment * tenure, interestEarned],
+                backgroundColor: ['#36a2eb', '#ff6384'],
+            }]
+        }
+    });
+}
+function calculateFD() {
+    // Get input values
+    var principal = parseFloat(document.getElementById("principal").value);
+    var rat = parseFloat(document.getElementById("rat").value);
+    var timePeriod = parseInt(document.getElementById("time").value);
+
+    // Calculate maturity amount and interest earned
+    var maturity = principal * (1 + rat / 100) ** timePeriod;
+    var interest = maturity - principal;
+
+    // Display the results
+    document.getElementById("maturity").textContent = maturity.toFixed(2);
+    document.getElementById("interest").textContent = interest.toFixed(2);
+
+    // Generate a pie chart
+    var ctx = document.getElementById("pie-chart").getContext("2d");
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Principal Amount', 'Interest Earned'],
+            datasets: [{
+                data: [principal, interestEarned],
+                backgroundColor: ['#36a2eb', '#ff6384'],
+            }]
+        }
+    });
+}
+
+let someValue = -1;
+
+if (someValue < 0) {
+  document.getElementById("db").style.color = "green";
+} else {
+  document.getElementById("db").style.color = "red";
+}
 
 
+    </script>
+	
+<h1 class="header"> NABASAN CASH BALANCE </H1>
 
-
-                  
-					
-								
-                      
-                        
-						
-								
-								
-                 
-			
-    </ul>
-    
 
 
 
 </head>
 <body >
 
-   <form     method="POST" id="form"   >
-	   
-             <table>
-<th class="btn1" scope="col">OPENING BALANCE  </th><th><input class="top3" type="number" id="total26_1"   name="ob" 
-                                     required readonly> 
-</th><th class="btn1"  scope="col">Closing BALANCE  </th><th> <input   type="number" onchange="multiply(this)" id="all_total"  value="0" class="top3" name="cb"  ></th> 
-                                    
-                                   
-<th class="btn1"  scope="col">MISMATCH BALANCE </th><th> <input  type="number" onchange="multiply(this)"  class="top3" name="mb" id="db" value="0" >  </th>
-<th class="btn1"  scope="col">TOTAL DEPOSIT  </th><th><input class="top3" type="number" id="tds"   name="tds" value="" required readonly> 
-                                     <input class="top3" type="number" id="tda"   name="tda" value="" required readonly> </th>
-                                    <th class="btn1"  scope="col">TOTAL WITHDRAWAL  </th><th><input    id="tws"   class="top3" name="tws"  > <input    id="twa"   class="top3" name="twa"  ></th> 
-                <th class="btn1"  scope="col">BC WITHDRAWAL  </th>     <th>	<input  type="number"  class="form-control"  id="bcw" name="bcw" >	</th>
-             
-			
-			
-			
-			<tr><th class="btn1"  scope="col">BC DEPOSIT  </th><th>	<input  type="number"  class="form-control"  id="bcd" name="bcd"  >	</th> 
-			<th class="btn1"  scope="col">OPENING SYSTEM BALANCE </th><th> <input  type="number"  class="top3" name="osb" id="osb" value="0" ></th>
-            <th class="btn1"  scope="col">CLOSING SYSTEM BALANCE  </th><th><button type="button" onclick="scb();"><input class="top3" type="number" id="csb"   name="csb" value="" required readonly></button> </th>
-            
-           <th scope="col" type="hidden" class="btn1" ></th><th><input type="hidden" class="btn1" name="sln" id="sln"value="1" readonly ><th>
-									  <th scope="col" class="btn1" >SEARCH Date</th><th><input type="date" class="form-control" 
-                                   placeholder="search data" novalidate id="dt" 
-                                   name="date"   required ></th><th><button class="btn btn-outline-secondary"  
-                                          type="button" onclick="Search1();">
-                                      <i class="bi bi-search"></i></button></th>
-									  <th></th>
-			
-</table>
+  <form     id="form"   >
+	  
+                  
+					
+                        
+						
+								
+                 
+	  
 			   
                <input type="hidden"  id="IsNew"    name="IsNew"    value="Y">
                <input type="hidden"  id="StartRow" name="StartRow" value="0"> 
                <input type="hidden"  id="RowCount" name="RowCount" value="0"> 
+			   <div id="custom-alert" class="custom-alert">
+<div class="alert-content">
+<span id="alert-message"></span>
+
+
 <table  onchange="multiply(this)" >
 <thead class="table-success">
 <tr>
 
 <tr>
-<th class="top">SL NO</th>
+
 <th class="top"> NOTE</th>
 <th class="top">Quantity</th>
 <th class="top">TOTAL AMOUNT </th>
@@ -1084,13 +1378,11 @@ function ShowAllData()
 <th class="top">TOTAL AMOUNT </th>
 
 
-<th  colspan="4" class="top">BC REPORT </th><th colspan="5" ><button type="button"
-                                class="btn btn-primary" onclick="Search3();">SHOW REPORT</button></th>
 
 </tr>
 </tr>
 <tr>
-<th >1</th>
+
 <th ><input  type="number"id="note1" name="note" class="note"  readonly value="500"></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity1" name="n500" /></th>
 <th><input type="number" onchange="multiply(this)" id="total1" class="total" name="amt500" value="0" readonly></th>
@@ -1099,15 +1391,10 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity2" name="rn500"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total2" class="total" name="amtr500" value="0" readonly></th>
 
-<td class="top">	ACCOUNT		</td><td>	<input  type="number" value="0" class="top2" id="acc" name="acc" readonly >	</td>
-<td class="top">	JJBY		</td><td>	<input  type="number" value="0" class="top2" id="jjby" name="jjby" readonly >	</td>
-<th><th>
-<th><th>
-<th><th>
-<th><th>
+
 </tr>
 <tr>
-<th class="top"> 2</th>
+
 <th><input type="number" value="200" readonly class="note" id="note3" name="note3" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity3" name="n200"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total3" class="total" name="amt200" value="0" readonly></th>
@@ -1116,11 +1403,9 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity4" name="rn200"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total4" class="total" name="amtr200" value="0" readonly></th>
 
-<td class="top">	SBY		</td><td>	<input  type="number"  value="0" class="top2" id="sby" name="sby" readonly >	</td>
-<td class="top">	APY		</td><td>	<input  type="number" value="0" class="top4" id="apy" name="apy"  >	</td>
 </tr>
 <tr>
-<th class="top"> 3</th>
+
 <th><input type="number" value="100" readonly class="note" id="note5" name="note5" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity5" name="n100"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total5" class="total" name="amt100" value="0" readonly></th>
@@ -1129,11 +1414,9 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" class="needs-validation" id="Quantity6" name="rn100"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total6" class="total" name="amtr100" value="0" readonly></th>
 
-<td class="top">	RD OPEN</td><td>	<input  type="number" value="0" class="top2" id="rdo" name="rdo" readonly >	</td>
-<td class="top">	STDR OPE</td><td>	<input  type="number" value="0" class="top2" id="stdr" name="stdr" readonly >	</td>
 </tr>
 <tr>
-<th class="top"> 4</th>
+
 <th><input type="number" value="50" readonly class="note" id="note7" name="note7" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"   id="Quantity7"  name="n50"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total7" class="total" name="amt50" value="0" readonly></th>
@@ -1142,11 +1425,9 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity8" name="rn50"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total8" class="total" name="amtr50" value="0" readonly></th>
 
-<td class="top">	RD DEP</td><td>	<input  type="number" value="0" class="top2"  name="loan" readonly >	</td>
-<td class="top">	LOAN DEP</td><td>	<input  type="number" value="0" class="top2"  name="yono" readonly >	</td>
 
 <tr>
-<th class="top"> 5</th>
+
 <th><input type="number" value="20" readonly class="note" id="note9" name="note9" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity9"  name="n20"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total9" class="total" name="amt20" value="0" readonly></th>
@@ -1155,13 +1436,11 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)"class="needs-validation" id="Quantity10" name="rn20"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total10" class="total" name="amtr20" value="0" readonly></th>
 
-<td class="top">	ATM DEP</td><td>	<input  type="number" value="0" class="top2"  name="rdd" readonly >	</td>
-<td class="top">	YONO Cash</td><td>	<input  type="number" value="0" class="top2"  name="atmd" readonly >	</td>
 
 
 </tr>
 <tr>
-<th class="top"> 6</th>
+
 <th><input type="number" value="10" readonly class="note" id="note11" name="note11" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity11"  name="n10"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total11" class="total" name="amt10" value="0" readonly></th>
@@ -1170,56 +1449,49 @@ function ShowAllData()
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity12"  name="rn10"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total12" class="total" name="amtr10" value="0" readonly></th>
 
-<td class="top">	ATM WITHD</td><td>	<input  type="number" value="0" class="top2"  name="atmw" readonly >	</td>
-<td class="top">	AEPS DEP</td><td>	<input  type="number" value="0" class="top2"  name="aepsd" readonly >	</td>
 
 </tr>
 <tr> 
-<th class="top"> 7</th>
+
 <th><input type="number" value="10" readonly class="note" id="note13" name="note13" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity13" name="c10"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total13" class="total" name="amtc10" value="0" readonly></th>
 
-<th><input  readonly value="ASRAMMORE BALANCE " class="btn1" name="note17" />  </th>
-<th><input type="number" onchange="multiply(this)" class="btn1" value="0"  name="ap" id="anup" readonly></th>
-<th><input type="number" onchange="multiply(this)" class="btn1" id="total17"  value="0" name="ap1" value="0" readonly></th>
+<th><input type="hidden"  readonly value="ASRAMMORE BALANCE "  name="note17" />  </th>
+<th><input type="hidden" onchange="multiply(this)"  value="0"  name="ap" id="anup" readonly></th>
+<th><input type="hidden" onchange="multiply(this)"  id="total17"  value="0" name="ap1" value="0" readonly></th>
 
-<td class="top">	AEPS WITHD	</td><td>	<input  type="number" value="0" class="top2"  name="aepsw" readonly >	</td>
-<td class="top">	DEPOSIT		</td><td>	<input  type="number" value="0" class="top2"  name="dep" readonly >	</td>
+
 
 
 </tr>
 <tr>
-<th class="top"> 8</th>
+
 <th><input type="number" value="5" readonly class="note" id="note14" name="note14" /></th>
 <th><input type="number" id="Quantity14" onchange="multiply(this)" class="needs-validation"    name="c5"  /></th>
 <th><input type="number" id="total14" class="total" name="amtc5" value="0" readonly></th>
 
-<th><a  href="https://sbikiosk32290324.github.io/nabasan2/log.html"target="_blank"><input  readonly value="Nabasan Balance " class="btn1" name="note18" /></a></th>
-<th><a href="https://sbikiosk32290324.github.io/nabasan2/log.html"target="_blank"><input type="number" onchange="multiply(this)"  class="btn1" name="sp" id="dipika" readonly></a></th>
-<th><input type="number" onchange="multiply(this)" class="btn1" id="total18"  name="sp1" value="0" readonly></th>
+<th><input  readonly value="Nabasan Balance " class="note" name="note18" /></th>
+<th><a href="https://sbikiosk32290324.github.io/nabasan2/NCASH.html"target="_blank"><input type="number" onchange="multiply(this)"  class="note" name="sp" id="dipika" readonly></a></th>
+<th><input type="number" onchange="multiply(this)" class="note" id="total18"  name="sp1" value="0" readonly></th>
 
-<td class="top">	WITHD RAWAL		</td><td>	<input  type="number" value="0" class="top2"  name="wit" readonly >	</td>
-<td class="top">	MONY TRAN</td><td>	<input  type="number" value="0" class="top2"  name="mtr" readonly >	</td>
 
 
 </tr>
 <tr>
-<th class="top"> 9</th>
+
 <th><input type="number" value="2" readonly class="note" id="note15" name="note15" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity15"  name="c2"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total15" class="total" name="amtc2" value="0" readonly></th>
 
-<th><input  readonly value="LOAN PAYMENT " class="note" name="note19" /> </th>
+<th><input  readonly value="OFFICE STATIONERY PAYMENT " class="note" name="note19" /> </th>
 <th><input type="number" onchange="multiply(this)"  class="needs-validation" name="lb"  id="loan" ></th>
-<th><input type="number" onchange="multiply(this)" id="total19" class="total" name="lb1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total19" class="total" name="lb1" value="0" readonly></th>
 
-<td class="top">	TOTAL TRAN</td><td>	<input  type="number" value="0" class="top2" id="ttran" name="ttran" readonly >	</td>
-<td class="top">	Contact center calling	</td><td>	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td>
 
 </tr>
 <tr>
-<th class="top"> 10</th>
+
 <th><input type="number" value="1" readonly class="note" id="note16" name="note16" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="Quantity16" name="c1"  /></th>
 <th><input type="number" onchange="multiply(this)" id="total16" class="total" name="amtc1" value="0" readonly></th>
@@ -1228,69 +1500,159 @@ function ShowAllData()
 <th><input readonly type="number" id="non" name="Quantity20" class="needs-validation"  onchange="multiply(this)" required></th>
 <th><input type="number" onchange="multiply(this)" id="total20" class="total" class="total" name="total20" value="0" readonly></th>
 
-<td class="top">	Inoperative AC calling</td><td>	<input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
-<td class="top">	Inoperative Done</td><td>	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td>
 
 
 </tr>
 <tr>
-<th class="top"> 11</th>
+
 <th> <input  readonly value="BC CASH BALANCE " class="note" name="note21" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="bc" name="sb"></th>
-<th><input type="number" onchange="multiply(this)" id="total21" class="total" name="sb1" value="0" readonly></th>
+<th><input type="hidden"onchange="multiply(this)" id="total21" class="total" name="sb1" value="0" readonly></th>
 
 <th><input  readonly value="EXC " class="note" name="note22" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"   id="exc" name="mp"></th>
-<th><input type="number" onchange="multiply(this)" id="total22" class="total" name="mp1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total22" class="total" name="mp1" value="0" readonly></th>
 
-<td class="top">	KYC collection</td><td>	<input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
-<td class="top">	KYC Submit</td><td>	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
 
 </tr>
 <tr>
-<th class="top"> 12</th>
-<th> <input  readonly value="AC CASH BALANCE " class="note" name="note23" /></th>
-<th><button type="button" class="top3" onclick="add ();" ><input type="number" value="" class="note" readonly id="ac" name="ab"></button></th>
-<th><button type="button" class="top3" onclick="multiply();" ><input type="number" onchange="multiply(this)" id="total23" class="total" name="ab1" value="0" readonly></button></th>
 
-
-<th> <input  readonly value="MANKHAND BALANCE " class="note" name="note24" /></th>
-<th><input  type="number" onchange="multiply(this)" class="needs-validation"  id="ofe" name="oe"></th>
-<th><input type="number" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
-
-<th colspan="3" ><a class="btn btn-primary" target="_blank" href="https://docs.google.com/spreadsheets/d/1usN3_5SCkQG9ZT2JLTwkhKZ7MHrEFt4VKr5l6T6mmno/edit?gid=1441275226#gid=1441275226">PAST TRANSSACTION</a></th>
-<TH colspan="5" > <button type="button"
-                                class="btn btn-primary" onclick="sendwhatsapp();">BC report post</button></TH>
-</tr>
-<tr>
-<th class="top"> 13</th>
 <th><input  readonly value="PENDING CASH " class="note" name="note25" /> </th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="pc" name="pc"></th>
-<th><input type="number" onchange="multiply(this)" id="total25" class="total" name="pc1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total25" class="total" name="pc1" value="0" readonly></th>
 
-<th><input  readonly value="OPENING BALANCE " class="note" name="note26" /></th>
-<th><input type="number" class="total" onchange="multiply(this)" name="Quantity26" value="150000" readonly id="ob" required></th>
-<th><input type="number" id="total26" onchange="multiply(this)" class="total" onchange="multiply(this)" name="total26" value="0" readonly></th>
+
+<th> <input type="hidden" readonly value="MANKHAND BALANCE " class="note" name="note24" /></th>
+<th><input  type="hidden" onchange="multiply(this)" class="needs-validation"  id="ofe" name="oe"></th>
+<th><input type="hidden" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
+
 </tr>
-	<input  onchange="multiply(this)" type="number" id="1input" name="mpa"  ></td>
+<tr>
 
-<tr > <th colspan="7"><button class="btn btn-primary" onclick="myFunction()">সংরক্ষণ করুন Save Data</button>
+<th></th>
+<th></th>
+<th></th>
 
-<p class="top" id="demo"></p><button type="button" class="btn btn-primary"  
-                                onclick="ShowAllData()">Show All Data</button></th> </tr>
+<th><input  readonly value="OPENING BALANCE " type="hidden"  class="note" name="note26" /></th>
+<th><input type="hidden"  class="total" onchange="multiply(this)" name="Quantity26" value="500000" readonly id="ob" required></th>
+<th><input type="hidden"  id="total26" onchange="multiply(this)" class="total" onchange="multiply(this)" name="total26" value="0" readonly></th>
+</tr>
+<tr>
+	<th colspan="20"><input class="massage" onchange="multiply(this)" type="massage" id="1input" name="mpa"  ></th></tr>
+
+<tr>  <th colspan="7"><button class="button button4" onclick="myFunction()"><i class="fa fa-save"></i> সংরক্ষণ   </button>
+
+<p  id="demo"></p></th>  </tr>
 
 
 </table>
+ </div>
+    
+                
+                <button id="cancel-btn" class="button button4"
+                    onclick="cancelAction1()"><i class="fa fa-close"></i>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
   <div class="column">
-    
+  
      <input type="hidden" value="1" class="btn1" placeholder="1" novalidate  id="sl" name="sl"   readonly>
-    
+     <div class="header">
+   <a style="font-size:20px;color:#50fa67">SBI Kiosk SEORA HATI</a>
+   <table ><tr>
+<th class="top" scope="col">OPENING BALANCE </th> <th ><input class="top3" type="number" id="total26_1"   name="ob" value="500000" required readonly></th>
+<th class="top"  scope="col">Closing BALANCE  </th> <th > <input   type="number" onchange="multiply(this)" id="all_total"  value="0" class="top3" name="cb"  ></th> 
+<th class="top"  scope="col">MISMATCH BALANCE </th> <th > <input  type="number" onchange="multiply(this)"  class="top3" name="mb" id="db" value="0" >  </th>
+<th class="top"  scope="col">TOTAL DEPOSIT </th> <th > <input class="top3" type="number" id="tds"   name="tds" value="" required readonly> </th>
+<th class="top"  scope="col">TOTAL DEP AMT</th> <th > <input class="top3" type="number" id="tda"   name="tda" value="" required readonly> </th>
+<th class="top"  scope="col">BC WITHDRAWAL </th> <th >	<input  type="number" value="0"  class="form-control"  id="bcw" name="bcw" >	</th>
+</tr>
+<tr> 
+ 
+<th class="top"  scope="col">OPENING SYSTEM BALANCE</th> <th >  <input  type="number"  class="top3" name="osb" id="osb" value="0" ></th>
+<th class="top"  scope="col">CLOSING SYSTEM BALANCE </th> <th > <a type="button"  onclick="scb();"><input class="top3" type="number" id="csb"   name="csb" value="" required readonly></a> </th>
+<th class="top"  scope="col">CLOSING CASH HANDBALANCE </th> <th > <input class="top3" type="number" id="cch"   name="cch" value="" required readonly> </th>
+<th class="top"  scope="col">TOTAL WDL </th> <th > <input    id="tws"   class="top3" name="tws"  ></th>
+<th class="top"  scope="col"> TOTAL WDL AMT</th> <th > <input    id="twa"   class="top3" name="twa"  ></th>
+<th class="top"  scope="col">BC DEPOSIT </th> <th >	<input  type="number" value="0"  class="form-control"  id="bcd" name="bcd"  >	</th>
+  </tr>
+  <tr>        
+   
+  <th> <a type="button"  onclick="multiply();"><input  readonly value="NEGATIVE BALANCE " class="note" name="note23" /></a></th>
+<th><a type="button"  onclick="add ();" ><input type="number" value=""class="button button4" readonly id="ac" name="ab"></a></th>
+<th class="top"  scope="col">TOTAL BALANCE </th><th ><input class="top3" type="number" id="TH"   name="TH" value="" required readonly> </th> 
+<th><input type="hidden"  onchange="multiply(this)" id="total23"  name="ab1" value="0" readonly></a></th>  
+
+<th></th><th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th><th></th>
+<th></th>
+<th></th>
+
+              
+
+<th scope="col" class="top" >SEARCH Date <input type="date"  class="btn1" placeholder="search data" novalidate id="dt"  name="date"   required >
+  <button  type="button" class="button button5" onclick="Search1();"><i class="bi bi-search"></i></button></th></tr> 
+                                 </table>
+                                 
+   <div class="header-right">
+   <div><img src="" class="image"  ></div>
+ <h1 >KO NAME    : SUSMITA PURKAIT</h1>
+ <h1 >KO CODE    : 32311337</h1>
+ <h1 >BRANCH     : SARISHA</h1>
+ <h1 >BRANCH CODE: 05156</h1>
+  
+   </div>
+ </div>
+    <div class="center">
+      <table  ><tr>
+                                  
+<td class="top">	ACCOUNT		</td><td>	<input  type="number" value="0" class="top2" id="acc" name="acc" readonly >	</td>
+<td class="top">	JJBY		</td><td>	<input  type="number" value="0" class="top2" id="jjby" name="jjby" readonly >	</td></tr>
+<tr><td class="top">	SBY		</td><td>	<input  type="number"  value="0" class="top2" id="sby" name="sby" readonly >	</td>
+<td class="top">	APY		</td><td>	<input  type="number" value="0" class="top4" id="apy" name="apy"  >	</td></tr>
+<tr><td class="top">	RD OPEN</td><td>	<input  type="number" value="0" class="top2" id="rdo" name="rdo" readonly >	</td>
+<td class="top">	STDR OPE</td><td>	<input  type="number" value="0" class="top2" id="stdr" name="stdr" readonly >	</td></tr>
+<tr><td class="top">	RD DEP</td><td>	<input  type="number" value="0" class="top2"  name="loan" readonly >	</td>
+<td class="top">	LOAN DEP</td><td>	<input  type="number" value="0" class="top2"  name="yono" readonly >	</td></tr>
+<tr><td class="top">	ATM DEP</td><td>	<input  type="number" value="0" class="top2"  name="rdd" readonly >	</td>
+<td class="top">	YONO Cash</td><td>	<input  type="number" value="0" class="top2"  name="atmd" readonly >	</td></tr>
+<tr><td class="top">	ATM WITHD</td><td>	<input  type="number" value="0" class="top2"  name="atmw" readonly >	</td>
+<td class="top">	AEPS DEP</td><td>	<input  type="number" value="0" class="top2"  name="aepsd" readonly >	</td></tr>
+<tr><td class="top">	AEPS WITHD	</td><td>	<input  type="number" value="0" class="top2"  name="aepsw" readonly >	</td>
+<td class="top">	DEPOSIT		</td><td>	<input  type="number" value="0" class="top2"  name="dep" readonly >	</td></tr>
+<tr><td class="top">	WITHD RAWAL		</td><td>	<input  type="number" value="0" class="top2"  name="wit" readonly >	</td>
+<td class="top">	MONY TRAN</td><td>	<input  type="number" value="0" class="top2"  name="mtr" readonly >	</td></tr>
+<tr><td class="top">	TOTAL TRAN</td><td>	<input  type="number" value="0" class="top2" id="ttran" name="ttran" readonly >	</td>
+<td class="top">	PPF & SSY		</td><td>	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td></tr>
+<tr><td class="top">	KYC UPDATE		</td><td>	<input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
+<td class="top">	AOF 	</td><td>	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td></tr>
+<tr><td class="top">	MINI STATEMENT		</td><td>	<input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
+<td class="top">	FI LEGACY</td><td>	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
+</tr>
+<tr><th colspan="2" ><a class="button button4" target="_blank" href="https://docs.google.com/spreadsheets/d/1usN3_5SCkQG9ZT2JLTwkhKZ7MHrEFt4VKr5l6T6mmno/edit?gid=1441275226#gid=1441275226">TRANSSACTION</a></th>
+<th colspan="2" class="right"><button type="button" class="button button4" onclick="Search3();">SHOW REPORT</button></th>
+</tr>
+
+<tr></th>
+</tr>
+<tr><th scope="col" type="hidden"  ></th><th><input type="hidden"  name="sln" id="sln"value="1" readonly ></th>  
+			</tr>
+      <tr><th colspan="3" class="right"><button type="button" class="button button4" onclick="sendwhatsapp();">BC report post</button></th>
+</tr>
+</table>
+    </div>
                   
         </form>
-		
-           <script>
-       function myFunction() {
+	 </body>
+<script>
+	function myFunction() {
 
   let text = "ভালো করে দেখে তবে সংরক্ষণ করবে\nYou will save it if you look carefully..";
   if (confirm(text) == true) {
@@ -1307,7 +1669,7 @@ function ShowAllData()
             .then(response => response.text())
             .then(data => {
                 alert(data);
-                
+                this.reset();
             })
             .catch(error => console.error('Error:', error));
         });
@@ -1317,39 +1679,222 @@ function ShowAllData()
   }
   document.getElementById("demo").innerHTML = text;
 }
+       
     </script>
-              
-    </div>
-	
-	<<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">cash</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <table class="table table-striped">
-		<tbody id="MyTBody"></tbody>
-	   </table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
-        
-      </div>
-    </div>
-  </div>
-</div>
+   
 	
 	
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<div id="alert1" class="custom-alert">
+        <div class="alert-content">
+            <span id="alert-message1"></span>
 
+
+	
+         <h2>Loan EMI Calculator</h2>
+
+        <form>
+		<div class="input-group">
+            <label for="investment">Loan Amount (₹):</label>
+            <input type="number" id="loanAmount" placeholder="Enter amount" required>
+        </div>
+            <div class="input-group">
+            <label for="investment">Interest Rate (% per year):</label>
+            <input type="number" id="interestRate" placeholder="Enter rate" required>
+        </div>
+<div class="input-group">
+            <label for="investment">Loan Tenure (Months):</label>
+            <input type="number" id="loanTenure" placeholder="Enter months" required>
+        </div>
+           
+            <button type="button" class="button button4" onclick="calculateEMI()">Calculate EMI</button>
+        </form>
+<div class="result">
+        <h3>Monthly EMI: ₹<span id="emiResult">0</span></h3>
+		<h3>Total Intrast: ₹<span id="tin">0</span></h3>
+		<h3>Total Pay: ₹<span id="tpay">0</span></h3>
+		</div>
+        
+     
+    </div>
+    
+                
+                <button id="cancel-btn" class="button button4"
+                    onclick="cancelAction()"><i class="fa fa-close"></i>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+	
+	<div id="custom-alert3" class="custom-alert">
+        <div class="alert-content">
+            <span id="alert-message3"></span>
+<div class="left" >
+<label class="input-group"></label> 
+
+<label class="right">RD Calculator</label> 
+
+   
+<table  onchange="multiply1(this)" >
+ <thead class="table-success">
+ <tr>
+ <th class="top" >SL NO</th>
+ 
+ <th class="top" > NOTE</th>
+ <th class="top" >Quantity</th>
+ <th class="top" >TOTAL AMOUNT </th>
+ </tr>
+ </thead>
+ <tbody id="TBody">
+ <tr>
+ <th class="top" name="Item" readonly> 1</th>
+ <td ><input  type="number"id="nt1"  readonly class="note"  value="500"readonly></td>
+ <td><input type="number"  onchange="multiply1(this)" class="needs-validation" id="Qt1" /></td>
+ <td><input type="number" id="tot1" class="note"  readonly value="0" ></td>
+ <td><label for="investment">Monthly Investment:</label></td>
+ <td><input type="number" class="needs-validation" id="investment" required></td>
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly> 2</th>
+ <td ><input  type="number"id="nt2"  readonly class="note"  value="200"readonly></td>
+ <td><input type="number"  id="Qt2" onchange="multiply1(this)" class="needs-validation"  /></td>
+ <td><input type="number" id="tot2" class="note"  readonly value="0" ></td>
+ <td><label for="rate">Interest Rate (%):</label></td>
+ <td><input type="number" class="needs-validation" id="rate" required></td>
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly>3</th>
+ <td ><input  type="number"id="nt3"  readonly class="note"  value="100"readonly></td>
+ <td><input type="number"  id="Qt3" onchange="multiply1(this)" class="needs-validation"  /></td>
+ <td><input type="number" id="tot3" class="note"   readonly value="0" ></td>
+ <td><label for="tenure">Tenure (months):</label></td>
+ <td><input type="number" class="needs-validation" id="tenure" required></td>
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly> 4</th>
+ <td ><input  type="number"id="nt4"  readonly class="note"  value="50"readonly></td>
+ <td><input type="number"  id="Qt4" onchange="multiply1(this)"  class="needs-validation" /></td>
+ <td><input type="number" id="tot4" class="note"   readonly value="0" ></td>
+ <td></td>
+ <td ><button class="button button4" onclick="calculateRD()" >Calculate</button></td>
+ 
+ </tr>
+<tr>
+ <th class="top" name="Item" readonly> 5</th>
+ <td ><input  type="number"id="nt5"  readonly class="note"  value="20"readonly></td>
+ <td><input type="number"  id="Qt5" onchange="multiply1(this)"  class="needs-validation" /></td>
+ <td><input type="number" id="tot5" class="note"   readonly value="0" ></td>
+ <td class="result"><p>Maturity Amount: <span id="maturityAmount"></span></p> </td>
+ 
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly> 6</th>
+ <td ><input  type="number"id="nt6"  readonly class="note"  value="10"readonly></td>
+ <td><input type="number"  id="Qt6" onchange="multiply1(this)" class="needs-validation"  /></td>
+ <td><input type="number" id="tot6" class="note"   readonly value="0" ></td>
+ <td><p>Interest Earned: <span id="interestEarned"></span></p></td>
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly> 7</th>
+ <td ><input  type="number"id="nt7"  readonly class="note"  value="5"readonly></td>
+ <td><input type="number"  id="Qt7" onchange="multiply1(this)" class="needs-validation"  /></td>
+ <td><input type="number" id="tot7" class="note"   readonly value="0" ></td>
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly> 8</th>
+ <td ><input  type="number"id="nt8"  readonly class="note"  value="2"readonly></td>
+ <td><input type="number"  id="Qt8" onchange="multiply1(this)"  class="needs-validation" /></td>
+ <td><input type="number" id="tot8" class="note"   readonly value="0" ></td>
+ </tr>
+ <tr>
+ <th class="top" name="Item" readonly>9</th>
+ <td ><input  type="number"id="nt9"  readonly class="note"  value="1"readonly></td>
+ <td><input type="number"  id="Qt9" onchange="multiply1(this)"  class="needs-validation" /></td>
+ <td><input type="number" id="tot9" class="note"   readonly value="0" ></td>
+ </tr>
+ 
+ <tr>
+ <th ></th>
+ <td>Total Amount</td>
+ <td></td>
+ <td><input   type="number" class="note" onchange="multiply1(this)" id="alltot" readonly value="0"  
+                                    class="form-control" 
+                                    name="addr"  ></td>
+ </tr>
+ </tbody>
+ </table>
+
+      </div>
+
+
+        
+       
+    
+               </div> 
+                <button id="cancel-btn3" class="button button4"
+                    onclick="cancelAction3()"><i class="fa fa-close"></i>
+                    Cancel
+                </button>
+            </div>
+       
+    </div>
+<div id="custom-alert4" class="custom-alert">
+        <div class="alert-content">
+            <span id="alert-message4"></span>
+
+<h2>FD Calculator</h2>
+        <table>
+        <tr class="input-group">
+           <th> <label  for="principal">Principal Amount:</label></th>
+           <th> <input class="needs-validation"  type="number" id="principal" required></th>
+        </tr>
+        <tr class="input-group">
+           <th> <label for="rate">Interest Rate (%):</label></th>
+           <th> <input class="needs-validation"  type="number" id="rat" required></th>
+        </tr>
+        <tr class="input-group">
+           <th> <label  for="time">Time Period (years):</label></th>
+           <th> <input class="needs-validation" type="number" id="time" required></th>
+        </tr>
+        <tr>
+        <th><button onclick="calculateFD()" class="button button4">Calculate</button></th>
+         </table>
+        <div class="result">
+          <p>Maturity Amount: <span id="maturity"></span></p>
+          <p>Interest Earned: <span id="interest"></span></p>
+        </div>
+               
+                <button id="cancel-btn4" class="button button4"
+                    onclick="cancelAction4()"><i class="fa fa-close"></i>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+	
+ <div>
+ <div class="sidebar">
+ 
+  <a class="w3-bar-item w3-button" onclick="customAlert()">CASH Count</a>
+  <a class="w3-bar-item w3-button" onclick="customAlert3()">Calculater </a>
+  <a class="w3-bar-item w3-button" onclick="customAlert4()">FD Calculater </a>
+  <a class="w3-bar-item w3-button" onclick="Alert1()">EMI Calculater </a>
+  <a href="https://sbikiosk32290324.github.io/nabasan2/log.html" class="w3-bar-item w3-button"  target="_blank">Nabasan Cash</a>
+ <a href="https://sbikiosk32290324.github.io/nabasan2/SendForm.html" class="w3-bar-item w3-button"   target="_blank">Form Send Branch</a>
+  <a href="https://customer.epson.co.in/customer/repair.do#/servicerequest/IN" class="w3-bar-item w3-button"   target="_blank">PRINTER SERVICE</a>
+ <a href="https://fi.sbi.bank.in/unifyapp/login/" class="w3-bar-item w3-button"   target="_blank">New Login</a>
+     <a href="https://kiosk.sbi.bank.in/" class="w3-bar-item w3-button"   target="_blank">Kiosk Login</a>
+   <a href="https://mail.google.com/mail/u/0/#inbox" class="fa-mail-forward"   target="_blank">Email </a>
+ 	  <a href="https://main.vibsranbc.org/csp-login"   class="w3-bar-item w3-button" target="_blank">Bc Login</a>
+ <a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit?gid=1081196834#gid=1081196834" class="w3-bar-item w3-button"  >KYC LIST</a>
+   <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"  style="font-size:20px;color:green">WhatsApp</a>
+</div>
   </body>
 </html>
   
- </body>
+
 	
 
 </html>
