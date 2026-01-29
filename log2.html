@@ -1326,15 +1326,16 @@ function calculateFD() {
     });
 }
 
-let someValue = -1;
 
-if (someValue < 0) {
-  document.getElementById("db").style.color = "green";
-} else {
-  document.getElementById("db").style.color = "red";
+ // check login
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
+    }
+ function logout() {
+  sessionStorage.removeItem("loggedIn");
+  window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
 }
-
-
+		
     </script>
 	
 <h1 class="header"> NABASAN CASH BALANCE </H1>
@@ -1607,7 +1608,7 @@ if (someValue < 0) {
  <h1 >KO CODE    : 32311337</h1>
  <h1 >BRANCH     : SARISHA</h1>
  <h1 >BRANCH CODE: 05156</h1>
-  
+  <button onclick="logout()">Logout</button>
    </div>
  </div>
     <div class="center">
