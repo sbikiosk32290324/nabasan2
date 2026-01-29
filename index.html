@@ -1,42 +1,122 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-UA-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>login form in HTML and CSS | codeha1</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+   <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 30px;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .input-box {
+      margin-bottom: 15px;
+    }
+
+    .input-box label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .input-box input:focus {
+      border-color: #667eea;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background: #667eea;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background: #5a67d8;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .links a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
+<div class="login-box">
+<h2>SBI KIOSK SARISHA</h2>
+<div class="input-box">
+        <label>Username</label>
+<input type="text" id="username" placeholder="Username"><br><br>
+</div>
+<div class="input-box">
+<label>Password</label>
+<input type="password" id="password" placeholder="Password"><br><br>
+</div>
+<button class="login-btn" onclick="login()">Login</button>
 
-    <div class="style">
-    
-    </div>
+<p id="msg"></p>
 
-    <div class="weapper">
-        <form action="">
-            <h1>SBI KIOSK SARISHA</h1>
-            <h2> Login</h2>
-            <div class="input-box">
-                <input type="text" placeholder="username" required>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="password" required>
-            </div>
+<script>
+function login() {
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
 
-            <div class="remember-forget">
-                <label><input type="checkbox"> remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
-			<div class="register-link">
-                <button><p><a href="nabasan.html">loging</a></p></button>
-            </div>
-            <div class="register-link">
-                <p>Don't have an account?<a href="Register.html">Register</a></p>
-            </div>
-        </form>
-    </div>
-		
+  // simple hardcoded login
+  if (user === "32290324" && pass === "rajesh@11") {
+    sessionStorage.setItem("loggedIn", "true");
+    window.location.href = "https://sbikiosk32290324.github.io/sarisha/";
+  } else {
+    document.getElementById("msg").innerText = "Wrong ID or Password";
+  }
+}
+</script>
+</div>
+</body>
+</html>
