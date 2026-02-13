@@ -12,20 +12,54 @@
     }
 
     body {
-      height: 100vh;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-image: url("IMG20251220122131.jpg");
+	background-size:109%;
+	  width: 80%;
+	height: 90%;
     }
 
-    .login-box {
-      background: #fff;
-      padding: 30px;
-      width: 350px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
+   .image{
+ border-radius: 80%;
+position: fixed;
+  width: 4%;
+  height: 7%;
+   left:88%;
+  }
+
+    .login-box  {
+    position: fixed;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #0ef;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #0ef;
+    padding: 30px;
+    width: 350px;
+    top:20%;
+  
+   left:40%;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+}
+
+.login-box ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #0ef;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+.login-box :hover:before {
+    width: 100%;
+}
 
     .login-box h2 {
       text-align: center;
@@ -57,20 +91,127 @@
       border-color: #667eea;
     }
 
-    .login-btn {
-      width: 100%;
-      padding: 10px;
-      background: #667eea;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+     button {
+    position: relative;
+    display: inline-block;
+    color: rgba(255, 255, 255, .4);
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #262c37;
+    padding: 2px 10px;
+    transition: .5s;
+    transition-delay: .8s;
+}
 
-    .login-btn:hover {
-      background: #5a67d8;
-    }
+button:hover {
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    text-shadow: 0 0 5px var(--clr);
+    transition-delay: 1ms;
+}
+
+button span {
+    position: absolute;
+    display: block;
+    background: var(--clr);
+    box-shadow: 0 0 5px var(--clr);
+}
+
+button span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+button:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+button span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+button:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+button span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+button:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+button span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+button:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+button span:nth-child(5) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+button:hover span:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+button span:nth-child(6) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+button:hover span:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
 
     .links {
       text-align: center;
@@ -99,9 +240,17 @@
 <label>Password</label>
 <input type="password" id="pass" placeholder="Enter Password"><br><br>
 </div>
-<button class="login-btn" onclick="login()">Login</button>
+<button onclick="login()" style="--clr:#fbff00;">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Login </button>
 
-<p id="msg"></p>
+
+<p id="msg" style="color:red;"></p>
 
 <script>
  const users = [
