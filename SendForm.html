@@ -306,14 +306,6 @@ function Search(pNo="")
 // 	});			
 
 // }
-	 check login
-    if (sessionStorage.getItem("loggedIn") !== "true") {
-      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-    }
- function logout() {
-  sessionStorage.removeItem("loggedIn");
-  window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-}
 	</script>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -354,7 +346,7 @@ function Search(pNo="")
                         
                     </div>
                                   <button class="btn btn-outline-secondary"  
-                                          id="leno1" type="button" onclick="Search();">
+                                           type="button" onclick="Search();">
                                       <i class="bi bi-search"></i></button>
                             </div>
                             <div class="valid-feedback">Letter No. is 
@@ -374,9 +366,9 @@ function Search(pNo="")
                <div class="row">
                     <div class="col-8">
 				
-                        <button type="submit"  id="leno2"
+                        <button type="submit"  
                                 class="btn btn-primary" >Submit</button>
-                        <button type="button"  id="leno3" class="btn btn-primary"  
+                        <button type="button"   class="btn btn-primary"  
                                 onclick="GetPrint()">Print</button>
 						
                     </div>
@@ -553,4 +545,3 @@ function Search(pNo="")
 
   </body>
 </html>
-
