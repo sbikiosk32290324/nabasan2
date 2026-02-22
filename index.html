@@ -257,10 +257,10 @@ function login() {
   var user = document.getElementById("username").value;
   var pass = document.getElementById("password").value;
 
-  // simple hardcoded login
-  if (user === "32290324" && pass === "rajesh@11") {
-    sessionStorage.setItem("loggedIn", "true");
-    window.location.href = "https://sbikiosk32290324.github.io/sarisha/";
+  
+  if (user === "32290324" && pass === "RBI@5555") {
+      localStorage.setItem("loggedIn", "true");
+	  window.location.href = "https://sbikiosk32290324.github.io/sarisha/";
   } else {
     document.getElementById("msg").innerText = "Wrong ID or Password";
   }
@@ -269,6 +269,7 @@ function login() {
 </div>
 </body>
 </html>
+
 
 
 
