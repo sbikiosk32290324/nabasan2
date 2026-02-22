@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Send form amtala</title>
+    <!-- For Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <!-- CSS For Print Format -->
+	   <link rel="stylesheet"  href="cal.css">
+    
+     
+   
+
+    <!-- jQuery CDN -->
+    <!--<script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+    <!-- For Invoice  -->
+    <script>
+	var AppsScriptLink = "AKf......OQ";
+
+
+function GetPrint()
+{
+   
+    window.print();
+	
+}
+
+
+
+
+
+$(document).ready(function () {
+    FormValidation();
+    SetCurrentDate();
+   
+    
+    MaxInv();
+      
+       
+});
+
+
+
+
+function MaxInv()
+{
+        $.getJSON("https://script.google.com/macros/s/AKfycbzgfyA7VMQVj6mPwAlCNomfrw7XnOR74QmN_sqU5ocB7jrryG2Vz1zCFRwgDsOsDEWKKg/exec?page=max",
+        function (data) {
+         
+          $("input[name='leno']").val(data);
+
+        });
+}
+
+
+function SetCurrentDate()
+{
+    const date = new Date();
+    console.log(date);
+
+    let d = date.getDate();
+    let m = date.getMonth() + 1;
+    let y = date.getFullYear();
+
+    if (d < 10) d = '0' + d;
+    if (m < 10) m = '0' + m;
+
+    let CurrDate = y + '-' + m + '-' + d;
+
+    $('input[name="ledt"]').val(CurrDate);
+
+}
+
+
+function FormValidation()
+{
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+ 
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+ 
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+ 
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+}
+
+function Search(pNo="")
+{
+        var no = $('#leno').val();
+
+		if (pNo != "") no = pNo;
+
+        $.getJSON("https://script.google.com/macros/s/AKfycbyPK4M9jACuGQlEt0y3ziOuNS3lYGLhgbDyFpITlCJsYB_vzTe7dYT_x9Kagu0KtxwnZw/exec?page=search&no="+no,
+        function (data) {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "NOT FOUND")
+          {
+            alert('Letter No. Not Found...');
+
+          }
+          else
+          {
+            //var record = data;
+            var record   = data.record;
+
+            var StartRow = data.SR;
+            var RowCount = data.CNT;
+
+            $('#IsNew').val('N');
+            $('#StartRow').val(StartRow);
+            $('#RowCount').val(RowCount);
+         
+            var i = 0;
+            $.each(record, function(key, value)
+            {
+           
+              if (i == 0)
+              {
+                var dt = value[1].substring(0,10);
+               
+                document.getElementsByName("ledt")[0].value = dt;
+                
+              }
+              else
+              {
+                if (i > 1) ;
+               
+             
+                document.getElementsByName("rf")[i].value = value[2];
+                document.getElementsByName("cif")[i].value     = value[3];
+                document.getElementsByName("ac")[i].value    = value[4];
+                document.getElementsByName("name")[i].value     = value[5];
+
+              }
+
+              i = i + 1;
+            });
+
+           
+			
+
+          }
+        });
+		$('#exampleModal').modal('hide');
+		 
+}
+// function ShowAllData()
+// {
+// 	$(document).ready(function (){
+		
+// 		$.getJSON("https://script.google.com/macros/s/AKfycbw0wlbYHgaeUwQktfiHl3aRs1oranpQeibDtIh3778PCIZGlcZokt8CrdFJzgS2vXLqag/exec?page=all",
+//         function (data) {
+	
+// 		var Table="", Rows="", Columns="";
+// 		$.each(data, function(key, value)
+// 		{
+// 			var leno="";
+// 			Columns ="";
+// 			i=0;
+// 			$.each(value, function(key1, value1)
+// 			{
+// 				i++;
+// 				if (i ==2) 
+// 				{
+// 					value1 = "" + value1;
+// 					value1 = value1.substring(0, 10);	
+// 				}
+// 				Columns = Columns + '<td>' + value1 + '</td>';
+// 				if (leno == "") leno = value1;
+				
+				
+// 			});
+// 			Rows = Rows + '<tr onclick="Search('+leno+')">' + Columns + '</tr>';
+// 		});
+		
+// 		$("#MyTBody").html(Rows);
+// 		$('#exampleModal').modal('show');
+// 	});	
+// 	});			
+
+// }
+	</script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+</head>
+  <body>
+    
+
+    <div >
+
+      <form method="POST" class="needs-validation" novalidate   action="https://script.google.com/macros/s/AKfycbzrdTdZNwYH9h3d8nPQtxS6ICvP4_kFtPVcESlK1RYS9gT1yqbakisP5vCV0TnH7IdlCg/exec"   >
+ <table >
+        <div >
+            <div class="header">
+             <h4> STATE BANK OF INDIA SARISHA RAMKRISHNA MISSION ASHRAM(Branch-Sarisha Branch Code-05156)</h4>
+			 </div>
+			 <h4> CUSTOMER SERVICE POINT (Location- Sarisha Hat,Asrammore,Seorahati,Mankhand D/H, WB 743368)</h4>
+			 <h4> CSP CODE – 32290324,32311287,32311337,32290301    CONTACT – 6296612586 / 9614300791 / 8158922924</h4>
+			 <h4> BRANCH CODE – 05156    EMAIL – 32290324.vib@gmail.com/ 32311337.astana@gmail.com\32311287.astana@gmail.com </h4>
+			 <h4>To </h4>
+			 <h4>Fi Manager </h4>
+			 <h4>Amtala Fimm Dsh </h4>
+			 <h4>Amtala,South 24 Parganas,wb 743337 </h4>
+			 
+			 <h4> </h4>
+			 <h4> </h4>
+			 
+			 <h4> CSP’s Account Openning Form Send for MAKER & CHECKER AUTHORISATION</h4>
+			 </table>
+			 <div >
+               <div class="row">
+                    <div class="col-8">
+				
+                        <button type="submit" 
+                                class="btn btn-primary" >Submit</button>
+                        <button type="button" class="btn btn-primary"  
+                                onclick="GetPrint()">Print</button>
+						
+                    </div>
+                                                 
+                        </div>
+            
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" >Letter. No</span>
+                            <input type="text" class="ent" 
+                                   placeholder="Letter. No"  id="leno" 
+                                   name="leno" autocomplete="off" 
+                                   required >
+                            <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary"  
+                                          type="button" onclick="Search();">
+                                      <i class="bi bi-search"></i></button>
+                            </div>
+                            <div class="valid-feedback">Letter No. is 
+                            OK</div>
+                        </div>
+                            
+                        
+                    </div>
+	<div>
+            <div class="col-4">
+		    
+                                            <div class="input-group mb-3">
+                            <span class="input-group-text" >Letter. Date</span>
+                            <input type="date" class="ent" 
+                                    name="ledt">
+                        
+                    </div>
+               </div>
+
+               <input type="hidden"  id="IsNew"    name="IsNew"    value="Y">
+               <input type="hidden"  id="StartRow" name="StartRow" value="0"> 
+               <input type="hidden"  id="RowCount" name="RowCount" value="0"> 
+
+               <table>
+                   
+                      <tr class="table-top">
+                        <th scope="col">#</th>
+                        <th scope="col">RF NO</th>
+                        <th scope="col" class="text-end">CIF No</th>
+                        <th scope="col" class="text-end">AC NO</th>
+                        <th scope="col" class="text-end">Customer Name</th>
+                                                
+                            
+                                    
+                        </th>
+
+                      </tr>
+                    
+                    <tbody id="TBody">
+                      <tr ><th scope="row" type="hidden">	</th>	<td> <input class="ent" type="hidden"name="rf" > </td>	<td><input type="hidden"   class="form-control text-end" name="cif" ></td>	 <td><input type="hidden"class="form-control text-end" name="ac"  ></td>	<td><input type="hidden" class="form-control text-end" name="name"  ></td></tr>	
+
+                       <th scope="row">	1	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	2	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	3	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	4	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	5	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	6	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	7	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	8	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	9	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	10	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	11	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	12	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	13	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	14	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	15	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	16	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+ 
+<th scope="row">	17	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	18	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	19	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	20	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	21	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	22	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	23	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	24	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	25	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	26	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	27	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	28	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	29	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	30	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	31	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	32	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	33	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	34	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	35	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	36	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	37	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	38	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	39	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	40	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	41	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	42	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	43	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	44	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	45	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	46	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	47	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	48	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	49	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	50	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	51	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	52	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	53	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	54	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	55	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	56	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	57	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	58	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	59	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	60	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	61	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	62	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	63	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	64	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	65	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	66	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	67	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	68	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	69	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	70	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	71	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	72	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	73	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	74	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	75	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	76	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	77	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	78	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	79	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	80	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	81	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	82	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	83	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	84	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	85	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	86	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	87	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	88	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	89	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	90	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	91	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	92	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	93	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	94	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	95	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	96	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	97	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	98	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	99	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+<th scope="row">	100	</th>	<td> <input class="ent" type="text" name="rf" > </td>	<td><input type="number"   class="ent" name="cif" ></td>	 <td><input type="number" class="ent" name="ac"  ></td>	<td><input type="taxt" class="ent" name="name"  ></td></tr>	
+
+									
+								   
+                        
+                      
+                    </tbody>
+                  </table>
+
+                  
+                    
+                    </div>
+                </div>
+            </div>
+          </div>
+        </form>
+    </div>
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Show Invoice</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <table class="table table-striped">
+		<tbody id="MyTBody"></tbody>
+	   </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
