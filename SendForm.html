@@ -726,9 +726,22 @@ window.addEventListener("storage", function(event) {
 window.addEventListener("beforeunload", function() {
     localStorage.setItem("logout-event", Date.now());
 });
+
+window.addEventListener("load", function () {
+    const navEntries = performance.getEntriesByType("navigation");
+
+    if (navEntries.length > 0 && navEntries[0].type === "reload") {
+        // Redirect to logout page
+        window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
+        // or "logout.php" if using PHP
+    }
+});
+
+	
 </script>
   </body>
 </html>
+
 
 
 
