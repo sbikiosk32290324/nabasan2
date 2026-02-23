@@ -715,9 +715,21 @@ function logout() {
   localStorage.removeItem("loggedIn");
   window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
 }
+	// Detect logout in other tabs
+window.addEventListener("storage", function(event) {
+    if (event.key === "logout-event") {
+        window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+    }
+});
+
+// When closing tab
+window.addEventListener("beforeunload", function() {
+    localStorage.setItem("logout-event", Date.now());
+});
 </script>
   </body>
 </html>
+
 
 
 
