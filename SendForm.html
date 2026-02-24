@@ -728,19 +728,21 @@ window.addEventListener("beforeunload", function() {
 });
 
 window.addEventListener("load", function () {
-    const navEntries = performance.getEntriesByType("navigation");
 
-    if (navEntries.length > 0 && navEntries[0].type === "reload") {
+    const nav = performance.getEntriesByType("navigation")[0];
+
+    if (nav.type === "reload" || nav.type === "navigate") {
         // Redirect to logout page
-        window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
-        // or "logout.php" if using PHP
+        window.location.href = "logout.html"; 
+        // use logout.php if using PHP session
     }
-});
 
+});
 	
 </script>
   </body>
 </html>
+
 
 
 
