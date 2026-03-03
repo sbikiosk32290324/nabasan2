@@ -757,6 +757,171 @@ var	pfif= document.getElementById("pfif").value;
 	
 	}
 
+		function sendreport()
+	{
+        var phonenumber="+919614300791";
+		var	date= document.getElementById("dt").value;
+		var	openstmbal=document.getElementById("osb").value;
+var	calsysclos=document.getElementById("csb").value;
+var	handbal=document.getElementById("cch").value;
+var	closbal=document.getElementById("TH").value;
+var	mitmach=document.getElementById("db").value;
+var	qnt500=document.getElementById("Quantity1").value;
+var	amt500=document.getElementById("total1").value;
+var	qnt200=document.getElementById("Quantity3").value;
+var	amt200=document.getElementById("total3").value;
+var	qnt100=document.getElementById("Quantity5").value;
+var	amt100=document.getElementById("total5").value;
+var	qnt50=document.getElementById("Quantity7").value;
+var	amt50=document.getElementById("total7").value;
+var	qnt20=document.getElementById("Quantity9").value;
+var	amt20=document.getElementById("total9").value;
+var	qnt10=document.getElementById("Quantity11").value;
+var	amt10=document.getElementById("total11").value;
+var	cqnt10=document.getElementById("Quantity13").value;
+var	camt10=document.getElementById("total13").value;
+var	cqnt5=document.getElementById("Quantity14").value;
+var	camt5=document.getElementById("total14").value;
+var	cqnt2=document.getElementById("Quantity15").value;
+var	camt2=document.getElementById("total15").value;
+var	cqnt1=document.getElementById("Quantity16").value;
+var	camt1=document.getElementById("total16").value;
+var	system=document.getElementById("bc").value;
+var	nagativ=document.getElementById("ac").value;
+
+var	nonnote=document.getElementById("total20").value;
+
+var	asrommore=document.getElementById("anup").value;
+var	seorahati=document.getElementById("dipika").value;
+var	officsta=document.getElementById("loan").value;
+var	pending=document.getElementById("pc").value;
+var	exces=document.getElementById("exc").value;
+
+var	mankhand=document.getElementById("ofe").value;
+var	ACCOUNT=document.getElementById("acc").value;
+var	JJBY=document.getElementById("jjby").value; 
+var	SBY	=document.getElementById("sby").value;
+var	APY	=document.getElementById("apy").value; 
+var	RDOPEN =document.getElementById("rdo").value; 
+var	STDROPE=document.getElementById("stdr").value;
+var	RDDEP=document.getElementById("loan").value;
+var	LOANDEP=document.getElementById("yono").value;
+var	ATMDEP=document.getElementById("rdd").value;
+var	YONOCash=document.getElementById("atmd").value;
+var	ATMWITHD=document.getElementById("atmw").value; 
+var	AEPSDEP	=document.getElementById("aepsd").value;
+var	AEPSWITHD	=document.getElementById("aepsw").value; 
+var	DEPOSIT=document.getElementById("dep").value; 
+var	WITHDRAWAL=document.getElementById("wit").value; 
+var	MONYTRAN=	document.getElementById("mtr").value;
+var	MINISTATEMENT=document.getElementById("kyc").value;
+var	FILEGACY=	 document.getElementById("pfif").value;
+var	totransaction=document.getElementById("ttran").value;
+var	dep=document.getElementById("tds").value;
+var	amtdep=document.getElementById("tda").value;
+var	wdl	=	 document.getElementById("tws").value;
+var	amtwdl=document.getElementById("twa").value;
+var	bcwdl=document.getElementById("bcw").value;
+var	bcdep=document.getElementById("bcd").value;
+var	ssy	= document.getElementById("ssy").value;
+var	nonqnt500	=	document.getElementById("Quantity2").value;
+var	nonamt500	=	document.getElementById("total2").value;
+var	nonqnt200	=	document.getElementById("Quantity4").value;
+var	nonamt200	=	document.getElementById("total4").value;
+var	nonqnt100	=	document.getElementById("Quantity6").value;
+var	nonamt100	=	document.getElementById("total6").value;
+var	nonqnt50	=	document.getElementById("Quantity8").value;
+var	nonamt50	=	document.getElementById("total8").value;
+var	nonqnt20	=	document.getElementById("Quantity10").value;
+var	nonamt20	=	document.getElementById("total10").value;
+var	nonqnt10	=	document.getElementById("Quantity12").value;
+var	nonamt10	=	document.getElementById("total12").value;
+
+
+ var url="https://wa.me/"+ phonenumber + "?text="
+ 
+	+"NEW REPORT FORMAT%0a" 
+	+"CSP CODE : 32311337%0a"
+	
+	+"DATE     :  "+date+"%0a"
+	
+    +"Opening System Balance    :  "+openstmbal+"%0a"
+    +"         *Hand cash *                         %0a"
+	+"1.500 X "+qnt500+" = "+amt500+"     %0a"
+    +"2.200 X "+qnt200+" = "+amt200+"   %0a" 
+    +"3.100 X "+qnt100+" = "+amt100+"   %0a"
+    +"4.20 X "+qnt50+" = "+amt50+"    %0a"
+    +"5.20 X "+qnt20+" = "+amt20+"    %0a"
+    +"6.10 X "+qnt10+" = "+amt10+"    * %0a"
+    +"      *coin * %0a"
+    +"7.10 X "+cqnt10+" = "+camt10+"    %0a"
+    +"8.5 X "+cqnt5+" = "+camt5+"       %0a"
+    +"9.2 X "+cqnt2+" = "+camt2+"       %0a"
+    +"10.1 X "+cqnt1+" = "+camt1+"      %0a"
+     +"    * Non Issue Note * %0a"
+     +"1.500 X "+nonqnt500+" = "+nonamt500+"     %0a"
+    +"2.200 X "+nonqnt200+" = "+nonamt200+"   %0a" 
+    +"3.100 X "+nonqnt100+" = "+nonamt100+"   %0a"
+    +"4.20 X "+nonqnt50+" = "+nonamt50+"    %0a"
+    +"5.20 X "+nonqnt20+" = "+nonamt20+"    %0a"
+    +"6.10 X "+nonqnt10+" = "+nonamt10+"     %0a"
+
+    +"Non Issue Note  ="+nonnote+"  %0a"
+    +"TOTAL HANDCASH             =  "+handbal+"%0a"
+    +"CLOSING SYSTEM BALANCE     =  "+system+" %0a"
+    +"TOTAL CASH =      "+closbal+"%0a"
+    +"%0a"
+    
+    +"TOTAL DEPOSIT    =   "+dep+"%0a"
+    +"TOTAL DEPOSIT AMOUNT =     "+amtdep+"%0a"
+    +"TOTAL WITHDRAWAL  =     "+wdl+"%0a"
+    +"TOTAL WITHDRAWAL AMOUNT   =   "+amtwdl+"%0a"
+    +"CALCULAT SYSTEM BALANCE ="+calsysclos+"%0a"
+     +"%0a"
+    
+    +"*  Seora Hati      ="+seorahati+"%0a"
+    +"*  Asrammore       ="+asrommore+"%0a"
+    +"*  Mankhand        ="+mankhand+" %0a"
+    +"*  Office Stationary ="+officsta+"%0a"
+    +"Other expenses     = "+exces+"%0a"
+    +"BC PENDING CASH      = "+pending+"%0a"
+    +"OD NAGATIVE BALANCE  =  "+nagativ+"%0a"
+     +"%0a"
+
+	+"      * BUSINESS REPORT* %0a"
+   +"%0a"
+   +"1.New Ac opened "+ACCOUNT+"%0a"
+	+"2.SBY        "+SBY+"%0a"
+	+"3.JJBY      "+JJBY+"%0a"
+  +"4.APY  "+APY+"%0a"
+	+"5.AEPS DEPOSIT  "+AEPSDEP+"%0a"
+  +"6.AEPS WITHDRAWAL  "+AEPSWITHD+"%0a"
+  +"7.CIF DEPOSIT  "+DEPOSIT+"%0a"
+  +"8.CIF WITHDRAWAL  "+WITHDRAWAL+"%0a"
+  +"9.MONEY TRANSFAR "+MONYTRAN+"%0a"
+  +"10.LOAN DEPOSIT  "+LOANDEP+"%0a"
+  +"11.ATM DEPOSIT  "+ATMDEP+"%0a"
+  +"12.ATM WITHDRAWAL  "+ATMWITHD+"%0a"
+  +"13.RD REMITENCE  "+RDDEP+"%0a"
+  +"14.MINI STATEMENT  "+MINISTATEMENT+"%0a"
+  +"15.STDR OPEN "+STDROPE+"%0a"
+	+"16.RD OPEN "+RDOPEN+"%0a"
+  +"17.YONO CASH "+STDROPE+"%0a"
+	+"18.FI legacy Submite Br. "+FILEGACY+"%0a"
+	+"19.Inoperative KYC Update  "+ssy+"%0a"
+  +"TOTAL TRANSACTION "+totransaction+"%0a"
+
+	
+
+	
+
+	 
+	+" Regards%0a"
+	+"CSP NAME  SUSMITA PURKAIT%0a";
+	window.open(url, '_blank').focus();
+	
+	}
+
 function FormValidation()
 {
     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -1614,28 +1779,28 @@ function calculateFD() {
     <div class="center">
       <table  ><tr>
                                   
-<td class="top">	ACCOUNT		</td><td>	<input  type="number" value="0" class="top2" id="acc" name="acc" readonly >	</td>
-<td class="top">	JJBY		</td><td>	<input  type="number" value="0" class="top2" id="jjby" name="jjby" readonly >	</td></tr>
-<tr><td class="top">	SBY		</td><td>	<input  type="number"  value="0" class="top2" id="sby" name="sby" readonly >	</td>
-<td class="top">	APY		</td><td>	<input  type="number" value="0" class="top4" id="apy" name="apy"  >	</td></tr>
-<tr><td class="top">	RD OPEN</td><td>	<input  type="number" value="0" class="top2" id="rdo" name="rdo" readonly >	</td>
-<td class="top">	STDR OPE</td><td>	<input  type="number" value="0" class="top2" id="stdr" name="stdr" readonly >	</td></tr>
-<tr><td class="top">	RD DEP</td><td>	<input  type="number" value="0" class="top2"  name="loan" readonly >	</td>
-<td class="top">	LOAN DEP</td><td>	<input  type="number" value="0" class="top2"  name="yono" readonly >	</td></tr>
-<tr><td class="top">	ATM DEP</td><td>	<input  type="number" value="0" class="top2"  name="rdd" readonly >	</td>
-<td class="top">	YONO Cash</td><td>	<input  type="number" value="0" class="top2"  name="atmd" readonly >	</td></tr>
-<tr><td class="top">	ATM WITHD</td><td>	<input  type="number" value="0" class="top2"  name="atmw" readonly >	</td>
-<td class="top">	AEPS DEP</td><td>	<input  type="number" value="0" class="top2"  name="aepsd" readonly >	</td></tr>
-<tr><td class="top">	AEPS WITHD	</td><td>	<input  type="number" value="0" class="top2"  name="aepsw" readonly >	</td>
-<td class="top">	DEPOSIT		</td><td>	<input  type="number" value="0" class="top2"  name="dep" readonly >	</td></tr>
-<tr><td class="top">	WITHD RAWAL		</td><td>	<input  type="number" value="0" class="top2"  name="wit" readonly >	</td>
-<td class="top">	MONY TRAN</td><td>	<input  type="number" value="0" class="top2"  name="mtr" readonly >	</td></tr>
-<tr><td class="top">	TOTAL TRAN</td><td>	<input  type="number" value="0" class="top2" id="ttran" name="ttran" readonly >	</td>
-<td class="top">	PPF & SSY		</td><td>	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td></tr>
-<tr><td class="top">	KYC UPDATE		</td><td>	<input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
-<td class="top">	AOF 	</td><td>	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td></tr>
-<tr><td class="top">	MINI STATEMENT		</td><td>	<input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
-<td class="top">	FI LEGACY</td><td>	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
+<td class="top">    	ACCOUNT		</td><td>	            <input  type="number" value="0" class="top2"    id="acc"    name="acc"  >	</td>
+<td class="top">	    JJBY		</td><td>	            <input  type="number" value="0" class="top2"    id="jjby"   name="jjby"  >	</td></tr>
+<tr><td class="top">	SBY		</td><td>	                <input  type="number"  value="0" class="top2"   id="sby"    name="sby"  >	</td>
+<td class="top">	    APY		</td><td>	                <input  type="number" value="0" class="top4"    id="apy"    name="apy"  >	</td></tr>
+<tr><td class="top">	RD OPEN</td><td>	                <input  type="number" value="0" class="top2"    id="rdo"    name="rdo"  >	</td>
+<td class="top">	    STDR OPE</td><td>                   <input  type="number" value="0" class="top2"    id="stdr"   name="stdr"  >	</td></tr>
+<tr><td class="top">	RD DEP</td><td>             	    <input  type="number" value="0" class="top2"    id="loan"   name="loan" readonly >	</td>
+<td class="top">	    LOAN DEP</td><td>	                <input  type="number" value="0" class="top2"    id="yono"   name="yono" readonly >	</td></tr>
+<tr><td class="top">	ATM DEP</td><td>	                <input  type="number" value="0" class="top2"    id="rdd"    name="rdd" readonly >	</td>
+<td class="top">	    YONO Cash</td><td>	                <input  type="number" value="0" class="top2"    id="atmd"   name="atmd" readonly >	</td></tr>
+<tr><td class="top">	ATM WITHD</td><td>	                <input  type="number" value="0" class="top2"    id="atmw"   name="atmw" readonly >	</td>
+<td class="top">	    AEPS DEP</td><td>               	<input  type="number" value="0" class="top2"    id="aepsd"  name="aepsd" readonly >	</td></tr>
+<tr><td class="top">	AEPS WITHD	</td><td>       	    <input  type="number" value="0" class="top2"    id="aepsw"  name="aepsw" readonly >	</td>
+<td class="top">	    DEPOSIT		</td><td>	            <input  type="number" value="0" class="top2"    id="dep"   name="dep" readonly >	</td></tr>
+<tr><td class="top">	WITHD RAWAL		</td><td>   	    <input  type="number" value="0" class="top2"    id="wit"   name="wit" readonly >	</td>
+<td class="top">	    MONY TRAN</td><td>	                <input  type="number" value="0" class="top2"    id="mtr"   name="mtr" readonly >	</td></tr>
+<tr><td class="top">	TOTAL TRAN</td><td>	                <input  type="number" value="0" class="top2" id="ttran" name="ttran" readonly >	</td>
+<td class="top">	    PPF & SSY		</td><td>       	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td></tr>
+<tr><td class="top">	KYC UPDATE		</td><td>   	    <input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
+<td class="top">	    AOF 	</td><td>               	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td></tr>
+<tr><td class="top">	MINI STATEMENT		</td><td>	    <input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
+<td class="top">	    FI LEGACY</td><td>              	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
 </tr>
 <tr><th colspan="2" ><a class="button button4" target="_blank" href="https://docs.google.com/spreadsheets/d/1usN3_5SCkQG9ZT2JLTwkhKZ7MHrEFt4VKr5l6T6mmno/edit?gid=1441275226#gid=1441275226">TRANSSACTION</a></th>
 <th colspan="2" class="right"><button type="button" class="button button4" onclick="Search3();">SHOW REPORT</button></th>
@@ -1646,6 +1811,7 @@ function calculateFD() {
 <tr><th scope="col" type="hidden"  ></th><th><input type="hidden"  name="sln" id="sln"value="1" readonly ></th>  
 			</tr>
       <tr><th colspan="3" class="right"><button type="button" class="button button4" onclick="sendwhatsapp();">BC report post</button></th>
+		  <tr><th colspan="3" class="right"><a type="button" class="button button4" onclick="sendreport();">BC report post</a></th>
 </tr>
 </table>
     </div>
