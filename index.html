@@ -234,7 +234,7 @@ button:hover span:nth-child(6) {
 <h2>SBI KIOSK SARISHA</h2>
 <div class="input-box">
         <label>Username</label>
-<input type="number"  id="username" placeholder="CSP ID" ><br><br>
+<input type="number"  id="userId" placeholder="CSP ID" ><br><br>
 </div>
 <div class="input-box">
 <label>Password</label>
@@ -250,21 +250,45 @@ button:hover span:nth-child(6) {
         Login </button>
 
 
-<p id="msg" style="color:red;"></p>
+<p id="error" style="color:red;"></p>
 
 <script>
-function login() {
-  var user = document.getElementById("username").value;
-  var pass = document.getElementById("password").value;
+	const users = {
+  "32290324": {
+    password: "RBI@5555",
+    page: "https://sbikiosk32290324.github.io/sarisha/"
+  },
 
-  
-  if (user === "32290324" && pass === "RBI@5555") {
-      localStorage.setItem("loggedIn", "true");
-	  window.location.href = "https://sbikiosk32290324.github.io/sarisha/";
+  "32311337": {
+    password: "RBI#5555",
+    page: "https://sbikiosk32290324.github.io/nabasan2/log2.html"
+  },
+
+  "user2": {
+    password: "user456",
+    page: "user2.html"
+  },
+
+  "user3": {
+    password: "user789",
+    page: "user3.html"
+  }
+};
+
+function login() {
+  const id = document.getElementById("userId").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (users[id] && users[id].password === password) {
+    window.location.href = users[id].page;
   } else {
-    document.getElementById("msg").innerText = "Wrong ID or Password";
+    document.getElementById("error").textContent =
+      "Wrong User ID or Password";
   }
 }
+
+  
+ 
 </script>
 </div>
 </body>
