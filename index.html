@@ -280,6 +280,9 @@ function login() {
   const password = document.getElementById("password").value;
 
   if (users[id] && users[id].password === password) {
+
+	sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("users[id]", users[id]);
     window.location.href = users[id].page;
   } else {
     document.getElementById("error").textContent =
