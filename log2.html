@@ -608,8 +608,10 @@ function multiply1()
 	  document.getElementById("total23").value=amt23;
 	  
 	  var note24= document.getElementById("ofe").value;
-	  var amt24=note24
+	   var amt24=note24
 	  document.getElementById("total24").value=amt24;
+	  
+	  
 	  
 	  var note25= document.getElementById("pc").value;
 	  var amt25=note25
@@ -625,10 +627,14 @@ function multiply1()
 	  var amt19=note19
 	  document.getElementById("total19").value=amt19;
 	  
+	  
+	 
+	  
 	  var ato= document.getElementById("all_total").value;
 	  var pob= document.getElementById("total26_1").value;
 	  var mib=-(amt26)- -(ato) 
 	  document.getElementById("db").value=mib;
+	  
 	  
 	  
 
@@ -685,6 +691,17 @@ var csb= +(osb)+ +(twa)+ +(bcd)+ -(tda)+ -(bcw);
       document.getElementById("csb").value=csb;
 	}
 	  
+function ersh()
+	{
+	
+	var pfi= document.getElementById("pfif").value; 
+	  var kky= document.getElementById("kyc").value;
+	  var aoff= document.getElementById("aof").value;
+	  var note24=+(kky)+ -(pfi)+ +(aoff); 
+	  document.getElementById("ofe").value=note24;
+	  
+	
+	}
  	  
 $(document).ready(function () {
     FormValidation()
@@ -1044,7 +1061,7 @@ function Search(pNo="")
 									document.getElementsByName("rdd")[0].value = value[58];
 									document.getElementsByName("loan")[0].value = value[59];
 									document.getElementsByName("yono")[0].value = value[61];
-									
+									document.getElementsByName("aof")[0].value = value[45];
 									document.getElementsByName("atmd")[0].value = value[60];
 									document.getElementsByName("atmw")[0].value = value[62];
 									document.getElementsByName("aepsd")[0].value = value[63];
@@ -1169,6 +1186,7 @@ function Search1(pNo="")
 									document.getElementsByName("rdd")[0].value = value[58];
 									document.getElementsByName("loan")[0].value = value[59];
 									document.getElementsByName("yono")[0].value = value[61];
+									document.getElementsByName("aof")[0].value = value[45];
 									
 									document.getElementsByName("atmd")[0].value = value[60];
 									document.getElementsByName("atmw")[0].value = value[62];
@@ -1490,15 +1508,14 @@ function calculateFD() {
     });
 }
 
-
- // check login
-    if (sessionStorage.getItem("loggedIn") !== "true") {
+ if (sessionStorage.getItem("loggedIn") !== "true") {
       window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
     }
  function logout() {
   sessionStorage.removeItem("loggedIn");
   window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
 }
+ 
 		
     </script>
 	
@@ -1688,15 +1705,27 @@ function calculateFD() {
 <th><input type="hidden" onchange="multiply(this)" id="total25" class="total" name="pc1" value="0" readonly></th>
 
 
-<th> <input   readonly value="ERSHAD BALANCE " class="note" name="note24" /></th>
-<th><input  type="number" onchange="multiply(this)" class="needs-validation"  id="ofe" name="oe"></th>
-<th><input type="number" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
+<th> <input   readonly value="ERSHAD OPENING BALANCE " class="note" name="note24" /></th>
+<th> <input  type="number" value="0" class="total" id="aof" name="aof" readonly ></th>
+<th></th>
+</tr>
+<tr>
+<th> <input   readonly value="ERSHAD WITHDRAWAL " class="note" name="note24" /></th>
+<th> <input  type="number" value="0" class="needs-validation" id="pfif" name="pfif"  ></th>
+<th> <input   readonly value="ERSHAD DEPOSIT " class="note" name="note24" /></th>
+<th> <input  type="number" value="0" class="needs-validation" id="kyc" name="kyc"  ></th>
+
+<th> <a type="button" onclick="multiply();"> <input   readonly value="ERSHAD Closing BALANCE " class="note" name="note24" ></a></th>
+<th> <a type="button"  onclick="ersh();"><input  type="number"  class="needs-validation"  id="ofe" name="oe" readonly></a></th>
+<th><input type="hidden" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
+</tr>
+<tr>
+
 
 </tr>
 <tr>
 
-<th></th>
-<th></th>
+
 <th></th>
 
 <th><input  readonly value="OPENING BALANCE " type="hidden"  class="note" name="note26" /></th>
@@ -1798,9 +1827,7 @@ function calculateFD() {
 <tr><td class="top">	TOTAL TRAN</td><td>	                <input  type="number" value="0" class="top2" id="ttran" name="ttran" readonly >	</td>
 <td class="top">	    PPF & SSY		</td><td>       	<input  type="number" value="0" class="top4" id="ppf" name="ppf" >	</td></tr>
 <tr><td class="top">	KYC UPDATE		</td><td>   	    <input  type="number" value="0" class="top4" id="ssy" name="ssy"  >	</td>
-<td class="top">	    AOF 	</td><td>               	<input  type="number" value="0" class="top4" id="aof" name="aof"  >	</td></tr>
-<tr><td class="top">	MINI STATEMENT		</td><td>	    <input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
-<td class="top">	    FI LEGACY</td><td>              	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
+
 </tr>
 <tr><th colspan="2" ><a class="button button4" target="_blank" href="https://docs.google.com/spreadsheets/d/1usN3_5SCkQG9ZT2JLTwkhKZ7MHrEFt4VKr5l6T6mmno/edit?gid=1441275226#gid=1441275226">TRANSSACTION</a></th>
 <th colspan="2" class="right"><button type="button" class="button button4" onclick="Search3();">SHOW REPORT</button></th>
@@ -2054,7 +2081,7 @@ function calculateFD() {
  <a href="https://fi.sbi.bank.in/unifyapp/login/" class="w3-bar-item w3-button"   target="_blank">New Login</a>
      <a href="https://kiosk.sbi.bank.in/" class="w3-bar-item w3-button"   target="_blank">Kiosk Login</a>
    <a href="https://mail.google.com/mail/u/0/#inbox" class="fa-mail-forward"   target="_blank">Email </a>
- 	  <a href="https://main.vibsranbc.org/csp-login"   class="w3-bar-item w3-button" target="_blank">Bc Login</a>
+ 	  <a href="https://cspmv2.asthanabc.com/#/login"   class="w3-bar-item w3-button" target="_blank">Bc Login</a>
  <a href="https://web.umang.gov.in/web_new/department?url=dept%2F100100&dept_id=100100&dept_name=Bharat%20Aadhaar%20Seeding%20Enabler" class="w3-bar-item w3-button"  >DBT LINK</a>
    <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"  style="font-size:20px;color:green">WhatsApp</a>
 </div>
