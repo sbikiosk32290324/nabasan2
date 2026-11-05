@@ -1079,9 +1079,68 @@ function Search(pNo="")
 
             
 			Search2(pNo="")
-			 
+			 Search4(pNo="")
+			 multiply()
 			
 			 
+          }
+        });
+		$('#exampleModal').modal('hide');
+		 
+}
+
+
+function Search4(pNo="")
+{
+        var no = $('#sl').val();
+
+		if (pNo != "") no = pNo;
+
+         $.getJSON("https://script.google.com/macros/s/AKfycby8v0jp-sSFME65SR6TIKMOer72dUgupGbIT-oEQs32twIDkH1AXLzrUE7h2Igg3fJ-/exec?page=search&no="+no,
+        function (data) {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "NOT FOUND")
+          {
+            alert('date. Not Found...');
+
+          }
+          else
+          {
+            //var record = data;
+            var record   = data.record;
+
+            var StartRow = data.SR;
+            var RowCount = data.CNT;
+
+            $('#IsNew').val('N');
+            $('#StartRow').val(StartRow);
+            $('#RowCount').val(RowCount);
+         
+            var i = 0;
+            $.each(record, function(key, value)
+            {
+           
+              if (i == 0)
+              {
+                var dt = value[1].substring(0,10);
+				
+				
+
+document.getElementsByName("aof")[0].value = value[16];
+document.getElementsByName("pfif")[0].value = value[14];
+document.getElementsByName("kyc")[0].value = value[15];
+
+
+
+              }
+             
+              i = i + 1;
+            });
+
+         
           }
         });
 		$('#exampleModal').modal('hide');
@@ -1508,7 +1567,7 @@ function calculateFD() {
     });
 }
 
- if (sessionStorage.getItem("loggedIn") !== "true") {
+  if (sessionStorage.getItem("loggedIn") !== "true") {
       window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
     }
  function logout() {
@@ -1706,17 +1765,17 @@ function calculateFD() {
 
 
 <th> <input   readonly value="ERSHAD OPENING BALANCE " class="note" name="note24" /></th>
-<th> <input  type="number" value="0" class="total" id="aof" name="aof" readonly ></th>
+<th> <input  readonly type="number" value="0" class="total" id="aof" name="aof" readonly ></th>
 <th></th>
 </tr>
 <tr>
 <th> <input   readonly value="ERSHAD WITHDRAWAL " class="note" name="note24" /></th>
-<th> <input  type="number" value="0" class="needs-validation" id="pfif" name="pfif"  ></th>
+<th> <input readonly type="number" value="0" class="total" id="pfif" name="pfif"  ></th>
 <th> <input   readonly value="ERSHAD DEPOSIT " class="note" name="note24" /></th>
-<th> <input  type="number" value="0" class="needs-validation" id="kyc" name="kyc"  ></th>
+<th> <input readonly type="number" value="0" class="total" id="kyc" name="kyc"  ></th>
 
 <th> <a type="button" onclick="multiply();"> <input   readonly value="ERSHAD Closing BALANCE " class="note" name="note24" ></a></th>
-<th> <a type="button"  onclick="ersh();"><input  type="number"  class="needs-validation"  id="ofe" name="oe" readonly></a></th>
+<th> <a href="https://sbikiosk32290324.github.io/nabasan2/er.html"target="_blank"><input  type="number"  class="total" id="ofe" name="oe" readonly></a></th>
 <th><input type="hidden" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
 </tr>
 <tr>
