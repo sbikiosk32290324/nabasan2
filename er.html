@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<title>NABASAN CASH BALANCE</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imagination Invoice Example</title>
+    <!-- For Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    
+    
+    
+
+    <!-- jQuery CDN -->
+    <!--<script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+	<style>
+		body {
+
+	 background-image: url("");
+	background-colour:#EC82FA; 
+	background-size: 109%;
+	  width: 100%;
+	height: 92%;
+}
+      *{
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+
+      }
+
+
+      ul{
+		  margin: 0;
+		  padding: 0;
+        list-style: none;
+        background: #22438C;
+		 text-align: left;
+
+      }
+li {
+        display: inline-block;
+        position: relative;
+		text-align: left;
+		padding: 0;
+        margin: 0;
+height:30px;
+      }
+      ul li a{
+		  padding: 0;
+        margin: 0;
+        display: block;
+        padding: 15px 50px;
+        color: rgb(217, 217, 235);
+        text-decoration: none;
+       text-align: center-left;
+        font-size:12px;
+		white-space: nowrap;
+			height:20px;
+   width:100%;
+      }
+      ul li ul.dropdown li{
+        display: block;
+		
+      }
+      ul li ul.dropdown{
+        font-size: 100%;
+        background: #22438C;
+        position: absolute;
+        z-index: 1;
+        display: none;
+		padding: 0;
+        margin: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  text-align: left;
+  
+      }
+      ul li a:hover{
+        background: #112C66;
+
+      }
+      ul li:hover ul.dropdown{
+        display: block;
+      }
+.btn
+{
+    background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 3px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  
+}
+  
+	
+
+.btn1
+{
+	background-color:ff5733; /* Green */
+color: #ff5733;
+font-size: 12px;
+border: 2px;
+
+text-align: center;
+  text-decoration: none;
+  display: inline-block;
+ 
+
+}
+.btn3
+{
+	 background-color: #04AA6D; /* Green */
+ 
+  color:#FFFFFF;
+	text-align:center;
+	color:black;
+	
+	padding: 2px 5px;
+	font-size: 12px;
+}
+.btn2,col-8
+{
+	background-color:ff5733; /* Green */
+color: #ff5733;
+font-size: 12px;
+text-align: left;
+padding: 2px 30px;
+  text-decoration: none;
+  display: inline-block;
+  
+ 
+
+}
+.form-control
+{
+    border: 0px;
+	padding: 2px 5px;
+	font-size: 12px;
+}
+
+.input-group-text
+{
+    border: 2px;
+    background-color: #40E0D0;
+	padding: 2px 5px;
+	font-size: 12px;
+	
+}
+.needs-validation
+{
+	background-color:#c6eccd;
+	text-align:center;
+	color:black;
+	
+	padding: 2px 5px;
+	font-size: 12px;
+}
+.note 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#FFFFFF;
+	
+	padding: 2px 5px;
+	font-size: 12px;
+	
+	}
+.total 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#FFFFFF ;
+	
+	padding: 2px 5px;
+	font-size: 12px;
+	}
+.timer 
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#00FF00 ;
+	
+	padding: 2px 5px;
+	font-size: 12px;
+	}
+.header
+{
+	background-color:#40E0D0;
+	text-align:center;
+	color:#FFFFFF;
+	font-size:100%;
+	padding: 2px 5px;
+	
+	}
+.top
+{
+	background-color:ff5733;
+	text-align:center;
+	color: #ff5733;
+	font-size: 12px;
+	
+	}
+	.top1
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#FFFFFF;
+	font-size: 12px;
+	width:50px;
+    height:20px;
+	}
+.top2
+{
+	background-color:#900C3F;
+	text-align:center;
+	color:#2ae610 ;
+	font-size: 12px;
+	width:50px;
+    height:20px;
+	}
+.top3
+{
+	
+	background-color:#900C3F;
+	text-align:center;
+	color:#2ae610 ;
+	font-size: 16px;
+	width:100px;
+    height:20px;
+	}
+.top4
+{
+	
+	text-align:center;
+	
+	font-size: 12px;
+	width:50px;
+    height:20px;
+	}
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+#demo {
+	background-color:#808000;
+	text-align:center;
+	color:#FFFFFF;
+	font-size: 12px;
+	
+	}
+
+
+
+	</style>
+
+<!-- For Invoice  -->
+    <script>
+	    
+	     function multiply()
+    {
+	
+	var final_data= document.getElementById("note1").value;
+      var qnt=document.getElementById("Quantity1").value;
+        var amt=final_data*qnt;
+      document.getElementById("total1").value=amt;
+var note3= document.getElementById("note3").value;
+      var qnt3=document.getElementById("Quantity3").value;
+        var amt3=note3*qnt3;
+      document.getElementById("total3").value=amt3;
+ var note5= document.getElementById("note5").value;
+      var qnt5=document.getElementById("Quantity5").value;
+        var amt5=note5*qnt5;
+      document.getElementById("total5").value=amt5;
+var note7= document.getElementById("note7").value;
+      var qnt7=document.getElementById("Quantity7").value;
+        var amt7=note7*qnt7;
+      document.getElementById("total7").value=amt7;
+  var note9= document.getElementById("note9").value;
+      var qnt9=document.getElementById("Quantity9").value;
+        var amt9=note9*qnt9;
+      document.getElementById("total9").value=amt9;
+	  var note11= document.getElementById("note11").value;
+      var qnt11=document.getElementById("Quantity11").value;
+        var amt11=note11*qnt11;
+      document.getElementById("total11").value=amt11;
+ var note13= document.getElementById("note13").value;
+      var qnt13=document.getElementById("Quantity13").value;
+        var amt13=note13*qnt13;
+      document.getElementById("total13").value=amt13;
+	  
+	  var note14= document.getElementById("note14").value;
+      var qnt14=document.getElementById("Quantity14").value;
+        var amt14=note14*qnt14;
+      document.getElementById("total14").value=amt14;
+	  
+	  var note15= document.getElementById("note15").value;
+      var qnt15=document.getElementById("Quantity15").value;
+        var amt15=note15*qnt15;
+      document.getElementById("total15").value=amt15;
+  var note16= document.getElementById("note16").value;
+      var qnt16=document.getElementById("Quantity16").value;
+        var amt16=note16*qnt16;
+      document.getElementById("total16").value=amt16;
+ var total1= document.getElementById("total1").value;
+	  
+	  var total3= document.getElementById("total3").value;
+	  
+	  var total5= document.getElementById("total5").value;
+	 
+	  var total7= document.getElementById("total7").value;
+	 
+	  var total9= document.getElementById("total9").value;
+	  
+	  var total11= document.getElementById("total11").value;
+	  
+	  var total13= document.getElementById("total13").value;
+	  var total14= document.getElementById("total14").value;
+	  var total15= document.getElementById("total15").value;
+	  var total16= document.getElementById("total16").value;
+var all1=+(total1)+ +(total3)+ +(total5)+ +(total7)+  +(total9)+ +(total11)+ +(total13)+ +(total14)+ +(total15)+ +(total16);
+	  document.getElementById("tc").value=all1;
+var de2=document.getElementById("de2").value;
+var de3=document.getElementById("de3").value;
+
+var de5=document.getElementById("de5").value;
+var de6=document.getElementById("de6").value;
+
+var de8=document.getElementById("de8").value;
+var de9=document.getElementById("de9").value;
+
+var de11=document.getElementById("de11").value;
+var de12=document.getElementById("de12").value;
+
+var de14=document.getElementById("de14").value;
+var de15=document.getElementById("de15").value;
+
+var de17=document.getElementById("de17").value;
+var de18=document.getElementById("de18").value;
+
+var de20=document.getElementById("de20").value;
+var de21=document.getElementById("de21").value;
+
+var de23=document.getElementById("de23").value;
+var de24=document.getElementById("de24").value;
+
+var de26=document.getElementById("de26").value;
+var de27=document.getElementById("de27").value;
+
+var de29=document.getElementById("de29").value;
+var de30=document.getElementById("de30").value;
+
+
+
+var de35=document.getElementById("de35").value;
+var de36=document.getElementById("de36").value;
+
+var de38=document.getElementById("de38").value;
+var de39=document.getElementById("de39").value;
+
+var de41=document.getElementById("de41").value;
+var de42=document.getElementById("de42").value;
+
+var de44=document.getElementById("de44").value;
+var de45=document.getElementById("de45").value;
+
+var de47=document.getElementById("de47").value;
+var de48=document.getElementById("de48").value;
+
+var de50=document.getElementById("de50").value;
+var de51=document.getElementById("de51").value;
+
+var de53=document.getElementById("de53").value;
+var de54=document.getElementById("de54").value;
+
+var de56=document.getElementById("de56").value;
+var de57=document.getElementById("de57").value;
+var de59=document.getElementById("de59").value;
+var de60=document.getElementById("de60").value;
+var aof=document.getElementById("aof").value;
+
+
+var pfif1=+(de2)+ +(de5)+ +(de8)+ +(de11)+ +(de14)+ +(de17)+ +(de20)+ +(de23)+ +(de26)+ +(de29)+ +(de35)+ +(de38)+ +(de41)+ +(de44)+ +(de47)+ +(de50)+ +(de53)+ +(de56);
+ document.getElementById("pfif").value=pfif1;
+	   var kycc=+(de3)+ +(de6)+ +(de9)+ +(de12)+ +(de15)+ +(de18)+ +(de21)+ +(de24)+ +(de27)+ +(de30)+ +(de36)+ +(de39)+ +(de42)+ +(de45)+ +(de48)+ +(de51)+ +(de54)+ +(de57);										
+document.getElementById("kyc").value=kycc;
+          
+var	ofe1=+(aof)+ +(de59)+ -(pfif1)+ +(kycc)+ -(de60);
+
+document.getElementById("ofe").value=ofe1;   
+
+	  }
+	  
+	  
+	  function add() {
+  let text = "আপনি নিশ্চিত তো ? \nAre you sure? \nমিসমাচ টি একাউন্ট ব্যালান্স  এর সাথে যুক্ত হবে \nThe mismatch will be added to the account balance.";
+  if (confirm(text) == true) {
+	  
+            
+
+	var amt23= document.getElementById("total23").value;
+      var mib=document.getElementById("db").value;
+        var note23= -(mib)- -(amt23);
+      document.getElementById("ac").value=note23;var note23= document.getElementById("ac").value;
+	 
+	  text = "মিসমাচ টি খরচের সাথে যুক্ত হয়েছে";
+  } else {
+    text = "মিসমাচ টি খরচের সাথে যুক্ত হয়নি";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+	  
+ 	  
+$(document).ready(function () {
+    FormValidation()
+	
+    Search(pNo="")
+   
+  
+       
+});
+
+function scb()
+	{
+	var osb= document.getElementById("osb").value;
+var twa= document.getElementById("twa").value;
+var tda= document.getElementById("tda").value;
+var bcw= document.getElementById("bcw").value;
+var bcd= document.getElementById("bcd").value;	
+var csb= +(osb)+ +(twa)+ +(bcd)+ -(tda)+ -(bcw);
+      document.getElementById("csb").value=csb;
+	}	
+ 	  
+
+
+function sendwhatsapp()
+	{
+		var phonenumber="";
+		var	date= document.getElementById("dt").value;
+		var	acc	= document.getElementById("acc").value;
+var	jjby= document.getElementById("jjby").value;
+var	sby	= document.getElementById("sby").value;
+var	apy	= document.getElementById("apy").value;
+var	rdo	= document.getElementById("rdo").value;
+var	stdr= document.getElementById("stdr").value;
+var	ppf	= document.getElementById("ppf").value;
+var	ssy	= document.getElementById("ssy").value;
+var	aof	= document.getElementById("aof").value;
+var	kyc	= document.getElementById("kyc").value;
+var	pfif= document.getElementById("pfif").value;
+
+ var url="https://wa.me/"+ phonenumber + "?text="
+ 
+	+"NEW REPORT FORMAT%0a" 
+	+"CSP CODE 👉 32290324%0a"
+	
+	+"DATE     :  "+date+"%0a"
+	+"CSP Opening Time:  8:00 AM%0a"
+	+"CSP Closed Time:6:30 PM%0a"
+	
+	+"1.APY     👉  "+apy+"%0a"
+	+"2.SBY      👉  "+sby+"%0a"
+	+"3.JJBY    👉  "+jjby+"%0a"
+	+"4.Fi Legacy Collection  👉"+aof+"%0a"
+	+"5.FI legacy Submite Br. 👉"+pfif+"%0a"
+	+"6.Inoperative KYC Update👉  "+ssy+"%0a"
+	+"7.New Ac opened👉 "+acc+"%0a"
+	+"8.STDR OPEN👉 "+stdr+"%0a"
+	+"9.RD OPEN👉 "+rdo+"%0a"
+	
+
+	 
+	+" Regards%0a"
+	+"CSP NAME  RAJESH PURKAIT%0a";
+	window.open(url, '_blank').focus();
+	
+	}
+	
+
+function SetCurrentDate()
+{
+    const date = new Date();
+    console.log(date);
+
+    let d = date.getDate();
+    let m = date.getMonth() + 1;
+    let y = date.getFullYear();
+
+    if (d < 10) d = '0' + d;
+    if (m < 10) m = '0' + m;
+
+    let CurrDate = y + '-' + m + '-' + d;
+
+    $('input[name="date"]').val(CurrDate);
+
+}
+
+function FormValidation()
+{
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+ 
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+ 
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+ 
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+}
+
+function Search(pNo="")
+{
+        var no = $('#sl').val();
+
+		if (pNo != "") no = pNo;
+
+         $.getJSON("https://script.google.com/macros/s/AKfycby8v0jp-sSFME65SR6TIKMOer72dUgupGbIT-oEQs32twIDkH1AXLzrUE7h2Igg3fJ-/exec?page=search&no="+no,
+        function (data) {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "NOT FOUND")
+          {
+            alert('date. Not Found...');
+
+          }
+          else
+          {
+            //var record = data;
+            var record   = data.record;
+
+            var StartRow = data.SR;
+            var RowCount = data.CNT;
+
+            $('#IsNew').val('N');
+            $('#StartRow').val(StartRow);
+            $('#RowCount').val(RowCount);
+         
+            var i = 0;
+            $.each(record, function(key, value)
+            {
+           
+              if (i == 0)
+              {
+                var dt = value[1].substring(0,10);
+				document.getElementsByName("sl")[0].value = value[0];
+				document.getElementsByName("date")[0].value = dt;
+document.getElementsByName("n500")[0].value = value[2];
+document.getElementsByName("n200")[0].value = value[3];
+document.getElementsByName("n100")[0].value = value[4];
+document.getElementsByName("n50")[0].value = value[5];
+document.getElementsByName("n20")[0].value = value[6];
+document.getElementsByName("n10")[0].value = value[7];
+document.getElementsByName("c10")[0].value = value[8];
+document.getElementsByName("c5")[0].value = value[9];
+document.getElementsByName("c2")[0].value = value[10];
+document.getElementsByName("c1")[0].value = value[11];
+document.getElementsByName("tc")[0].value = value[12];
+document.getElementsByName("aof")[0].value = value[16];
+document.getElementsByName("pfif")[0].value = value[14];
+document.getElementsByName("kyc")[0].value = value[15];
+
+
+
+
+
+              }
+             
+              i = i + 1;
+            });
+
+      
+
+           SetCurrentDate()
+	   multiply()
+		  multiply()
+		  multiply()
+		  
+          }
+        });
+		$('#exampleModal').modal('hide');
+		 
+}
+function Search1(pNo="")
+{
+        var no = $('#dt').val();
+
+		if (pNo != "") no = pNo;
+
+        $.getJSON("https://script.google.com/macros/s/AKfycby8v0jp-sSFME65SR6TIKMOer72dUgupGbIT-oEQs32twIDkH1AXLzrUE7h2Igg3fJ-/exec?page=search&no="+no,
+        function (data) {
+
+         
+          //alert(data);
+         // console.log(data);
+          if (data == "NOT FOUND")
+          {
+            alert('date. Not Found...');
+
+          }
+          else
+          {
+            //var record = data;
+            var record   = data.record;
+
+            var StartRow = data.SR;
+            var RowCount = data.CNT;
+
+            $('#IsNew').val('N');
+            $('#StartRow').val(StartRow);
+            $('#RowCount').val(RowCount);
+         
+            var i = 0;
+            $.each(record, function(key, value)
+            {
+           
+              if (i == 0)
+              {
+                var dt = value[1].substring(0,10);
+				document.getElementsByName("sl")[0].value = value[0];
+				document.getElementsByName("date")[0].value = dt;
+									document.getElementsByName("n500")[0].value = value[2];
+document.getElementsByName("n200")[0].value = value[3];
+document.getElementsByName("n100")[0].value = value[4];
+document.getElementsByName("n50")[0].value = value[5];
+document.getElementsByName("n20")[0].value = value[6];
+document.getElementsByName("n10")[0].value = value[7];
+document.getElementsByName("c10")[0].value = value[8];
+document.getElementsByName("c5")[0].value = value[9];
+document.getElementsByName("c2")[0].value = value[10];
+document.getElementsByName("c1")[0].value = value[11];
+document.getElementsByName("tc")[0].value = value[12];
+document.getElementsByName("aof")[0].value = value[13];
+document.getElementsByName("pfif")[0].value = value[14];
+document.getElementsByName("kyc")[0].value = value[15];
+document.getElementsByName("oe")[0].value = value[16];
+document.getElementsByName("de1")[0].value = value[17];
+document.getElementsByName("de2")[0].value = value[18];
+document.getElementsByName("de3")[0].value = value[19];
+document.getElementsByName("de4")[0].value = value[20];
+document.getElementsByName("de5")[0].value = value[21];
+document.getElementsByName("de6")[0].value = value[22];
+document.getElementsByName("de7")[0].value = value[23];
+document.getElementsByName("de8")[0].value = value[24];
+document.getElementsByName("de9")[0].value = value[25];
+document.getElementsByName("de10")[0].value = value[26];
+document.getElementsByName("de11")[0].value = value[27];
+document.getElementsByName("de12")[0].value = value[28];
+document.getElementsByName("de13")[0].value = value[29];
+document.getElementsByName("de14")[0].value = value[30];
+document.getElementsByName("de15")[0].value = value[31];
+document.getElementsByName("de16")[0].value = value[32];
+document.getElementsByName("de17")[0].value = value[33];
+document.getElementsByName("de18")[0].value = value[34];
+document.getElementsByName("de19")[0].value = value[35];
+document.getElementsByName("de20")[0].value = value[36];
+document.getElementsByName("de21")[0].value = value[37];
+document.getElementsByName("de22")[0].value = value[38];
+document.getElementsByName("de23")[0].value = value[39];
+document.getElementsByName("de24")[0].value = value[40];
+document.getElementsByName("de25")[0].value = value[41];
+document.getElementsByName("de26")[0].value = value[42];
+document.getElementsByName("de27")[0].value = value[43];
+document.getElementsByName("de28")[0].value = value[44];
+document.getElementsByName("de29")[0].value = value[45];
+document.getElementsByName("de30")[0].value = value[46];
+document.getElementsByName("de34")[0].value = value[47];
+document.getElementsByName("de35")[0].value = value[48];
+document.getElementsByName("de36")[0].value = value[49];
+document.getElementsByName("de37")[0].value = value[50];
+document.getElementsByName("de38")[0].value = value[51];
+document.getElementsByName("de39")[0].value = value[52];
+document.getElementsByName("de40")[0].value = value[53];
+document.getElementsByName("de41")[0].value = value[54];
+document.getElementsByName("de42")[0].value = value[55];
+document.getElementsByName("de43")[0].value = value[56];
+document.getElementsByName("de44")[0].value = value[57];
+document.getElementsByName("de45")[0].value = value[58];
+document.getElementsByName("de46")[0].value = value[59];
+document.getElementsByName("de47")[0].value = value[60];
+document.getElementsByName("de48")[0].value = value[61];
+document.getElementsByName("de49")[0].value = value[62];
+document.getElementsByName("de50")[0].value = value[63];
+document.getElementsByName("de51")[0].value = value[64];
+document.getElementsByName("de52")[0].value = value[65];
+document.getElementsByName("de53")[0].value = value[66];
+document.getElementsByName("de54")[0].value = value[67];
+document.getElementsByName("de55")[0].value = value[68];
+document.getElementsByName("de56")[0].value = value[69];
+document.getElementsByName("de57")[0].value = value[70];
+document.getElementsByName("de58")[0].value = value[71];
+document.getElementsByName("de59")[0].value = value[72];
+document.getElementsByName("de60")[0].value = value[73];
+
+              }
+             
+              i = i + 1;
+            });
+
+           
+
+          }
+        });
+		$('#exampleModal').modal('hide');
+		
+		 
+}
+
+    </script>
+	
+
+
+
+
+
+</head>
+<body >
+
+  <form     id="form"   >
+	  
+                  
+					
+                        
+						
+								
+                 
+	   <table>
+<h1 class="header">Ershad Ali Shaikh <th scope="col" class="top" >SEARCH Date <input type="date"  class="btn1" placeholder="search data" novalidate id="dt"  name="date"   required >
+  <button  type="button" class="button button5" onclick="Search1();"><i class="bi bi-search"></i></button></th></tr> <th colspan="7"><button class="button button5" onclick="myFunction()"><i class="fa fa-save"></i> সংরক্ষণ   </button>
+
+<p  id="demo"></p></th>  </tr></H1>
+
+
+
+</head>
+
+
+
+	  
+                  
+					
+                        
+						
+								
+                 
+	  
+			   
+               <input type="hidden"  id="IsNew"    name="IsNew"    value="Y">
+               <input type="hidden"  id="StartRow" name="StartRow" value="0"> 
+               <input type="hidden"  id="RowCount" name="RowCount" value="0"> 
+			   <div id="custom-alert" class="custom-alert">
+<div class="alert-content">
+<span id="alert-message"></span>
+
+
+<table  onchange="multiply(this)" >
+<thead class="table-success">
+<tr>
+
+<tr>
+<th></th>
+<th></th>
+<th></th>
+
+<th class="top2">DATE </th>
+<th class="top2"> WITHDRAWAL</th>
+<th class="top2"> DEPOSIT</th>
+<th class="top2">DATE </th>
+<th class="top3"> WITHDRAWAL</th>
+<th class="top3"> DEPOSIT</th>
+
+
+
+
+</tr>
+</tr>
+<tr>
+
+<th ><input type="hidden"id="note1" name="note" class="note"  readonly value="500"></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation" id="Quantity1" name="n500" /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total1" class="total" name="amt500" value="0" readonly></th>
+
+<th>	<input type="text"  class="needs-validation"  value="0"	 id="de1" name="de1"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de2" name="de2"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de3" name="de3"	 /></th>
+
+<th>	<input type="text"  class="needs-validation"  value="0"	 id="de34" name="de34"	 /></th>
+<th>	<input type="number"   class="needs-validation" value="0"	 id="de35" name="de35"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de36" name="de36"	 /></th>
+
+
+
+</tr>
+<tr>
+
+<th><input type="hidden" value="200" readonly class="note" id="note3" name="note3" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation" id="Quantity3" name="n200"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total3" class="total" name="amt200" value="0" readonly></th>
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de4" name="de4"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de5" name="de5"	 /></th>
+<th>	<input type="number"  class="needs-validation" value="0"	 id="de6" name="de6"	 /></th>
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de37" name="de37"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de38" name="de38"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de39" name="de39"	 /></th>
+
+</tr>
+<tr>
+
+<th><input type="hidden"" value="100" readonly class="note" id="note5" name="note5" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation" id="Quantity5" name="n100"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total5" class="total" name="amt100" value="0" readonly></th>
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de7" name="de7"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de8" name="de8"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de9" name="de9"	 /></th>
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de40" name="de40"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de41" name="de41"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de42" name="de42"	 /></th>
+
+
+</tr>
+<tr>
+
+<th><input type="hidden" value="50" readonly class="note" id="note7" name="note7" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation"   id="Quantity7"  name="n50"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total7" class="total" name="amt50" value="0" readonly></th>
+
+<th>	<input type="text" class="needs-validation"  value="0"	 id="de10" name="de10"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de11" name="de11"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de12" name="de12"	 /></th>
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de43" name="de43"	 /></th>
+<th>	<input type="number"  class="needs-validation"  value="0"	 id="de44" name="de44"	 /></th>
+<th>	<input type="number"   class="needs-validation" value="0"	 id="de45" name="de45"	 /></th>
+
+
+
+
+<tr>
+
+<th><input type="hidden"" value="20" readonly class="note" id="note9" name="note9" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation"  id="Quantity9"  name="n20"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total9" class="total" name="amt20" value="0" readonly></th>
+
+<th>	<input type="text"  class="needs-validation"  value="0"	 id="de13" name="de13"	 /></th>
+<th>	<input type="number"  class="needs-validation"  value="0"	 id="de14" name="de14"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de15" name="de15"	 /></th>
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de46" name="de46"	 /></th>
+<th>	<input type="number"  class="needs-validation"  value="0"	 id="de47" name="de47"	 /></th>
+<th>	<input type="number"  class="needs-validation"  value="0"	 id="de48" name="de48"	 /></th>
+
+
+
+</tr>
+<tr>
+
+<th><input type="hidden" value="10" readonly class="note" id="note11" name="note11" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation"  id="Quantity11"  name="n10"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total11" class="total" name="amt10" value="0" readonly></th>
+
+<th>	<input type="text"  class="needs-validation"  value="0"	 id="de16" name="de16"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de17" name="de17"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de18" name="de18"	 /></th>
+
+<th>	<input type="text"  class="needs-validation" value="0"	 id="de49" name="de49"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de50" name="de50"	 /></th>
+<th>	<input type="number"   class="needs-validation" value="0"	 id="de51" name="de51"	 /></th>
+
+
+
+</tr>
+<tr> 
+
+<th><input type="hidden" value="10" readonly class="note" id="note13" name="note13" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation"  id="Quantity13" name="c10"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total13" class="total" name="amtc10" value="0" readonly></th>
+<th>	<input type="text"  class="needs-validation" value="0"	 id="de19" name="de19"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de20" name="de20"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de21" name="de21"	 /></th>
+
+<th>	<input type="text"    class="needs-validation"  value="0"	 id="de52" name="de52"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de53" name="de53"	 /></th>
+<th>	<input type="number"  class="needs-validation" value="0"	 id="de54" name="de54"	 /></th>
+
+
+
+
+
+</tr>
+<tr>
+
+<th><input type="hidden" value="5" readonly class="note" id="note14" name="note14" /></th>
+<th><input type="hidden" id="Quantity14" onchange="multiply(this)" class="needs-validation"    name="c5"  /></th>
+<th><input type="hidden" id="total14" class="total" name="amtc5" value="0" readonly></th>
+
+<th>	<input type="text"  class="needs-validation"  value="0"	 id="de22" name="de22"	 /></th>
+<th>	<input type="number"   class="needs-validation" value="0"	 id="de23" name="de23"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de24" name="de24"	 /></th>
+
+<th>	<input type="text"  class="needs-validation"  value="0"	 id="de55" name="de55"	 /></th>
+<th>	<input type="number"  class="needs-validation" value="0"	 id="de56" name="de56"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de57" name="de57"	 /></th>
+
+
+
+
+
+</tr>
+<tr>
+
+<th><input type="hidden" value="2" readonly class="note" id="note15" name="note15" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation"  id="Quantity15"  name="c2"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total15" class="total" name="amtc2" value="0" readonly></th>
+<th>	<input type="text"   class="needs-validation" value="0"	 id="de25" name="de25"	 /></th>
+<th>	<input type="number"  class="needs-validation"  value="0"	 id="de26" name="de26"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de27" name="de27"	 /></th>
+<th> <input   readonly value="DATE " class="note"  /></th>
+<th> <input   readonly value="CASH RECIVED " class="note"  /></th>
+<th> <input   readonly value="CASH PAY " class="note"  /></th>
+
+
+</tr>
+<tr>
+
+<th><input type="hidden" value="1" readonly class="note" id="note16" name="note16" /></th>
+<th><input type="hidden" onchange="multiply(this)" class="needs-validation"  id="Quantity16" name="c1"  /></th>
+<th><input type="hidden" onchange="multiply(this)" id="total16" class="total" name="amtc1" value="0" readonly></th>
+
+
+<th>	<input type="text"   class="needs-validation"  value="0"	 id="de28" name="de28"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de29" name="de29"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de30" name="de30" /></th>
+
+<th>	<input type="text" class="needs-validation"  value="0"	 id="de58" name="de58"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de59" name="de59"	 /></th>
+<th>	<input type="number"   class="needs-validation"  value="0"	 id="de60" name="de60"	 /></th>
+
+
+
+</tr>
+<tr>
+<th> <input  type="hidden" readonly value="TOTAL CASH " class="note"  /></th>
+<th></th>
+<th> <input type="hidden"  value="0" class="total" id="tc" name="tc" readonly ></th>
+<th> <input   readonly value="ERSHAD OPENING BALANCE " class="note" name="note24" /></th>
+<th> <input   type="number" value="0" class="total" id="aof" name="aof" readonly ></th>
+
+
+<th> <input   readonly value="ERSHAD WITHDRAWAL " class="note" name="note24" /></th>
+<th> <input  type="number" value="0" class="total" id="pfif" name="pfif" readonly ></th>
+<th> <input   readonly value="ERSHAD DEPOSIT " class="note" name="note24" /></th>
+<th> <input  type="number" value="0" class="total" id="kyc" name="kyc" readonly ></th>
+</tr>
+<tr>
+<th></th><th></th><th></th>
+<th> <a type="button" onclick="multiply();"> <input   readonly value="ERSHAD Closing BALANCE " class="note" name="note24" ></a></th>
+<th> <a type="button"  onclick="ersh();"><input  type="number"  class="total"  id="ofe" name="oe" readonly></a></th>
+
+
+
+
+</tr>
+<tr>
+
+
+
+
+
+<th></th>
+</tr>
+
+<tr>
+
+
+</tr>
+
+
+
+
+
+
+
+
+<tr>  
+
+
+</table>
+
+    
+                
+                
+  
+     
+
+
+
+
+
+              
+
+
+                                 </table>
+                                 
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </tr>
+     <input type="hidden" value="1" class="btn1" placeholder="1" novalidate  id="sl" name="sl"   readonly>
+    </table>
+                  
+        </form>
+	 </body>
+<script>
+function myFunction() {
+
+  let text = "ভালো করে দেখে তবে সংরক্ষণ করবে\nYou will save it if you look carefully..";
+  if (confirm(text) == true) {
+    text = "সংরক্ষণ করা হয়েছে \nSaved";
+	
+  
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('https://script.google.com/macros/s/AKfycbxKokl3C9Dr5sC-qU59NcQzFOYMTwfSzrpDDc9CUB_7W-XGQ5Yx6v-f-_S2Xhhdfh7D/exec', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                this.reset();
+            })
+            .catch(error => console.error('Error:', error));
+        });
+		 }
+		else {
+    text = "বাতিল  করা হয়েছে \nCancelled";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+       
+    </script>
+    
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+  
+
+	
+
+</html>
