@@ -24,6 +24,42 @@
 
 
 	<style>
+	.border-box {
+    width: 100%;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    
+    padding: 1px 0;
+	position: absolute;
+   top: 0;
+   right: 8%;
+   left:11%;
+  
+  
+ 
+}
+
+.moving-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+	
+    
+    font-weight: bold;
+    animation: slide 40s linear infinite;
+	
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+	
 
 		.sidebar {
   margin: 0;
@@ -193,7 +229,13 @@ text-align: center;
     background-color: #3e8e41;
 }  
 
-
+.massage1 {
+color: red;
+border: none;  
+width:2000px;
+background-color:#021c20;
+    
+   }  
 
 .massage {
   font-size: 14px;
@@ -1566,8 +1608,7 @@ function calculateFD() {
         }
     });
 }
-
-  if (sessionStorage.getItem("loggedIn") !== "true") {
+ if (sessionStorage.getItem("loggedIn") !== "true") {
       window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
     }
  function logout() {
@@ -1575,6 +1616,8 @@ function calculateFD() {
   window.location.href = "https://sbikiosk32290324.github.io/nabasan2/SEORAHATI.html";
 }
  
+
+  
 		
     </script>
 	
@@ -1792,7 +1835,7 @@ function calculateFD() {
 <th><input type="hidden"  id="total26" onchange="multiply(this)" class="total" onchange="multiply(this)" name="total26" value="0" readonly></th>
 </tr>
 <tr>
-	<th colspan="20"><input class="massage" onchange="multiply(this)" type="massage" id="1input" name="mpa"  ></th></tr>
+	</tr>
 
 <tr>  <th colspan="7"><button class="button button4" onclick="myFunction()"><i class="fa fa-save"></i> সংরক্ষণ   </button>
 
@@ -1815,7 +1858,9 @@ function calculateFD() {
   
      <input type="hidden" value="1" class="btn1" placeholder="1" novalidate  id="sl" name="sl"   readonly>
      <div class="header">
-   <a style="font-size:20px;color:#50fa67">SBI Kiosk SEORA HATI</a>
+   <a style="font-size:20px;color:#50fa67">SBI Kiosk SEORA HATI</a><div class="border-box"><div class="moving-text">
+       <input class="massage1" onchange="multiply(this)" type="massage" id="1input" name="mpa"  >
+    </div></div>
    <table ><tr>
 <th class="top" scope="col">OPENING BALANCE </th> <th ><input class="top3" type="number" id="total26_1"   name="ob" value="150000" required readonly></th>
 <th class="top"  scope="col">Closing BALANCE  </th> <th > <input   type="number" onchange="multiply(this)" id="all_total"  value="0" class="top3" name="cb"  ></th> 
